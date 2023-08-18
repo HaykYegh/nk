@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import AboutForm from './components/AboutForm/AboutForm';
 
 function App() {
   return (
-    <div className="App">
-
+    <div >
+        <AboutForm />
     </div>
   );
 }

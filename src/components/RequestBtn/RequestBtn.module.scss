@@ -1,0 +1,25 @@
+.btnRequest{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 1em 2.5em;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: proxima-nova;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #6184db;
+    border-color: #6184db;
+    transition: .1s opacity linear;
+    user-select: none;
+    &:hover{
+        opacity: 0.8;
+    }
+}
