@@ -1,0 +1,19 @@
+.Logo {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid white;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    border-radius: 3px;
+    margin: 0 2px;
+  }
+}
