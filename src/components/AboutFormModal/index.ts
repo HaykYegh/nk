@@ -1,1 +1,1 @@
-export {default} from './AboutFormModal'
+export { default } from './AboutFormModal';

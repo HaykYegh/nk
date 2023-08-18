@@ -1,6 +1,8 @@
-import { MouseEvent, FocusEvent } from "react"
+import { MouseEvent, FocusEvent } from 'react';
 
-export interface IAboutFormModalProps{
-    showFormModal:boolean
-    setShowFormModalBlock:(e:MouseEvent<HTMLElement> | FocusEvent<HTMLElement>) => void
+export interface IAboutFormModalProps {
+  showFormModal: boolean;
+  setShowFormModalBlock: (
+    e: MouseEvent<HTMLElement> | FocusEvent<HTMLElement>,
+  ) => void;
 }

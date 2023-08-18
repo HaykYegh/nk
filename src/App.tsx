@@ -3,8 +3,8 @@ import AboutForm from './components/AboutForm/AboutForm';
 
 function App() {
   return (
-    <div >
-        <AboutForm />
+    <div>
+      <AboutForm />
     </div>
   );
 }

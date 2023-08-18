@@ -1,12 +1,12 @@
-import { MouseEvent, useState, FocusEvent } from "react";
-import AboutFormModal from "../AboutFormModal/AboutFormModal";
-import RequestBtn from "../RequestBtn/RequestBtn";
-import styles from "./useAboutForm.module.scss";
+import React, { MouseEvent, useState, FocusEvent } from 'react';
+import AboutFormModal from '../AboutFormModal/AboutFormModal';
+import RequestBtn from '../RequestBtn/RequestBtn';
+import styles from './useAboutForm.module.scss';
 
 const AboutForm = () => {
   const [showFormModal, setShowFormModal] = useState(false);
   const setShowFormModalBlock = (
-    e: MouseEvent<HTMLElement> | FocusEvent<HTMLElement>
+    e: MouseEvent<HTMLElement> | FocusEvent<HTMLElement>,
   ) => {
     setShowFormModal(!showFormModal);
   };

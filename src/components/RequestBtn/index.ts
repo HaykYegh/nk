@@ -1,1 +1,1 @@
-export {default} from './RequestBtn.module.scss'
+export { default } from './RequestBtn.module.scss';
