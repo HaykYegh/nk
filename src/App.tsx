@@ -1,6 +1,14 @@
+import {OurOffice} from "./components/OurOffice";
+
+import styles from './App.module.scss';
+
 const App = () => {
   return (
-      <div></div>
+      <div>
+          <div className={styles.container}>
+              <OurOffice />
+          </div>
+      </div>
   )
 };
 
