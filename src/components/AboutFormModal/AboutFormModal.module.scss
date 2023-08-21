@@ -1,27 +1,79 @@
-.lightbox_inner{
+@import '../../assets//formVars.scss';
+@import '../../assets//formMixins.scss';
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+
+.lightbox_inner {
     position: absolute;
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.384);
+    background-color: $inner-bg;
     display: flex;
     justify-content: center;
     overflow-x: hidden;
+    font-family: 'Sofia Pro';
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #333;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(133, 131, 130, .4);
+        border-radius: 20px;
+
+    }
 }
-.lightbox_content{
-    max-width: 600px;
+
+.lightbox_content {
+    max-width: 680px;
+    width: 680px;
     margin: 0 auto;
     padding: 40px;
     background: #fff;
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 50%;
+    height: max-content;
+
+    @media (max-width: 600px) {
+        margin: 0;
+    }
 }
-.block_form{
-    font-size: 14px;
+
+.titleBlock {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.block_form {
     text-transform: none;
     font-style: normal;
+    display: flex;
+    flex-direction: column;
 }
-.lightbox_inner_none{
-    display: none ;
+
+.closeBlock {
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $closeBlock-bg;
+}
+
+.title {
+    font-size: $title-fontSize;
+    color: $title-color;
+    cursor: text;
+
+}
+
+
+.lightbox_inner_none {
+    display: none;
 }

@@ -28,6 +28,7 @@ module.exports = {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/react-in-jsx-scope': 'off',
     // Add or modify TypeScript-specific rules as needed
   },
 };

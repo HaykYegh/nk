@@ -2,6 +2,7 @@ import React, { MouseEvent, useState, FocusEvent } from 'react';
 import AboutFormModal from '../AboutFormModal/AboutFormModal';
 import RequestBtn from '../RequestBtn/RequestBtn';
 import styles from './useAboutForm.module.scss';
+import { createPortal } from 'react-dom';
 
 const AboutForm = () => {
   const [showFormModal, setShowFormModal] = useState(false);
@@ -14,10 +15,13 @@ const AboutForm = () => {
   return (
     <div className={styles.aboutForm}>
       <RequestBtn setShowFormModalBlock={setShowFormModalBlock} />
-      <AboutFormModal
-        setShowFormModalBlock={setShowFormModalBlock}
-        showFormModal={showFormModal}
-      />
+      {createPortal(
+        <AboutFormModal
+          setShowFormModalBlock={setShowFormModalBlock}
+          showFormModal={showFormModal}
+        />,
+        document.body,
+      )}
     </div>
   );
 };

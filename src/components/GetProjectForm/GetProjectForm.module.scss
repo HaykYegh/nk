@@ -1,0 +1,149 @@
+@import '../../assets//formVars.scss';
+@import '../../assets//formMixins.scss';
+
+
+form {
+    margin-top: 55px;
+
+    .req {
+        color: red;
+    }
+}
+
+.namesTitle {
+    display: flex;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+.namestext {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #222;
+
+}
+
+
+.fieldsBlock {
+    display: flex;
+    gap: 10px;
+    @media (max-width: 450px) {
+       flex-direction: column;
+    }
+    input {
+        @include stylesInput;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .firstNameBlcok,
+    .lastNameBlcok {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 18px;
+        width: 50%;
+        .activeError{
+            background-color: #ffeae8;
+            border: 1px solid #ce2c30;
+        }
+        @media (max-width: 450px) {
+            width: 100%;
+         }
+
+    }
+    
+}
+
+.cusstomFieldBlock {
+    font-size: 18px;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        @include stylesInput;
+    }
+    .activeError{
+        background-color: #ffeae8;
+        border: 1px solid #ce2c30;
+    }
+
+    textarea {
+        @include textAreaStyles;
+    }
+}
+
+.checkBoxs_title {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.checkbox_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkBoxs_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.checks {
+    align-items: center;
+    display: inline-flex;
+    column-gap: 6px;
+    text-rendering: optimizelegibility;
+    font-size: 13px;
+
+
+    input {
+        background-color: #fafafa;
+        border: 1px solid #a9a9a9;
+        height: 16px;
+        justify-content: center;
+        overflow: hidden;
+        width: 16px;
+        appearance: none;
+        position: relative;
+    }
+    input:checked::before {
+        content: "";
+        display: block;
+        position: absolute;
+        text-align: center;
+        height: 15px;
+        width: 15px;
+        background-color: #050505;
+        font-family: "Montserrat";
+        border: 1px solid rgb(150 150 150 / 30%);
+      }
+      
+      input:checked::after {
+        content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
+        display: block;
+        position: absolute;
+      }
+    label {
+        cursor: pointer;
+    }
+
+}
+
+
+.btnSubmit {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+#submitBtn {
+    @include submitFormstyles;
+}
+.error{
+    color: red;
+    font-size: 14px;
+}
