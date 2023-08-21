@@ -9,7 +9,7 @@ const OurOffice = () => {
             <div className={styles.title}>
                 <h2>Contacts</h2>
             </div>
-            <div>
+            <div className={styles.map_and_leftContent_wrapper}>
                 <LeftContent />
                 <OurOfficeMap />
             </div>

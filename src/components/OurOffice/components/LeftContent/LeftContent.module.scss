@@ -21,6 +21,10 @@
     span {
       color: #4a4a4a;
       margin-bottom: 7px;
+
+      @media (max-width: 920px) {
+        line-height: 1.5;
+      }
     }
   }
 }
