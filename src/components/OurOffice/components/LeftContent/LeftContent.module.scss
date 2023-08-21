@@ -3,7 +3,11 @@
   flex-direction: column;
   gap: 30px;
 
-  p {
+  @media (max-width: 650px) {
+    flex-direction: row;
+  }
+
+  div {
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -11,11 +15,23 @@
     color: #4a4a4a;
     margin: 0;
 
+    p {
+      margin: 0;
+
+      @media (max-width: 650px) {
+        font-size: 15px;
+      }
+    }
+
     strong {
       color: #4a4a4a;
       font-size: 18px;
       letter-spacing: 0px;
       line-height: 1.6em;
+
+      @media (max-width: 650px) {
+        font-size: 17px;
+      }
     }
 
     span {
@@ -23,7 +39,12 @@
       margin-bottom: 7px;
 
       @media (max-width: 920px) {
-        line-height: 1.5;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 650px) {
+        font-size: 15px;
+        line-height: 1;
       }
     }
   }
