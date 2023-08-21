@@ -1,8 +1,15 @@
-import React from 'react';
-import './App.css';
+import { OurOffice } from './components/OurOffice';
 
-function App() {
-  return <div className="App"></div>;
-}
+import styles from './App.module.scss';
+
+const App = () => {
+  return (
+    <div>
+      <div className={styles.container}>
+        <OurOffice />
+      </div>
+    </div>
+  );
+};
 
 export default App;

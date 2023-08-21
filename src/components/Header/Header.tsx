@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import { NavLink as Link } from 'react-router-dom';
 import { Logo } from '../Logo';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [isBurgerActive, setBurgerActive] = useState(false);
