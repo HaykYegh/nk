@@ -29,9 +29,11 @@ form {
 .fieldsBlock {
     display: flex;
     gap: 10px;
+
     @media (max-width: 450px) {
-       flex-direction: column;
+        flex-direction: column;
     }
+
     input {
         @include stylesInput;
     }
@@ -40,22 +42,9 @@ form {
         font-size: 12px;
     }
 
-    .firstNameBlcok,
-    .lastNameBlcok {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 18px;
-        width: 50%;
-        .activeError{
-            background-color: #ffeae8;
-            border: 1px solid #ce2c30;
-        }
-        @media (max-width: 450px) {
-            width: 100%;
-         }
 
-    }
-    
+
+
 }
 
 .cusstomFieldBlock {
@@ -67,7 +56,8 @@ form {
     input {
         @include stylesInput;
     }
-    .activeError{
+
+    .activeError {
         background-color: #ffeae8;
         border: 1px solid #ce2c30;
     }
@@ -110,6 +100,7 @@ form {
         appearance: none;
         position: relative;
     }
+
     input:checked::before {
         content: "";
         display: block;
@@ -120,13 +111,14 @@ form {
         background-color: #050505;
         font-family: "Montserrat";
         border: 1px solid rgb(150 150 150 / 30%);
-      }
-      
-      input:checked::after {
+    }
+
+    input:checked::after {
         content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
         display: block;
         position: absolute;
-      }
+    }
+
     label {
         cursor: pointer;
     }
@@ -143,7 +135,8 @@ form {
 #submitBtn {
     @include submitFormstyles;
 }
-.error{
+
+.error {
     color: red;
     font-size: 14px;
 }

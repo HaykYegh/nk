@@ -20,35 +20,29 @@ const GetProjectForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.namesInfoBlock}>
-        <div className={styles.namesTitle}>
-          <span className={styles.namestext}>
-            Name <span className={styles.req}>*</span>
-          </span>
+        <div className={styles.cusstomFieldBlock}>
+          <label htmlFor="firstName">
+            First Name <span className={styles.req}>*</span>
+          </label>
+          <input
+            className={classNames({
+              [styles.activeError]: errors.firstName,
+            })}
+            type="text"
+            {...register('firstName')}
+          />
         </div>
-        <span className={styles.error}>
-          {errors.firstName?.message || errors.lastName?.message}
-        </span>
-        <div className={styles.fieldsBlock}>
-          <div className={styles.firstNameBlcok}>
-            <label htmlFor="firstName">First Name</label>
-            <input
-              className={classNames({
-                [styles.activeError]: errors.firstName,
-              })}
-              type="text"
-              {...register('firstName')}
-            />
-          </div>
-          <div className={styles.lastNameBlcok}>
-            <label htmlFor="lastName">Last Name</label>
-            <input
-              className={classNames({
-                [styles.activeError]: errors.lastName,
-              })}
-              type="text"
-              {...register('lastName')}
-            />
-          </div>
+        <div className={styles.cusstomFieldBlock}>
+          <label htmlFor="lastName">
+            Last Name<span className={styles.req}>*</span>
+          </label>
+          <input
+            className={classNames({
+              [styles.activeError]: errors.lastName,
+            })}
+            type="text"
+            {...register('lastName')}
+          />
         </div>
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="email">

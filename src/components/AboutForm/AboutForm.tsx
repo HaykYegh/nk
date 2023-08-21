@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState, FocusEvent } from 'react';
+import React, { useState } from 'react';
 import AboutFormModal from '../AboutFormModal/AboutFormModal';
 import RequestBtn from '../RequestBtn/RequestBtn';
 import styles from './useAboutForm.module.scss';
@@ -6,9 +6,7 @@ import { createPortal } from 'react-dom';
 
 const AboutForm = () => {
   const [showFormModal, setShowFormModal] = useState(false);
-  const setShowFormModalBlock = (
-    e: MouseEvent<HTMLElement> | FocusEvent<HTMLElement>,
-  ) => {
+  const setShowFormModalBlock = () => {
     setShowFormModal(!showFormModal);
   };
 

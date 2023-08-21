@@ -1,19 +1,13 @@
 import { FC } from 'react';
 import { IAboutFormModalProps } from './AboutFormModalTypes';
-import classNames from 'classnames';
-import styles from './AboutFormModal.module.scss';
 import GetProjectForm from '../GetProjectForm/GetProjectForm';
-
+import styles from './AboutFormModal.module.scss';
 const AboutFormModal: FC<IAboutFormModalProps> = ({
   showFormModal,
   setShowFormModalBlock,
 }) => {
-  return (
-    <div
-      className={classNames(styles.lightbox_inner, {
-        [styles.lightbox_inner_none]: !showFormModal,
-      })}
-    >
+  return showFormModal ? (
+    <div className={styles.lightbox_inner}>
       <div className={styles.lightbox_content}>
         <div className={styles.block_form}>
           <div className={styles.titleBlock}>
@@ -29,7 +23,7 @@ const AboutFormModal: FC<IAboutFormModalProps> = ({
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default AboutFormModal;
