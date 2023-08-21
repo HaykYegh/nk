@@ -2,25 +2,23 @@
 
 .HeaderImg {
   width: 100%;
+  height: 500px;
   overflow: hidden;
-  position: relative;
   max-height: 500px;
-
-  img {
-    width: 100%;
-  }
+  background-image: url('https://images.pexels.com/photos/245032/pexels-photo-245032.jpeg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .textOnImg {
-    width: 800px;
     max-width: 100%;
     padding: 50px;
     text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 
     h1 {
