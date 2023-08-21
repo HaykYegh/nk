@@ -1,4 +1,8 @@
 .Layout {
   width: 100vw;
   min-height: 100vh;
+
+  .mainLayout{
+    z-index: 2;
+  }
 }

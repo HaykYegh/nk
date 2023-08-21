@@ -1,0 +1,58 @@
+@import '../../colorsVariables.scss';
+
+.HeaderImg {
+  width: 100%;
+    overflow: hidden;
+  position: relative;
+  max-height: 500px;
+
+  img {
+    width: 100%;
+  }
+
+  .textOnImg {
+    // width: 800px;
+    padding: 50px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      color: $white-color;
+      font-size: 40px;
+
+      @media (max-width: 750px) {
+        font-size: 20px;
+      }
+    }
+
+    .contactUsBtn {
+      background: $secondary2-color;
+      border: none;
+      padding: 20px;
+      color: $white-color;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+
+      @media (max-width: 750px) {
+        font-size: 14px;
+        padding: 15px;
+      }
+
+      @media (max-width: 612px) {
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+
+    .contactUsBtn:hover{
+        opacity: .8;
+    }
+  }
+}

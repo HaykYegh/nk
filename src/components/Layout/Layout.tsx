@@ -1,8 +1,9 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode } from 'react';
 
-import styles from "./Layout.module.scss";
-import { Container } from "../Container";
-import { Header } from "../Header";
+import styles from './Layout.module.scss';
+import { Container } from '../Container';
+import { Header } from '../Header';
+import { HeaderImg } from '../HeaderImg';
 
 interface IProps {
   children: ReactNode;
@@ -18,9 +19,11 @@ const Layout: FC<IProps> = ({ children }) => {
         container {children} container 
         
         //footer */}
-      <Header />
-
-      <Container>{children}</Container>
+      <div className={styles.mainLayout}>
+        <Header />
+        <HeaderImg />
+        <Container>{children}</Container>
+      </div>
     </div>
   );
 };
