@@ -11,7 +11,9 @@ const Header = () => {
     <div className={styles.Header}>
       <Logo />
       <nav>
-        <div className={styles.section}>WHY NK?</div>
+        <div className={styles.section}>
+          <Link to="/">WHY NK?</Link>
+        </div>
         <div className={styles.section}>
           <Link to="/">SERVICES</Link>
           <div className={styles.hoverPopup}>
@@ -20,7 +22,9 @@ const Header = () => {
             <Link to="/">DESKTOP APPLICATIONS</Link>
           </div>
         </div>
-        <div className={styles.section}>CONTACT US</div>
+        <div className={styles.section}>
+          <Link to="/">CONTACT US</Link>
+        </div>
       </nav>
       <button onClick={burgerHandler} className={styles.burgerMenu}>
         <div
