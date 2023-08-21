@@ -24,6 +24,7 @@
     display: none;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     @media (max-width: 900px) {
       display: flex;
@@ -136,7 +137,7 @@
           transition: opacity 0.14s 0.14s ease-in-out;
         }
         a:hover {
-          transform: translateY(-1px);
+          color: rgb(211, 211, 211);
         }
       }
     }
