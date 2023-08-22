@@ -21,13 +21,6 @@ const Layout: FC<IProps> = ({ children }) => {
   const closeSidebar = () => setSidebarActive(false);
   return (
     <div className={styles.Layout}>
-      {/* //header
-       //image
-        //right menue 
-        
-        container {children} container 
-        
-        //footer */}
       <div
         onClick={closeSidebar}
         className={`${styles.mainLayout} ${isSidebarActive && styles.moveLeft}`}

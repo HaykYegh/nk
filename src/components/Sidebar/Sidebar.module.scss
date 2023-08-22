@@ -46,7 +46,7 @@
       }
 
       .servicesSubMenu {
-        padding: 10px;
+        padding: 10px 10px 10px 32px;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -57,6 +57,7 @@
           color: $white-color;
           letter-spacing: 2px;
           font-size: 16px;
+          line-height: 20px;
         }
 
         a:hover {
