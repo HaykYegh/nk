@@ -1,0 +1,31 @@
+@import '../../colorsVariables.scss';
+
+.Footer {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: $primary-color;
+
+  .socialMedia {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .mediaIcon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $white-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 16px;
+      margin: 0 10px;
+    }
+  }
+}

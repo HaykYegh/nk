@@ -7,6 +7,7 @@
   .mainLayout {
     width: 100%;
     z-index: 2;
+    min-height: 100vh;
     background: $white-color;
     transition: all 0.2s ease-in-out;
     display: flex;
