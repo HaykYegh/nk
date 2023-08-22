@@ -1,0 +1,82 @@
+
+@mixin stylesInput{
+    background-color: #fafafa;
+    border: 1px solid #a9a9a9;
+    color: #000;
+    height: 46px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    &:focus{
+        outline-offset: 0;
+    }
+}
+
+@mixin textAreaStyles{
+    background-color: #fafafa;
+    border: 1px solid #a9a9a9;
+    color: #000;
+    height: 46px;
+    padding: 10px;
+    width: 100%;
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+    min-height: 120px;
+}
+@mixin submitFormstyles{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 1em 2.5em;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    color: #fff;
+    background-color: #6184db;
+    border-color: #6184db;
+    border-radius: 300px;
+    transition: .1s opacity linear;
+    &:hover{
+        opacity: .8;
+    }
+}
+@mixin checkBoxStyles{
+    input{
+        background-color: #fafafa;
+        border: 1px solid #a9a9a9;
+        height: 16px;
+        justify-content: center;
+        overflow: hidden;
+        width: 16px;
+        appearance: none;
+        position: relative;
+        &:checked::before{
+            content: "";
+            display: block;
+            position: absolute;
+            text-align: center;
+            height: 15px;
+            width: 15px;
+            background-color: #050505;
+            font-family: "Montserrat";
+            border: 1px solid rgb(150 150 150 / 30%);
+        }
+        &:checked::after{
+            content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
+            display: block;
+            position: absolute;
+        }
+    }
+   
+    
+}
+
+
+@mixin errorStyles{
+    color: red;
+    font-size: 14px;
+}
