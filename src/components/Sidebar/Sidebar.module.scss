@@ -1,0 +1,76 @@
+@import '../../colorsVariables.scss';
+
+.Sidebar {
+  width: 260px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  line-height: 1em;
+  text-align: left;
+  overflow: auto;
+  background: $primary-color;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.2s ease-in-out;
+  display: none;
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+
+  .sideMenuWrapper {
+    width: 100%;
+    .sideNav {
+      padding: 24px 36px 72px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      .section {
+        color: $white-color;
+        letter-spacing: 2px;
+        font-size: 16px;
+        padding: 15px;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: $white-color;
+        }
+      }
+
+      .section:hover {
+        opacity: 0.8;
+      }
+
+      .servicesSubMenu {
+        padding: 10px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        a {
+          padding: 10px 0;
+          text-decoration: none;
+          color: $white-color;
+          letter-spacing: 2px;
+          font-size: 16px;
+        }
+
+        a:hover {
+          opacity: 0.8;
+        }
+      }
+      .contactUsBtn {
+        border: 2px solid $white-color;
+        border-radius: 25px;
+      }
+    }
+  }
+}
+
+.sideActive {
+  z-index: 0;
+}
