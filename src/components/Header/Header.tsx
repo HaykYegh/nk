@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import styles from './Header.module.scss';
 import { NavLink as Link } from 'react-router-dom';
 import { Logo } from '../Logo';
+import classNames from 'classnames';
 
 interface IProps {
   isSidebarActive: boolean;
@@ -30,11 +31,13 @@ const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
       </nav>
       <button onClick={handleSidebar} className={styles.burgerMenu}>
         <div
-          className={`${styles.burger} ${
-            isSidebarActive && styles.burgerActive
-          }`}
+          className={classNames(styles.burger, {
+            [styles.burgerActive]: isSidebarActive,
+          })}
         >
-          <span className={`${isSidebarActive && styles.activeSpan}`}></span>
+          <span
+            className={classNames({ [styles.activeSpan]: isSidebarActive })}
+          ></span>
         </div>
       </button>
     </div>

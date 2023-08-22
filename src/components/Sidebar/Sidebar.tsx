@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import styles from './Sidebar.module.scss';
+import classNames from 'classnames';
 
 interface IProps {
   isSidebarActive: boolean;
@@ -24,11 +25,11 @@ const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
             <Link to="/">WHY NK?</Link>
           </div>
           <div onClick={showServicesHandler} className={styles.section}>
-            {isServicesActive ? (
-              <i className="fa-solid fa-caret-right fa-rotate-90"></i>
-            ) : (
-              <i className="fa-solid fa-caret-right"></i>
-            )}{' '}
+            <i
+              className={classNames('fa-solid', 'fa-caret-right', {
+                'fa-rotate-90': isServicesActive,
+              })}
+            ></i>{' '}
             SERVICES
           </div>
           {isServicesActive && (
@@ -39,7 +40,7 @@ const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
             </div>
           )}
 
-          <div className={`${styles.section} ${styles.contactUsBtn}`}>
+          <div className={styles.section}>
             <Link to="/">CONTACT US</Link>
           </div>
         </div>
