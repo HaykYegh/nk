@@ -8,8 +8,8 @@ import {
 } from '../constants/validationErorrs';
 
 export const scemaGetProjectForm = yup.object().shape({
-  lastName: yup.string().required(required),
-  firstName: yup.string().required(required),
+  lastName: yup.string().required(`last${required}`),
+  firstName: yup.string().required(`First${required}`),
   email: yup.string().required(requiredEmail).email(invalidEmail),
   projectBrief: yup.string().required(projectBriefError),
   support: yup.boolean(),
