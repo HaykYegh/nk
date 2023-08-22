@@ -39,7 +39,7 @@ const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
             </div>
           )}
 
-          <div className={`${styles.section} ${styles.contactUsBtn}`}>
+          <div className={styles.section}>
             <Link to="/">CONTACT US</Link>
           </div>
         </div>
