@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+@import '../../colorsVariables.scss';
 .btnRequest{
     display: inline-block;
     width: auto;
@@ -16,7 +17,7 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #fff;
-    background-color: #6184db;
+    background-color: $secondary2-color;
     border-color: #6184db;
     transition: .1s opacity linear;
     user-select: none;

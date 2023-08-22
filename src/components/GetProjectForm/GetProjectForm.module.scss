@@ -109,3 +109,32 @@ form {
 .error {
    @include errorStyles;
 }
+.alertBlock {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb; 
+    color: #721c24; 
+    padding: 10px 5px; 
+    margin: 20px 0;
+    border-radius: 8px;
+    font-size: clamp(10px, 2.5vw, 14px); 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+  
+    .iconFont {
+      color: #ce2c30;
+      font-size: 20px;
+    }
+  
+    p {
+      margin: 0;
+      color: #ce2c30;
+      font-weight: bold;
+    }
+  }
+  
+  
+  

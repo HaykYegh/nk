@@ -1,9 +1,11 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { scemaGetProjectForm } from '../../schemas/getProjectScema';
-import styles from './GetProjectForm.module.scss';
 import { IGetProjectData } from './GetProjectFormTypes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
+import styles from './GetProjectForm.module.scss';
 
 const GetProjectForm = () => {
   const {
@@ -20,6 +22,21 @@ const GetProjectForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.namesInfoBlock}>
+        {!!Object.keys(errors).length && (
+          <div className={styles.alertBlock}>
+            <FontAwesomeIcon
+              icon={faCircleExclamation}
+              className={styles.iconFont}
+            />
+            <p>
+              {errors.firstName && `${errors.firstName.message}, `}
+              {errors.lastName && `${errors.lastName.message}, `}
+              {errors.email && `${errors.email.message}, `}
+              {errors.projectBrief && `${errors.projectBrief.message}`}
+            </p>
+          </div>
+        )}
+
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="firstName">
             First Name<span className={styles.req}>*</span>
@@ -64,7 +81,6 @@ const GetProjectForm = () => {
           <label htmlFor="phone">Phone</label>
           <input type="text" {...register('phone')} />
         </div>
-
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="projectBrief">
             Project Brief<span className={styles.req}>*</span>
@@ -101,7 +117,7 @@ const GetProjectForm = () => {
             </div>
             <div className={styles.checks}>
               <input id="other" type="checkbox" {...register('other')} />
-              <label htmlFor="other">other</label>
+              <label htmlFor="other">Other</label>
             </div>
           </div>
         </div>
