@@ -19,20 +19,11 @@
     }
 
     &::-webkit-scrollbar {
-        width: 10px;
-        background-color: #333;
+        width: 1px;
+        background: none;
     }
 
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-        border-radius: 20px;
-    }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: rgba(133, 131, 130, .4);
-        border-radius: 20px;
-
-    }
 }
 
 .lightbox_content {
@@ -49,27 +40,10 @@
         margin: 0;
         overflow-x: hidden;
         height: 100%;
-
-        ::-webkit-scrollbar {
-            width: 10px;
+        &::-webkit-scrollbar {
+            width: 1px;
+            background: none;
         }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 8px;
-        }
-
-
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 8px;
-        }
-
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-
     }
 }
 
