@@ -29,10 +29,11 @@ const GetProjectForm = () => {
               className={styles.iconFont}
             />
             <p>
-              {errors.firstName && `${errors.firstName.message}, `}
-              {errors.lastName && `${errors.lastName.message}, `}
-              {errors.email && `${errors.email.message}, `}
-              {errors.projectBrief && `${errors.projectBrief.message}`}
+              Form submission failed. Review the following information:
+              {errors.firstName && `firstName, `}
+              {errors.lastName && `LastName, `}
+              {errors.email && `Email, `}
+              {errors.projectBrief && `Project Brief`}
             </p>
           </div>
         )}
