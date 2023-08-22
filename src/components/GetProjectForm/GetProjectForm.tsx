@@ -22,7 +22,7 @@ const GetProjectForm = () => {
       <div className={styles.namesInfoBlock}>
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="firstName">
-            First Name <span className={styles.req}>*</span>
+            First Name<span className={styles.req}>*</span>
           </label>
           <input
             className={classNames({
@@ -31,6 +31,7 @@ const GetProjectForm = () => {
             type="text"
             {...register('firstName')}
           />
+          <span className={styles.error}>{errors.firstName?.message}</span>
         </div>
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="lastName">
@@ -43,12 +44,13 @@ const GetProjectForm = () => {
             type="text"
             {...register('lastName')}
           />
+          <span className={styles.error}>{errors.lastName?.message}</span>
         </div>
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="email">
-            Email <span className={styles.req}>*</span>
+            Email<span className={styles.req}>*</span>
           </label>
-          <span className={styles.error}>{errors.email?.message}</span>
+
           <input
             className={classNames({
               [styles.activeError]: errors.email,
@@ -56,6 +58,7 @@ const GetProjectForm = () => {
             type="text"
             {...register('email')}
           />
+          <span className={styles.error}>{errors.email?.message}</span>
         </div>
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="phone">Phone</label>
@@ -64,15 +67,16 @@ const GetProjectForm = () => {
 
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="projectBrief">
-            Project Brief <span className={styles.req}>*</span>
+            Project Brief<span className={styles.req}>*</span>
           </label>
-          <span className={styles.error}>{errors.projectBrief?.message}</span>
+
           <textarea
             className={classNames({
               [styles.activeError]: errors.projectBrief,
             })}
             {...register('projectBrief')}
           ></textarea>
+          <span className={styles.error}>{errors.projectBrief?.message}</span>
         </div>
         <div className={styles.cusstomFieldBlock}>
           <label htmlFor="projectBudget">Project Budget</label>

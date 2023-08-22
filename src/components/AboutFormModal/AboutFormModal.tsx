@@ -1,7 +1,10 @@
 import { FC } from 'react';
 import { IAboutFormModalProps } from './AboutFormModalTypes';
 import GetProjectForm from '../GetProjectForm/GetProjectForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 import styles from './AboutFormModal.module.scss';
+
 const AboutFormModal: FC<IAboutFormModalProps> = ({
   showFormModal,
   setShowFormModalBlock,
@@ -16,7 +19,7 @@ const AboutFormModal: FC<IAboutFormModalProps> = ({
               onClick={setShowFormModalBlock}
               className={styles.closeBlock}
             >
-              X
+              <FontAwesomeIcon icon={faX} />
             </button>
           </div>
           <GetProjectForm />

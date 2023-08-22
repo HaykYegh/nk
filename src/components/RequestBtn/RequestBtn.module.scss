@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
 .btnRequest{
     display: inline-block;
     width: auto;
@@ -9,7 +10,7 @@
     outline: none;
     -webkit-appearance: none;
     appearance: none;
-    font-family: proxima-nova;
+    font-family: 'Proxima Nova Condensed';
     font-weight: 300;
     font-style: normal;
     text-transform: uppercase;
@@ -19,6 +20,11 @@
     border-color: #6184db;
     transition: .1s opacity linear;
     user-select: none;
+    @media (max-width: 450px) {
+        width: 150px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
     &:hover{
         opacity: 0.8;
     }

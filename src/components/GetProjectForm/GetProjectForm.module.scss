@@ -39,7 +39,7 @@ form {
     }
 
     label {
-        font-size: 12px;
+        font-size: $label-fontSize;
     }
 
 
@@ -48,10 +48,11 @@ form {
 }
 
 .cusstomFieldBlock {
-    font-size: 18px;
+    font-size: $cusstomField-fs;
     margin-bottom: 18px;
     display: flex;
     flex-direction: column;
+    gap: 3px;
 
     input {
         @include stylesInput;
@@ -68,7 +69,7 @@ form {
 }
 
 .checkBoxs_title {
-    font-size: 18px;
+    font-size: $checkBoxs_title-fs;
     margin-bottom: 18px;
 }
 
@@ -88,41 +89,10 @@ form {
     column-gap: 6px;
     text-rendering: optimizelegibility;
     font-size: 13px;
-
-
-    input {
-        background-color: #fafafa;
-        border: 1px solid #a9a9a9;
-        height: 16px;
-        justify-content: center;
-        overflow: hidden;
-        width: 16px;
-        appearance: none;
-        position: relative;
-    }
-
-    input:checked::before {
-        content: "";
-        display: block;
-        position: absolute;
-        text-align: center;
-        height: 15px;
-        width: 15px;
-        background-color: #050505;
-        font-family: "Montserrat";
-        border: 1px solid rgb(150 150 150 / 30%);
-    }
-
-    input:checked::after {
-        content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
-        display: block;
-        position: absolute;
-    }
-
+    @include checkBoxStyles;
     label {
         cursor: pointer;
     }
-
 }
 
 
@@ -137,6 +107,5 @@ form {
 }
 
 .error {
-    color: red;
-    font-size: 14px;
+   @include errorStyles;
 }
