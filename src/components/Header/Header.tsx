@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { FC } from 'react';
 import styles from './Header.module.scss';
 import { NavLink as Link } from 'react-router-dom';
 import { Logo } from '../Logo';
+import classNames from 'classnames';
 
-const Header = () => {
-  const [isBurgerActive, setBurgerActive] = useState(false);
+interface IProps {
+  isSidebarActive: boolean;
+  handleSidebar: (e: React.MouseEvent<HTMLButtonElement>) => void;
+}
 
-  const burgerHandler = () => setBurgerActive((prev) => !prev);
+const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
   return (
     <div className={styles.Header}>
       <Logo />
@@ -26,13 +29,15 @@ const Header = () => {
           <Link to="/">CONTACT US</Link>
         </div>
       </nav>
-      <button onClick={burgerHandler} className={styles.burgerMenu}>
+      <button onClick={handleSidebar} className={styles.burgerMenu}>
         <div
-          className={`${styles.burger} ${
-            isBurgerActive && styles.burgerActive
-          }`}
+          className={classNames(styles.burger, {
+            [styles.burgerActive]: isSidebarActive,
+          })}
         >
-          <span className={`${isBurgerActive && styles.activeSpan}`}></span>
+          <span
+            className={classNames({ [styles.activeSpan]: isSidebarActive })}
+          ></span>
         </div>
       </button>
     </div>

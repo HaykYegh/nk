@@ -1,8 +1,23 @@
+@import '../../colorsVariables.scss';
+
 .Layout {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 
-  .mainLayout{
-    z-index: 2;
+  .mainLayout {
+    width: 100%;
+    z-index: 1;
+    min-height: 100vh;
+    background: $white-color;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .moveLeft {
+    transform: translateX(-260px) translatez(0);
   }
 }
