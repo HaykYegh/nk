@@ -11,7 +11,11 @@ function App() {
       <Router>
         <Layout>
           NK
-          <AboutForm />
+          <AboutForm
+            formTitle="asdasd"
+            checkBoxShow={false}
+            btnTitle="request aquote"
+          />
         </Layout>
       </Router>
     </div>
