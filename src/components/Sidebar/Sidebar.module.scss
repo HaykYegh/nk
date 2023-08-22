@@ -23,7 +23,7 @@
   .sideMenuWrapper {
     width: 100%;
     .sideNav {
-      padding: 24px 36px 72px;
+      padding: 24px 18px 72px;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
@@ -46,17 +46,17 @@
       }
 
       .servicesSubMenu {
-        padding: 10px 10px 10px 32px;
+        padding: 0 10px 0 32px;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
 
         a {
-          padding: 10px 0;
+          padding: 5px 0;
           text-decoration: none;
           color: $white-color;
           letter-spacing: 2px;
-          font-size: 16px;
+          font-size: 14px;
           line-height: 20px;
         }
 
