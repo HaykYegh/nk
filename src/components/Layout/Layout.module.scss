@@ -19,5 +19,7 @@
 
   .moveLeft {
     transform: translateX(-260px) translatez(0);
+    position: fixed;
+    top: 0;
   }
 }
