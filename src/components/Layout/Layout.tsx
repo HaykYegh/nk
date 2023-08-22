@@ -5,6 +5,7 @@ import { Container } from '../Container';
 import { Header } from '../Header';
 import { HeaderImg } from '../HeaderImg';
 import { Sidebar } from 'components/Sidebar';
+import { Footer } from 'components/Footer';
 
 interface IProps {
   children: ReactNode;
@@ -31,6 +32,7 @@ const Layout: FC<IProps> = ({ children }) => {
         />
         <HeaderImg />
         <Container>{children}</Container>
+        <Footer />
       </div>
       <Sidebar isSidebarActive={isSidebarActive} />
     </div>
