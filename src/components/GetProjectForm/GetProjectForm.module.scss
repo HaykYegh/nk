@@ -3,15 +3,14 @@
 
 
 form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     .req {
         color: red;
     }
 }
-.namesInfoBlock{
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
+
 
 .namesTitle {
     display: flex;
@@ -44,10 +43,6 @@ form {
     label {
         font-size: $label-fontSize;
     }
-
-
-
-
 }
 
 .cusstomFieldBlock {
