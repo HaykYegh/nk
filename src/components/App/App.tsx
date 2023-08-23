@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import styles from './App.module.scss';
 import { Layout } from '../Layout';
 import AboutForm from 'components/AboutForm/AboutForm';
+import GetProjectForm from 'components/GetProjectForm/GetProjectForm';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Layout>
           NK
           <AboutForm />
+          <GetProjectForm contactPage={true} />
         </Layout>
       </Router>
     </div>

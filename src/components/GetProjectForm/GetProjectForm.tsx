@@ -1,13 +1,14 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { scemaGetProjectForm } from '../../schemas/getProjectScema';
-import { IGetProjectData } from './GetProjectFormTypes';
+import { IGetProjectData, IGetProjectDataProps } from './GetProjectFormTypes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
 import styles from './GetProjectForm.module.scss';
+import { FC } from 'react';
 
-const GetProjectForm = () => {
+const GetProjectForm: FC<IGetProjectDataProps> = ({ contactPage }) => {
   const {
     register,
     handleSubmit,
@@ -77,13 +78,16 @@ const GetProjectForm = () => {
         />
         <span className={styles.error}>{errors.email?.message}</span>
       </div>
+
       <div className={styles.cusstomFieldBlock}>
         <label htmlFor="phone">Phone</label>
         <input type="text" {...register('phone')} />
       </div>
+
       <div className={styles.cusstomFieldBlock}>
         <label htmlFor="projectBrief">
-          Project Brief<span className={styles.req}>*</span>
+          {!contactPage ? 'Project Brief' : 'message'}
+          <span className={styles.req}>*</span>
         </label>
 
         <textarea
@@ -94,10 +98,12 @@ const GetProjectForm = () => {
         ></textarea>
         <span className={styles.error}>{errors.projectBrief?.message}</span>
       </div>
-      <div className={styles.cusstomFieldBlock}>
-        <label htmlFor="projectBudget">Project Budget</label>
-        <input type="text" {...register('projectBudget')} />
-      </div>
+      {!contactPage && (
+        <div className={styles.cusstomFieldBlock}>
+          <label htmlFor="projectBudget">Project Budget</label>
+          <input type="text" {...register('projectBudget')} />
+        </div>
+      )}
       <div className={styles.checkbox_section}>
         <div className={styles.checkBoxs_title}>
           <span>I Need</span>
@@ -121,9 +127,18 @@ const GetProjectForm = () => {
           </div>
         </div>
       </div>
-      <div className={styles.btnSubmit}>
-        <button id={styles.submitBtn} type="submit">
-          SUBMIT
+      <div
+        className={classNames(styles.btnSubmit, {
+          [styles.btnContact]: contactPage,
+        })}
+      >
+        <button
+          className={classNames(styles.submitBtn, {
+            [styles.btnSub]: contactPage,
+          })}
+          type="submit"
+        >
+          {contactPage ? 'TALK TO US' : 'SUBMIT'}
         </button>
       </div>
     </form>

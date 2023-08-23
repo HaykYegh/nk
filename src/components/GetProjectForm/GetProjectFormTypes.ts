@@ -8,3 +8,7 @@ export interface IGetProjectData {
   support: boolean | undefined;
   web_application: boolean | undefined;
 }
+
+export interface IGetProjectDataProps {
+  contactPage?: boolean;
+}
