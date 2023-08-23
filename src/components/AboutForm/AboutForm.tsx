@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import AboutFormModal from '../AboutFormModal/AboutFormModal';
 import RequestBtn from '../RequestBtn/RequestBtn';
-import styles from './useAboutForm.module.scss';
 import { createPortal } from 'react-dom';
-
+import styles from './useAboutForm.module.scss';
 const AboutForm = () => {
   const [showFormModal, setShowFormModal] = useState(false);
   const setShowFormModalBlock = () => {
