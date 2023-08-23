@@ -3,12 +3,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import styles from './App.module.scss';
 import { Layout } from '../Layout';
+import { Approach } from 'pages/Approach';
 
 function App() {
   return (
     <div className={styles.App}>
       <Router>
-        <Layout>NK</Layout>
+        <Layout>
+          <Approach />
+        </Layout>
       </Router>
     </div>
   );
