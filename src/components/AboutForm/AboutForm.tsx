@@ -9,6 +9,7 @@ const AboutForm = () => {
   const setShowFormModalBlock = () => {
     setShowFormModal(!showFormModal);
   };
+  const portalDiv = document.getElementById('root') as HTMLElement;
 
   return (
     <div className={styles.aboutForm}>
@@ -18,7 +19,7 @@ const AboutForm = () => {
           setShowFormModalBlock={setShowFormModalBlock}
           showFormModal={showFormModal}
         />,
-        document.body,
+        portalDiv,
       )}
     </div>
   );
