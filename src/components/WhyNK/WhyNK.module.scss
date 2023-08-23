@@ -1,11 +1,7 @@
 .whyNK {
-    font-family: sofia-pro;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    letter-spacing: 0px;
-    line-height: 1.6em;
-    color: rgba(26,26,26,.7);
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
     h1 {
         font-weight: 400;
         font-style: normal;
@@ -19,7 +15,7 @@
     h2 {
         font-weight: 400;
         font-style: normal;
-        font-size: 25px;
+        font-size: 22px;
         letter-spacing: 2px;
         text-transform: uppercase;
         line-height: 1.2em;
@@ -32,27 +28,31 @@
         font-weight: 400;
         font-style: normal;
         letter-spacing: 0px;
-        line-height: 1.6em;
+        line-height: 24px;
         color: rgba(26, 26, 26, .7);
     }
-    .twoP{
-        margin-bottom: 0;
-    }
+
 }
 
-.succsess {
+.becauseBlocks{
     display: flex;
-
-    .imgBlock,
     .succsess_textBlock {
         padding: 17px;
+        flex: 1;
+    }
+    .imgBlock {
         width: 50%;
-    }
-}
-.imgBlock{
-    img{
-        width: 100%;
+        padding: 17px;
         
+        img{
+            width: 100%;
+        }
     }
+    @media (max-width: 580px) {
+        flex-direction: column;
+        .imgBlock{
+            width: 100%;
+        }
+      }
 }
 
