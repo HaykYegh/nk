@@ -242,25 +242,30 @@ export const SliderData = [
   {
     imgUrl: recomazingImage,
     id: 1,
+    activeImage: true,
   },
 
   {
     imgUrl: digiconnectImage,
     id: 2,
+    activeImage: false,
   },
 
   {
     imgUrl: justhiveImage,
     id: 3,
+    activeImage: false,
   },
 
   {
     imgUrl: lpmaImage,
     id: 4,
+    activeImage: false,
   },
 
   {
     imgUrl: tuningImage,
     id: 5,
+    activeImage: false,
   },
 ];
