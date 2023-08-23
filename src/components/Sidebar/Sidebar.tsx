@@ -35,7 +35,7 @@ const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
           {isServicesActive && (
             <div className={styles.servicesSubMenu}>
               <Link to="/">WEB APPS</Link>
-              <Link to="/">CHROME EXTENTIONS</Link>
+              <Link to="/">CHROME EXTENSIONS</Link>
               <Link to="/">DESKTOP APPS</Link>
             </div>
           )}

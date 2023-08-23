@@ -7,9 +7,12 @@ const RoutesComponent = () => {
   return (
     <div className={styles.RoutesComponent}>
       <Routes>
-        <Route path='/' element={"main"} />
-        <Route path='/why-nk' />
-
+        <Route path="/" element={'main'} />
+        <Route path="/why-nk" />
+        <Route path="/web-applications" />
+        <Route path="/chrome-extensions" />
+        <Route path="/desktop-applications" />
+        <Route path="/approach" />
       </Routes>
     </div>
   );

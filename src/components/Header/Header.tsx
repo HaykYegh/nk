@@ -21,7 +21,7 @@ const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
           <Link to="/">SERVICES</Link>
           <div className={styles.hoverPopup}>
             <Link to="/">WEB APPLICATIONS</Link>
-            <Link to="/">CHROME EXTENTIONS</Link>
+            <Link to="/">CHROME EXTENSIONS</Link>
             <Link to="/">DESKTOP APPLICATIONS</Link>
           </div>
         </div>
