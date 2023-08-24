@@ -5,7 +5,7 @@
   height: 500px;
   overflow: hidden;
   max-height: 500px;
-  background-image: url('https://images.pexels.com/photos/245032/pexels-photo-245032.jpeg');
+
   background-position: center;
   background-size: cover;
   display: flex;
@@ -22,8 +22,8 @@
     flex-direction: column;
 
     h1 {
-      color: $secondary-color;
-      font-size: 3em;
+      color: $secondary2-color;
+      font-size: 2.5em;
       letter-spacing: 2px;
 
       @media (max-width: 750px) {

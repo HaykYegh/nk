@@ -39,7 +39,7 @@ const HeaderImg = () => {
         break;
       case '/chrome-extensions':
         setCurrentBg(
-          'https://i0.wp.com/res.cloudinary.com/practicaldev/image/fetch/s--jy_UG-FI--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/230og48eo411wc0gopd5.png?w=1230&ssl=1',
+          'https://www.codefuel.com/wp-content/uploads/2022/02/How-to-make-a-chrome-extention.jpg',
         );
         setTextOnImg('CHROME EXTENSIONS DEVELOPMENT');
         break;

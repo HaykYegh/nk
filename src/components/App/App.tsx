@@ -1,10 +1,7 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-
-import styles from './App.module.scss';
-import { Layout } from '../Layout';
-
 import { RoutesComponent } from 'components/RoutesComponent';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Layout } from '../Layout';
+import styles from './App.module.scss';
 
 function App() {
   return (
