@@ -112,6 +112,7 @@ const GetProjectForm: FC<IFormProps> = ({ checkBoxShow }) => {
             />
             <label htmlFor="web_application">Web Application</label>
           </div>
+          
 <<<<<<< HEAD
         )}
 
@@ -190,22 +191,6 @@ const GetProjectForm: FC<IFormProps> = ({ checkBoxShow }) => {
                 />
                 <label htmlFor="web_application">Web Application</label>
               </div>
-              <div className={styles.checks}>
-                <input id="support" type="checkbox" {...register('support')} />
-                <label htmlFor="support">Technical Support</label>
-              </div>
-              <div className={styles.checks}>
-                <input id="other" type="checkbox" {...register('other')} />
-                <label htmlFor="other">Other</label>
-              </div>
-            </div>
-          </div>
-        )}
-
-        <div className={styles.btnSubmit}>
-          <button id={styles.submitBtn} type="submit">
-            SUBMIT
-          </button>
         </div>
 =======
           <div className={styles.checks}>
