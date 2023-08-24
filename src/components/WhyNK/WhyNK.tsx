@@ -1,3 +1,9 @@
+import {
+  manDeveloperImg,
+  matureImg,
+  oficeImg,
+  superPowerImg,
+} from '../../constants';
 import styles from './WhyNK.module.scss';
 
 const WhyNK = () => {
@@ -6,10 +12,7 @@ const WhyNK = () => {
       <h1>Because...</h1>
       <div className={styles.becauseBlocks}>
         <div className={styles.imgBlock}>
-          <img
-            src="https://www.outbrain.com/case-studies/wp-content/uploads/2022/01/GettyImages-516895432-Smiling-Businessman-on-Tablet-min.jpg"
-            alt=""
-          />
+          <img src={manDeveloperImg} />
         </div>
         <div className={styles.succsess_textBlock}>
           <h2>YOUR SUCCESS IS OUR VICTORY</h2>
@@ -39,18 +42,12 @@ const WhyNK = () => {
           </p>
         </div>
         <div className={styles.imgBlock}>
-          <img
-            src="https://www.realmenrealstyle.com/wp-content/uploads/2023/06/Women-Like-A-Man-To-Show-Vulnerability.jpg"
-            alt=""
-          />
+          <img src={superPowerImg} alt="" />
         </div>
       </div>
       <div className={styles.becauseBlocks}>
         <div className={styles.imgBlock}>
-          <img
-            src="https://pix4free.org/assets/library/2021-01-12/originals/office_meeting_men_women_laptop_table.jpg"
-            alt=""
-          />
+          <img src={oficeImg} alt="" />
         </div>
         <div className={styles.succsess_textBlock}>
           <h2>COMMUNICATION IS VITAL FOR USY</h2>
@@ -80,10 +77,7 @@ const WhyNK = () => {
           </p>
         </div>
         <div className={styles.imgBlock}>
-          <img
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwaW4lMjBvZmZpY2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
-            alt=""
-          />
+          <img src={matureImg} alt="" />
         </div>
       </div>
     </div>
