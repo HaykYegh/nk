@@ -1,0 +1,81 @@
+@import '../../colorsVariables.scss';
+
+.CareerDetails {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+  }
+
+  .titleDescription {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    h4 {
+      font-size: 25px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6em;
+      font-weight: 200;
+    }
+  }
+
+  h4 {
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.2em;
+    margin: 10px 0;
+  }
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    li {
+      font-size: 18px;
+      line-height: 1.6em;
+      font-weight: 200;
+    }
+  }
+
+  .applyBtn {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      padding: 21px 34px;
+      font-size: 15px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 1px;
+      color: white;
+      background-color: $secondary2-color;
+      border: none;
+      outline: none;
+      border-radius: 3px;
+      cursor: pointer;
+
+      @media (max-width: 322px) {
+        padding: 14px 20px;
+      }
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  }
+}
