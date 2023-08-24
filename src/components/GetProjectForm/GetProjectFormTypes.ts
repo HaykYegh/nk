@@ -8,6 +8,7 @@ export interface IGetProjectData {
   support: boolean | undefined;
   web_application: boolean | undefined;
 }
-export interface IFormProps {
-  checkBoxShow: boolean;
+
+export interface IGetProjectDataProps {
+  contactPage?: boolean;
 }
