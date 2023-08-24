@@ -1,17 +1,13 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import styles from './App.module.scss';
 import { Layout } from '../Layout';
-import About from 'components/About/About';
+import styles from './App.module.scss';
 
 function App() {
   return (
     <div className={styles.App}>
       <Router>
-        <Layout>
-          NK
-          <About />
-        </Layout>
+        <Layout>NK</Layout>
       </Router>
     </div>
   );
