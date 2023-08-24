@@ -22,7 +22,7 @@ const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
             <Link to="/">MAIN PAGE</Link>
           </div>
           <div className={styles.section}>
-            <Link to="/">WHY NK?</Link>
+            <Link to="/why-nk">WHY NK?</Link>
           </div>
           <div onClick={showServicesHandler} className={styles.section}>
             <i
@@ -34,14 +34,14 @@ const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
           </div>
           {isServicesActive && (
             <div className={styles.servicesSubMenu}>
-              <Link to="/">WEB APPS</Link>
-              <Link to="/">CHROME EXTENSIONS</Link>
-              <Link to="/">DESKTOP APPS</Link>
+              <Link to="/web-applications">WEB APPS</Link>
+              <Link to="/chrome-extensions">CHROME EXTENSIONS</Link>
+              <Link to="/desktop-applications">DESKTOP APPS</Link>
             </div>
           )}
 
           <div className={styles.section}>
-            <Link to="/">CONTACT US</Link>
+            <Link to="/contact-us">CONTACT US</Link>
           </div>
         </div>
       </div>
