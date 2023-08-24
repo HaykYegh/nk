@@ -5,6 +5,10 @@
   margin-top: 50px;
   margin-bottom: 50px;
 
+  @media (max-width: 785px) {
+    gap: 50px;
+  }
+
   .top_block_text_content {
     display: flex;
     flex-direction: column;
