@@ -14,7 +14,8 @@ const HeaderImg = () => {
       path === '/web-applications' ||
       path === '/chrome-extensions' ||
       path === '/desktop-applications' ||
-      path === '/approach'
+      path === '/approach' ||
+      path === '/about'
     ) {
       return true;
     } else {
@@ -53,6 +54,11 @@ const HeaderImg = () => {
           'https://www.accountability.org/static/dd2a3fb09c6d5a28be81ed7ae8cc03e9/89218/AccountAbility_Careers.webp',
         );
         setTextOnImg('STEPS TO YOUR PROJECT');
+        break;
+      case '/about':
+        setCurrentBg(
+          'https://d7fi61gsgzcz4.cloudfront.net/assets/page-hero-images/istock-493171547_2500.jpg/dynamic:1-aspect:2.5-fit:cover-strategy:entropy/istock-493171547_2500--1400.webp',
+        );
         break;
     }
   }, [location.pathname]);

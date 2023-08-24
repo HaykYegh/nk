@@ -22,8 +22,9 @@
     flex-direction: column;
 
     h1 {
-      color: $white-color;
-      font-size: 2em;
+      color: $secondary-color;
+      font-size: 3em;
+      letter-spacing: 2px;
 
       @media (max-width: 750px) {
         font-size: 20px;
