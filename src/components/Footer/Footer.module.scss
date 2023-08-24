@@ -1,0 +1,74 @@
+@import '../../colorsVariables.scss';
+
+.Footer {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: $primary-color;
+
+  .socialMedia {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    .mediaIcon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $white-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 16px;
+      margin: 5px;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+
+  .socialMedia:hover {
+    .mediaIcon {
+      opacity: 0.7;
+    }
+    .mediaIcon:hover {
+      opacity: 1;
+    }
+  }
+
+  .navigations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: $white-color;
+      font-size: 16px;
+      padding: 10px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .address {
+    color: $white-color;
+    font-size: 11px;
+    letter-spacing: 2px;
+    line-height: 15px;
+    text-align: center;
+  }
+}

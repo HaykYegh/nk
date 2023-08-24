@@ -1,0 +1,62 @@
+@import '../../colorsVariables.scss';
+
+.aboutPage {
+  font-family: sofia-pro;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 1.6em;
+  color: rgba(26, 26, 26, .7);
+  box-sizing: border-box;
+  width: auto;
+  max-width: 1020px;
+  padding: 94px 0px;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    margin: 1em 0 0.5em;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: $secondary2-color;
+  border-radius: 50%;
+  color: $white-color;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  align-self: center;
+  margin-bottom: 25px;
+
+  &:hover {
+    background-color: transparent;
+    color: $secondary2-color;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.ourValues {
+  padding: 15px 25px;
+}
