@@ -1,5 +1,5 @@
-import React, { FC, useState } from 'react';
-import { NavLink as Link } from 'react-router-dom';
+import React, { FC, useEffect, useState } from 'react';
+import { NavLink as Link, useLocation } from 'react-router-dom';
 import styles from './Sidebar.module.scss';
 import classNames from 'classnames';
 
@@ -9,9 +9,15 @@ interface IProps {
 
 const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
   const [isServicesActive, setServicesActive] = useState(false);
+  const location = useLocation();
   const showServicesHandler = () => {
     setServicesActive((prev) => !prev);
   };
+
+  useEffect(() => {
+    setServicesActive(false);
+  }, [location.pathname]);
+
   return (
     <div
       className={`${styles.Sidebar} ${isSidebarActive && styles.sideActive}`}
