@@ -6,6 +6,8 @@
   @media (max-width: 650px) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
 
   div {
