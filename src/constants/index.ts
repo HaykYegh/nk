@@ -229,3 +229,8 @@ export const GoogleMapStyle = [
     ],
   },
 ];
+
+export const careerFirstUrl =
+  'https://www.youtube.com/embed/UjaZVGBYW60?si=Yt2QiaDmzVFn4dF3';
+export const careerSecondUrl =
+  'https://www.youtube.com/embed/V84IycATdvA?si=564EZlDUjJMWyrg5';

@@ -1,5 +1,4 @@
-const videoUrl =
-  'https://www.youtube.com/embed/UjaZVGBYW60?si=Yt2QiaDmzVFn4dF3';
+import { careerFirstUrl, careerSecondUrl } from '../../../../constants';
 
 import styles from './CareerVideo.module.scss';
 
@@ -19,7 +18,7 @@ const CareerVideo = () => {
         </div>
         <div className={styles.video_wrapper}>
           <iframe
-            src={videoUrl}
+            src={careerFirstUrl}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -30,7 +29,7 @@ const CareerVideo = () => {
       <div className={styles.video_block}>
         <div className={styles.video_wrapper}>
           <iframe
-            src="https://www.youtube.com/embed/V84IycATdvA?si=564EZlDUjJMWyrg5"
+            src={careerSecondUrl}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
