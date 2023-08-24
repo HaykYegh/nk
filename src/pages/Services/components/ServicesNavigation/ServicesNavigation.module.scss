@@ -5,6 +5,10 @@
   flex-direction: column;
   gap: 15px;
 
+  @media (max-width: 900px) {
+    display: none;
+  }
+
   h2 {
     font-weight: 700;
     font-style: normal;
