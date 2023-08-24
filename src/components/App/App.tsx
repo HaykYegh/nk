@@ -3,16 +3,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import styles from './App.module.scss';
 import { Layout } from '../Layout';
-import AboutForm from 'components/AboutForm/AboutForm';
 
 function App() {
   return (
     <div className={styles.App}>
       <Router>
-        <Layout>
-          NK
-          <AboutForm />
-        </Layout>
+        <Layout>NK</Layout>
       </Router>
     </div>
   );
