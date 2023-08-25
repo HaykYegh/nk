@@ -1,7 +1,6 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import { MainPage } from '../../pages/MainPage';
+import { Services } from 'pages/Services';
 import { Layout } from '../Layout';
-
 import styles from './App.module.scss';
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
     <div className={styles.App}>
       <Router>
         <Layout>
-          <MainPage />
+          <Services />
         </Layout>
       </Router>
     </div>
