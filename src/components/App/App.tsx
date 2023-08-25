@@ -1,8 +1,8 @@
-import AboutForm from 'components/AboutForm/AboutForm';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { MainPage } from '../../pages/MainPage';
 import { Layout } from '../Layout';
 import styles from './App.module.scss';
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 
 function App() {
   return (
@@ -10,7 +10,11 @@ function App() {
       <Router>
         <Layout>
           <MainPage />
-          <AboutForm formTitle="warface" btnTitle="Arss" checkBoxShow={true} />
+          <ProjectDiteals
+            formTitle="warface"
+            btnTitle="Arss"
+            checkBoxShow={true}
+          />
         </Layout>
       </Router>
     </div>
