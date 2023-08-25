@@ -1,12 +1,13 @@
 @import '../../assets//formVars.scss';
 @import '../../assets//formMixins.scss';
-
+@import '../../colorsVariables.scss';
 
 form {
     display: flex;
     flex-direction: column;
     gap: 18px;
     width: 100%;
+
     .req {
         color: red;
     }
@@ -25,20 +26,24 @@ form {
     font-size: 20px;
     letter-spacing: 0px;
     color: #222;
-    
+
 }
-.formNames_section{
+
+.formNames_section {
     display: flex;
     gap: 15px;
-   .cusstomFieldBlock{
-    width: 50%;
-   }
-   @media (max-width: 450px) {
-    flex-direction: column;
-    .cusstomFieldBlock{
-        width: 100%;
+
+    .cusstomFieldBlock {
+        width: 50%;
     }
-}
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+
+        .cusstomFieldBlock {
+            width: 100%;
+        }
+    }
 }
 
 
@@ -86,6 +91,7 @@ form {
     text-rendering: optimizelegibility;
     font-size: 13px;
     @include checkBoxStyles;
+
     label {
         cursor: pointer;
     }
@@ -100,19 +106,21 @@ form {
 
 .submitBtn {
     @include submitFormstyles;
+    background-color: $secondary2-color;
 }
 
 .error {
-   @include errorStyles;
+    @include errorStyles;
 }
+
 .alertBlock {
     background-color: #f8d7da;
-    border: 1px solid #f5c6cb; 
-    color: #721c24; 
-    padding: 10px 9px; 
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 10px 9px;
     margin: 0 0 16px;
     border-radius: 8px;
-    font-size: clamp(10px, 2.5vw, 14px); 
+    font-size: clamp(10px, 2.5vw, 14px);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -120,23 +128,25 @@ form {
     transition: transform 0.3s, box-shadow 0.3s;
     width: 100%;
     line-height: 17px;
+
     .iconFont {
-      color: #ce2c30;
-      font-size: 20px;
+        color: #ce2c30;
+        font-size: 20px;
     }
-  
+
     p {
-      margin: 0;
-      color: #ce2c30;
-      font-weight: bold;
+        margin: 0;
+        color: #ce2c30;
+        font-weight: bold;
     }
-  }
-  
-  .btnContact{
-    justify-content: start;
-    
-   
 }
-.btnSub{
+
+.btnContact {
+    justify-content: start;
+
+
+}
+
+.btnSub {
     border-radius: 0;
 }

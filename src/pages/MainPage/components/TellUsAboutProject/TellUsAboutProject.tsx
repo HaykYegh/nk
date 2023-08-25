@@ -1,3 +1,4 @@
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import styles from './TellUsAboutProject.module.scss';
 
 const TellUsAboutProject = () => {
@@ -16,7 +17,11 @@ const TellUsAboutProject = () => {
         </p>
       </div>
       <div className={styles.button_wrapper}>
-        <button>Request a quote</button>
+        <ProjectDiteals
+          btnTitle="Request a quote"
+          formTitle="Tell Us About Your Project"
+          checkBoxShow={true}
+        />
       </div>
     </div>
   );
