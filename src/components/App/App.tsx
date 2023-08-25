@@ -1,9 +1,6 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-
 import { Layout } from '../Layout';
-
-import { Careers } from 'pages/Careers';
-
+import { CareerDetails } from 'pages/CareerDetails';
 import styles from './App.module.scss';
 
 function App() {
@@ -11,7 +8,7 @@ function App() {
     <div className={styles.App}>
       <Router>
         <Layout>
-          <Careers />
+          <CareerDetails />
         </Layout>
       </Router>
     </div>
