@@ -1,17 +1,15 @@
-import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { MainPage } from '../../pages/MainPage';
+import { Layout } from '../Layout';
 
 import styles from './App.module.scss';
-import { Layout } from '../Layout';
-import AboutForm from 'components/AboutForm/AboutForm';
 
 function App() {
   return (
     <div className={styles.App}>
       <Router>
         <Layout>
-          NK
-          <AboutForm />
+          <MainPage />
         </Layout>
       </Router>
     </div>

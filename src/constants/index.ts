@@ -1,3 +1,9 @@
+import tuningImage from 'images/3dtuning.jpg';
+import digiconnectImage from 'images/digiconnect.jpg';
+import justhiveImage from 'images/justhive.jpg';
+import lpmaImage from 'images/LPMA.jpg';
+import recomazingImage from 'images/recomazing.jpg';
+
 export const MAP_API_KEY: string = process.env[
   'REACT_APP_MAP_API_KEY'
 ] as string;
@@ -229,3 +235,46 @@ export const GoogleMapStyle = [
     ],
   },
 ];
+
+export const videoUrl = 'https://www.youtube.com/embed/Yk1uCWWUl-4';
+
+export const SliderData = [
+  {
+    imgUrl: recomazingImage,
+    id: 1,
+    activeImage: true,
+  },
+
+  {
+    imgUrl: digiconnectImage,
+    id: 2,
+    activeImage: false,
+  },
+
+  {
+    imgUrl: justhiveImage,
+    id: 3,
+    activeImage: false,
+  },
+
+  {
+    imgUrl: lpmaImage,
+    id: 4,
+    activeImage: false,
+  },
+
+  {
+    imgUrl: tuningImage,
+    id: 5,
+    activeImage: false,
+  },
+];
+//urls
+export const manDeveloperImg =
+  'https://www.outbrain.com/case-studies/wp-content/uploads/2022/01/GettyImages-516895432-Smiling-Businessman-on-Tablet-min.jpg';
+export const superPowerImg =
+  'https://www.realmenrealstyle.com/wp-content/uploads/2023/06/Women-Like-A-Man-To-Show-Vulnerability.jpg';
+export const oficeImg =
+  'https://pix4free.org/assets/library/2021-01-12/originals/office_meeting_men_women_laptop_table.jpg';
+export const matureImg =
+  'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwaW4lMjBvZmZpY2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80';
