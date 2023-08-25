@@ -6,6 +6,7 @@
   @media (max-width: 650px) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   div {
@@ -15,6 +16,10 @@
     font-size: 18px;
     color: #4a4a4a;
     margin: 0;
+
+    @media (max-width: 650px) {
+      align-items: center;
+    }
 
     p {
       margin: 0;
