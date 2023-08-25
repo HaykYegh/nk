@@ -1,8 +1,9 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import AboutForm from 'components/AboutForm/AboutForm';
 import { Layout } from '../Layout';
+
 import styles from './App.module.scss';
+import AboutForm from 'components/AboutForm/AboutForm';
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
       <Router>
         <Layout>
           <AboutForm
-            btnTitle="example"
+            btnTitle="asdas"
+            formTitle="asdjhasd"
             checkBoxShow={true}
-            formTitle="HelloWord"
           />
         </Layout>
       </Router>

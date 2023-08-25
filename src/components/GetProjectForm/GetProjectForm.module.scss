@@ -6,13 +6,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    min-width: 600px;
-    @media (max-width: 680px) {
-        min-width: 300px;
-    }
-    @media (max-width: 470px) {
-       min-width: unset;
-    }
+    width: 100%;
     .req {
         color: red;
     }
@@ -48,22 +42,7 @@ form {
 }
 
 
-// .fieldsBlock {
-//     display: flex;
-//     gap: 10px;
 
-//     @media (max-width: 450px) {
-//         flex-direction: column;
-//     }
-
-//     input {
-//         @include stylesInput;
-//     }
-
-//     label {
-//         font-size: $label-fontSize;
-//     }
-// }
 
 .cusstomFieldBlock {
     font-size: $cusstomField-fs;
