@@ -10,11 +10,6 @@ function App() {
       <Router>
         <Layout>
           <MainPage />
-          <ProjectDiteals
-            formTitle="warface"
-            btnTitle="Arss"
-            checkBoxShow={true}
-          />
         </Layout>
       </Router>
     </div>
