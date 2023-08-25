@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import AboutFormModal from '../AboutFormModal/AboutFormModal';
 import RequestBtn from '../RequestBtn/RequestBtn';
 import { createPortal } from 'react-dom';
@@ -11,10 +11,16 @@ const AboutForm: FC<IAboutFormProps> = ({
   formTitle,
 }) => {
   const [showFormModal, setShowFormModal] = useState(false);
+  useEffect(() => {
+    if (showFormModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
+  }, [showFormModal]);
   const setShowFormModalBlock = () => {
     setShowFormModal(!showFormModal);
   };
-  const portalDiv = document.getElementById('root') as HTMLElement;
 
   return (
     <div className={styles.aboutForm}>
@@ -29,7 +35,7 @@ const AboutForm: FC<IAboutFormProps> = ({
           formTitle={formTitle}
           checkBoxShow={checkBoxShow}
         />,
-        portalDiv,
+        document.body,
       )}
     </div>
   );
