@@ -1,9 +1,7 @@
-import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-
-import styles from './App.module.scss';
 import { Layout } from '../Layout';
 import { CareerDetails } from 'pages/CareerDetails';
+import styles from './App.module.scss';
 
 function App() {
   return (
