@@ -1,20 +1,16 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { Layout } from '../Layout';
+import { Careers } from 'pages/Careers';
 
 import styles from './App.module.scss';
-import AboutForm from 'components/AboutForm/AboutForm';
 
 function App() {
   return (
     <div className={styles.App}>
       <Router>
         <Layout>
-          <AboutForm
-            btnTitle="asdas"
-            formTitle="asdjhasd"
-            checkBoxShow={true}
-          />
+          <Careers />
         </Layout>
       </Router>
     </div>
