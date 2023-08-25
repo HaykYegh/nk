@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useState } from 'react';
+import React, { FC, ReactNode, useEffect, useState } from 'react';
 
 import styles from './Layout.module.scss';
 import { Container } from '../Container';
@@ -6,6 +6,7 @@ import { Header } from '../Header';
 import { HeaderImg } from '../HeaderImg';
 import { Sidebar } from 'components/Sidebar';
 import { Footer } from 'components/Footer';
+import { useLocation } from 'react-router-dom';
 
 interface IProps {
   children: ReactNode;
@@ -13,12 +14,16 @@ interface IProps {
 
 const Layout: FC<IProps> = ({ children }) => {
   const [isSidebarActive, setSidebarActive] = useState(false);
+  const location = useLocation();
 
   const handleSidebar = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     setSidebarActive((prev) => !prev);
   };
 
+  useEffect(() => {
+    setSidebarActive(false);
+  }, [location.pathname]);
   const closeSidebar = () => setSidebarActive(false);
   return (
     <div className={styles.Layout}>

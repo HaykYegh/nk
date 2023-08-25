@@ -16,6 +16,7 @@ const TellUsAboutProject = () => {
           keen to learn more.
         </p>
       </div>
+
       <div className={styles.button_wrapper}>
         <ProjectDiteals
           btnTitle="Request a quote"

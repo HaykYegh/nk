@@ -297,3 +297,21 @@ export const videoUrl =
   'https://www.youtube.com/embed/9ltpBAUJAi4?si=hk5nLR_cCNW3wufY';
 export const careerDetailsImg1 =
   'https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/5b5bec5f-186d-492c-9447-3043d0c19db7/DSC07803.jpg?format=1500w';
+
+export const homeUrl =
+  'https://images.pexels.com/photos/245032/pexels-photo-245032.jpeg';
+
+export const webUrl =
+  'https://images.unsplash.com/photo-1539689007727-bf17b6198946?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80';
+
+export const chromeUrl =
+  'https://www.codefuel.com/wp-content/uploads/2022/02/How-to-make-a-chrome-extention.jpg';
+
+export const desktopUrl =
+  'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80';
+
+export const approachUrl =
+  'https://www.accountability.org/static/dd2a3fb09c6d5a28be81ed7ae8cc03e9/89218/AccountAbility_Careers.webp';
+
+export const aboutUrl =
+  'https://d7fi61gsgzcz4.cloudfront.net/assets/page-hero-images/istock-493171547_2500.jpg/dynamic:1-aspect:2.5-fit:cover-strategy:entropy/istock-493171547_2500--1400.webp';
