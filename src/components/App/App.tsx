@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Services } from 'pages/Services';
 import { Layout } from '../Layout';
-import { CareerDetails } from 'pages/CareerDetails';
 import styles from './App.module.scss';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className={styles.App}>
       <Router>
         <Layout>
-          <CareerDetails />
+          <Services />
         </Layout>
       </Router>
     </div>

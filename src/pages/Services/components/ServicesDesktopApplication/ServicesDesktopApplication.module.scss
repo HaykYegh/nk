@@ -1,0 +1,106 @@
+@import 'colorsVariables';
+
+.desktop_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  .desktop_title {
+    text-align: center;
+
+    h2 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+
+  .images_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    .desktop_blocks {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+
+      @media (max-width: 730px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &:nth-child(1) {
+        @media (max-width: 730px) {
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+      }
+
+      &:nth-child(3) {
+        @media (max-width: 730px) {
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+      }
+
+      &:nth-child(5) {
+        @media (max-width: 730px) {
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+      }
+
+      .block_description {
+        @media (max-width: 730px) {
+          text-align: center;
+        }
+
+        h4 {
+          margin: 0 0 10px 0;
+          font-size: 1.2em;
+          font-weight: 700;
+          opacity: .7;
+        }
+
+        p {
+          margin: 0;
+          line-height: 1.5;
+          opacity: .5;
+        }
+      }
+
+      .img_wrappers {
+        border-radius: 20px;
+        width: 320px;
+        height: 220px;
+        position: relative;
+
+        &:before {
+          background: linear-gradient(90deg, $secondary-color, $secondary2-color);
+          border-radius: 1rem;
+          content: "";
+          left: 0;
+          position: absolute;
+          top: 0;
+          transform: rotate(5deg);
+          transform-origin: 40% 80%;
+          width: 320px;
+          height: 220px;
+          z-index: 1;
+        }
+
+        img {
+          border-radius: 20px;
+          width: 320px;
+          height: 220px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+
