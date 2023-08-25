@@ -38,38 +38,4 @@
       }
     }
   }
-
-  button {
-    margin-top: 30px;
-    padding: 21px 34px;
-    font-size: 15px;
-    font-weight: 600;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
-    background-color: $secondary2-color;
-    border: 0;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: .2s all;
-
-    @media (max-width: 900px) {
-      margin-top: 0;
-    }
-
-    @media (max-width: 565px) {
-      padding: 18px 24px;
-      font-size: 13px;
-    }
-
-    @media (max-width: 360px) {
-      padding: 13px 17px;
-      font-size: 10px;
-    }
-
-    &:hover {
-      opacity: .8;
-    }
-  }
 }

@@ -1,17 +1,15 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-
+// import { Services } from 'pages/Services';
 import { Layout } from '../Layout';
-
-import { Careers } from 'pages/Careers';
-
 import styles from './App.module.scss';
+import { MainPage } from '../../pages/MainPage';
 
 function App() {
   return (
     <div className={styles.App}>
       <Router>
         <Layout>
-          <Careers />
+          <MainPage />
         </Layout>
       </Router>
     </div>
