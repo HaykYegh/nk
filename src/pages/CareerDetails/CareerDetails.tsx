@@ -1,14 +1,12 @@
 import React from 'react';
 
 import styles from './CareerDetails.module.scss';
+import { careerDetailsImg1 } from '../../constants';
 
 const CareerDetails = () => {
   return (
     <div className={styles.CareerDetails}>
-      <img
-        src="https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/5b5bec5f-186d-492c-9447-3043d0c19db7/DSC07803.jpg?format=1500w"
-        alt=""
-      />
+      <img src={careerDetailsImg1} alt="" />
       <div className={styles.titleDescription}>
         <h4>Senior Data Engineer</h4>
         <p>
