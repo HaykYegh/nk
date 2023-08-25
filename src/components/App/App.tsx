@@ -1,9 +1,6 @@
-import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-
-import { Layout } from '../Layout';
 import { Services } from 'pages/Services';
-
+import { Layout } from '../Layout';
 import styles from './App.module.scss';
 
 function App() {

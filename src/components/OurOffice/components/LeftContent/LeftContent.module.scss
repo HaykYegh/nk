@@ -7,7 +7,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> 7d27bc878def0716fe6034c0aef1276b37da6a11
   }
 
   div {
@@ -17,6 +20,10 @@
     font-size: 18px;
     color: #4a4a4a;
     margin: 0;
+
+    @media (max-width: 650px) {
+      align-items: center;
+    }
 
     p {
       margin: 0;

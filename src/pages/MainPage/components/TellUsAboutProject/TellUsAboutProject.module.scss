@@ -1,0 +1,55 @@
+@import 'colorsVariables';
+
+.tell_us_about_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  .title_and_content {
+    text-align: center;
+    padding: 17px;
+
+    h2 {
+      font-weight: 400;
+      font-style: normal;
+      font-size: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 1.2em;
+    }
+
+    p {
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
+      letter-spacing: 0px;
+      line-height: 1.6em;
+      color: rgba(26,26,26,.7);
+      margin: 18px 0 0 0;
+    }
+  }
+
+  .button_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      padding: 14px 35px;
+      font-weight: 300;
+      font-size: 15px;
+      letter-spacing: 3px;
+      color: #fff;
+      background-color: $secondary2-color;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: .2s all;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
