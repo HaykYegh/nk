@@ -11,4 +11,5 @@ export interface IGetProjectData {
 
 export interface IGetProjectDataProps {
   contactPage?: boolean;
+  checkBoxShow: boolean;
 }

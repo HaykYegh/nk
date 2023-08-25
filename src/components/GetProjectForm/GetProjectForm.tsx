@@ -8,7 +8,10 @@ import classNames from 'classnames';
 import styles from './GetProjectForm.module.scss';
 import { FC } from 'react';
 
-const GetProjectForm: FC<IGetProjectDataProps> = ({ contactPage }) => {
+const GetProjectForm: FC<IGetProjectDataProps> = ({
+  contactPage,
+  checkBoxShow,
+}) => {
   const {
     register,
     handleSubmit,
@@ -104,29 +107,32 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ contactPage }) => {
           <input type="text" {...register('projectBudget')} />
         </div>
       )}
-      <div className={styles.checkbox_section}>
-        <div className={styles.checkBoxs_title}>
-          <span>I Need</span>
+      {checkBoxShow && (
+        <div className={styles.checkbox_section}>
+          <div className={styles.checkBoxs_title}>
+            <span>I Need</span>
+          </div>
+          <div className={styles.checkBoxs_content}>
+            <div className={styles.checks}>
+              <input
+                id="web_application"
+                type="checkbox"
+                {...register('web_application')}
+              />
+              <label htmlFor="web_application">Web Application</label>
+            </div>
+            <div className={styles.checks}>
+              <input id="support" type="checkbox" {...register('support')} />
+              <label htmlFor="support">Technical Support</label>
+            </div>
+            <div className={styles.checks}>
+              <input id="other" type="checkbox" {...register('other')} />
+              <label htmlFor="other">Other</label>
+            </div>
+          </div>
         </div>
-        <div className={styles.checkBoxs_content}>
-          <div className={styles.checks}>
-            <input
-              id="web_application"
-              type="checkbox"
-              {...register('web_application')}
-            />
-            <label htmlFor="web_application">Web Application</label>
-          </div>
-          <div className={styles.checks}>
-            <input id="support" type="checkbox" {...register('support')} />
-            <label htmlFor="support">Technical Support</label>
-          </div>
-          <div className={styles.checks}>
-            <input id="other" type="checkbox" {...register('other')} />
-            <label htmlFor="other">Other</label>
-          </div>
-        </div>
-      </div>
+      )}
+
       <div
         className={classNames(styles.btnSubmit, {
           [styles.btnContact]: contactPage,

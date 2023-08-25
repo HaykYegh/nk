@@ -1,0 +1,96 @@
+@import '../../colorsVariables.scss';
+
+.Approach {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    text-align: center;
+    white-space: pre-wrap;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  .steps {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    @media (max-width: 1042px) {
+      flex-wrap: wrap;
+    }
+
+    .step {
+      width: 250px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @media (max-width: 330px) {
+        width: unset;
+      }
+
+      .num {
+        width: 100px;
+        height: 100px;
+        background: $secondary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: $white-color;
+
+        p {
+          margin: 0;
+          padding: 0;
+          font-size: 65px;
+          font-weight: 500;
+        }
+      }
+
+      h4 {
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .tellBtn {
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    color: $white-color;
+    background: $secondary2-color;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 3px;
+    cursor: pointer;
+
+    @media (max-width: 350px) {
+      font-size: 10px;
+      padding: 15px 10px;
+    }
+
+    @media (max-width: 330px) {
+      font-size: 10px;
+      padding: 10px 7px;
+    }
+  }
+
+  .tellBtn:hover {
+    opacity: 0.8;
+  }
+}
