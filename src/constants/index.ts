@@ -236,12 +236,6 @@ export const GoogleMapStyle = [
   },
 ];
 
-export const careerFirstUrl =
-  'https://www.youtube.com/embed/UjaZVGBYW60?si=Yt2QiaDmzVFn4dF3';
-export const careerSecondUrl =
-  'https://www.youtube.com/embed/V84IycATdvA?si=564EZlDUjJMWyrg5';
-export const videoUrl = 'https://www.youtube.com/embed/Yk1uCWWUl-4';
-
 export const SliderData = [
   {
     imgUrl: recomazingImage,
@@ -282,3 +276,16 @@ export const oficeImg =
   'https://pix4free.org/assets/library/2021-01-12/originals/office_meeting_men_women_laptop_table.jpg';
 export const matureImg =
   'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwaW4lMjBvZmZpY2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80';
+
+export const dennisImg =
+  'https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1515591702915-SM4JMJU78OMO6KS047HI/Bryce+York?format=1500w';
+export const volodymyrImg =
+  'https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1515591744281-83SFNC3CAJ7ZQLQPISCQ/Artboard+2.jpg?format=2500w';
+export const bryceImg =
+  'https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1515591772961-IWKIF46WAJ3LTBXMTV7F/Volodymyr+Khokhlachov?format=2500w';
+
+export const careerFirstUrl =
+  'https://www.youtube.com/embed/UjaZVGBYW60?si=Yt2QiaDmzVFn4dF3';
+export const careerSecondUrl =
+  'https://www.youtube.com/embed/V84IycATdvA?si=564EZlDUjJMWyrg5';
+export const videoUrl = 'https://www.youtube.com/embed/Yk1uCWWUl-4';
