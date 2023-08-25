@@ -229,3 +229,9 @@ export const GoogleMapStyle = [
     ],
   },
 ];
+
+export const ServicesPathNames = {
+  web: 'web-applications',
+  desktop: 'desktop-applications',
+  chrome: 'chrome-extensions',
+};
