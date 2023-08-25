@@ -33,24 +33,37 @@ form {
     color: #222;
     
 }
-
-
-.fieldsBlock {
+.formNames_section{
     display: flex;
-    gap: 10px;
-
-    @media (max-width: 450px) {
-        flex-direction: column;
-    }
-
-    input {
-        @include stylesInput;
-    }
-
-    label {
-        font-size: $label-fontSize;
+    gap: 15px;
+   .cusstomFieldBlock{
+    width: 50%;
+   }
+   @media (max-width: 450px) {
+    flex-direction: column;
+    .cusstomFieldBlock{
+        width: 100%;
     }
 }
+}
+
+
+// .fieldsBlock {
+//     display: flex;
+//     gap: 10px;
+
+//     @media (max-width: 450px) {
+//         flex-direction: column;
+//     }
+
+//     input {
+//         @include stylesInput;
+//     }
+
+//     label {
+//         font-size: $label-fontSize;
+//     }
+// }
 
 .cusstomFieldBlock {
     font-size: $cusstomField-fs;

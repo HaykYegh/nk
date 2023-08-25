@@ -40,33 +40,35 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
           </p>
         </div>
       )}
+      <div className={styles.formNames_section}>
+        <div className={styles.cusstomFieldBlock}>
+          <label htmlFor="firstName">
+            First Name<span className={styles.req}>*</span>
+          </label>
+          <input
+            className={classNames({
+              [styles.activeError]: errors.firstName,
+            })}
+            type="text"
+            {...register('firstName')}
+          />
+          <span className={styles.error}>{errors.firstName?.message}</span>
+        </div>
+        <div className={styles.cusstomFieldBlock}>
+          <label htmlFor="lastName">
+            Last Name<span className={styles.req}>*</span>
+          </label>
+          <input
+            className={classNames({
+              [styles.activeError]: errors.lastName,
+            })}
+            type="text"
+            {...register('lastName')}
+          />
+          <span className={styles.error}>{errors.lastName?.message}</span>
+        </div>
+      </div>
 
-      <div className={styles.cusstomFieldBlock}>
-        <label htmlFor="firstName">
-          First Name<span className={styles.req}>*</span>
-        </label>
-        <input
-          className={classNames({
-            [styles.activeError]: errors.firstName,
-          })}
-          type="text"
-          {...register('firstName')}
-        />
-        <span className={styles.error}>{errors.firstName?.message}</span>
-      </div>
-      <div className={styles.cusstomFieldBlock}>
-        <label htmlFor="lastName">
-          Last Name<span className={styles.req}>*</span>
-        </label>
-        <input
-          className={classNames({
-            [styles.activeError]: errors.lastName,
-          })}
-          type="text"
-          {...register('lastName')}
-        />
-        <span className={styles.error}>{errors.lastName?.message}</span>
-      </div>
       <div className={styles.cusstomFieldBlock}>
         <label htmlFor="email">
           Email<span className={styles.req}>*</span>
