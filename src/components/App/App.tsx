@@ -1,8 +1,8 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import AboutForm from 'components/AboutForm/AboutForm';
 import { Layout } from '../Layout';
 import styles from './App.module.scss';
-import AboutForm from 'components/AboutForm/AboutForm';
 
 function App() {
   return (
