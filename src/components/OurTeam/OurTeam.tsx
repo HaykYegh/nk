@@ -1,3 +1,4 @@
+import { bryceImg, dennisImg, volodymyrImg } from '../../constants/index';
 import styles from './OurTeam.module.scss';
 
 const OurTeam = () => {
@@ -7,10 +8,7 @@ const OurTeam = () => {
       <div className={styles.wrapper}>
         <div className={styles.personBlock}>
           <div className={styles.imgBlock}>
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1515591702915-SM4JMJU78OMO6KS047HI/Bryce+York?format=1500w"
-              alt=""
-            />
+            <img src={dennisImg} alt="" />
           </div>
           <p>
             <strong>Dennis Jungerius</strong>, ounder Digi-Connect, Rotterdam 🇳🇱
@@ -26,10 +24,7 @@ const OurTeam = () => {
         </div>
         <div className={styles.personBlock}>
           <div className={styles.imgBlock}>
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1515591744281-83SFNC3CAJ7ZQLQPISCQ/Artboard+2.jpg?format=2500w"
-              alt=""
-            />
+            <img src={volodymyrImg} alt="" />
           </div>
           <p>
             <strong>Volodymyr Khokhlachov,</strong>, co-founder Models Can
@@ -46,10 +41,7 @@ const OurTeam = () => {
         </div>
         <div className={styles.personBlock}>
           <div className={styles.imgBlock}>
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1515591772961-IWKIF46WAJ3LTBXMTV7F/Volodymyr+Khokhlachov?format=2500w"
-              alt=""
-            />
+            <img src={bryceImg} alt="" />
           </div>
           <p>
             <strong>Bryce York</strong>, co-founder Radframe, Sydney 🇦🇺
