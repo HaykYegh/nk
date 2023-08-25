@@ -1,14 +1,15 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Services } from 'pages/Services';
+// import { Services } from 'pages/Services';
 import { Layout } from '../Layout';
 import styles from './App.module.scss';
+import { MainPage } from '../../pages/MainPage';
 
 function App() {
   return (
     <div className={styles.App}>
       <Router>
         <Layout>
-          <Services />
+          <MainPage />
         </Layout>
       </Router>
     </div>
