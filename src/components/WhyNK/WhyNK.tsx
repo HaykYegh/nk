@@ -1,3 +1,4 @@
+import AboutForm from 'components/AboutForm/AboutForm';
 import {
   manDeveloperImg,
   matureImg,
@@ -80,6 +81,11 @@ const WhyNK = () => {
           <img src={matureImg} alt="" />
         </div>
       </div>
+      <AboutForm
+        btnTitle="REQUEST A QUOTE"
+        formTitle="Tell us about your project"
+        checkBoxShow={true}
+      />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import AboutForm from 'components/AboutForm/AboutForm';
 import styles from './TellUsAboutProject.module.scss';
 
 const TellUsAboutProject = () => {
@@ -15,9 +16,11 @@ const TellUsAboutProject = () => {
           keen to learn more.
         </p>
       </div>
-      <div className={styles.button_wrapper}>
-        <button>Request a quote</button>
-      </div>
+      <AboutForm
+        btnTitle="REQUEST A QUOTE"
+        formTitle="Tell us about your project"
+        checkBoxShow={true}
+      />
     </div>
   );
 };
