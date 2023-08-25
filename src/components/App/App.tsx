@@ -1,17 +1,17 @@
-import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import styles from './App.module.scss';
 import { Layout } from '../Layout';
-import OurTeam from 'components/OurTeam/OurTeam';
+
+import { Careers } from 'pages/Careers';
+
+import styles from './App.module.scss';
 
 function App() {
   return (
     <div className={styles.App}>
       <Router>
         <Layout>
-          NK
-          <OurTeam />
+          <Careers />
         </Layout>
       </Router>
     </div>

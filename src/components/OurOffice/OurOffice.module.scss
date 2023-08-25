@@ -11,6 +11,7 @@
 
   .title {
     text-align: center;
+
     h2 {
       color: #4a4a4a;
       font-weight: 400;
@@ -38,5 +39,9 @@
       align-items: flex-start;
       gap: 20px;
     }
+  }
+
+  .border {
+    padding-bottom: 17px;
   }
 }
