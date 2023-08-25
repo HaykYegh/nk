@@ -1,15 +1,15 @@
-import About from 'components/About/About';
-import WhyNK from 'components/WhyNK/WhyNK';
-import { Approach } from 'pages/Approach';
-import { MainPage } from 'pages/MainPage';
+import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import styles from './RoutesComponent.module.scss';
-import ContactUs from 'pages/ContactUs/ContactUs';
-import { Services } from 'pages/Services';
+const Approach = lazy(() => import('pages/Approach'));
+const ContactUs = lazy(() => import('pages/ContactUs/ContactUs'));
+const MainPage = lazy(() => import('pages/MainPage'));
+const Services = lazy(() => import('pages/Services'));
+const WhyNK = lazy(() => import('components/WhyNK/WhyNK'));
+const About = lazy(() => import('components/About/About'));
 
 const RoutesComponent = () => {
   return (
-    <div className={styles.RoutesComponent}>
+    <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/why-nk" element={<WhyNK />} />
@@ -20,7 +20,7 @@ const RoutesComponent = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </div>
+    </Suspense>
   );
 };
 
