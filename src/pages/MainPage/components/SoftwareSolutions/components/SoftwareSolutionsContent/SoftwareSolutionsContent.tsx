@@ -1,7 +1,7 @@
 import webApps from 'images/web-apps.svg';
 import desktopApp from 'images/desktop-app.svg';
 import googleExtension from 'images/google-extension.svg';
-
+import { NavLink as Link } from 'react-router-dom';
 import styles from './SoftwareSolutionsContent.module.scss';
 
 const SoftwareSolutionsContent = () => {
@@ -9,13 +9,13 @@ const SoftwareSolutionsContent = () => {
     <div className={styles.content_wrapper}>
       <div>
         <img src={webApps} alt="web apps" />
-        <h3>Web Sites</h3>
+        <h3>Web Applications</h3>
         <p>
           We design and develop multi-purpose, data-driven, real-time, high
           performing and efficient mobile-ready web applications.
         </p>
         <div className={styles.more}>
-          <span>Learn more...</span>
+          <Link to="/web-applications">Learn more...</Link>
         </div>
       </div>
       <div>
@@ -27,7 +27,7 @@ const SoftwareSolutionsContent = () => {
           cutting-edge technologies.
         </p>
         <div className={styles.more}>
-          <span>Learn more...</span>
+          <Link to="/desktop-applications">Learn more...</Link>
         </div>
       </div>
       <div>
@@ -39,7 +39,7 @@ const SoftwareSolutionsContent = () => {
           you name it.
         </p>
         <div className={styles.more}>
-          <span>Learn more...</span>
+          <Link to="/chrome-extensions">Learn more...</Link>
         </div>
       </div>
     </div>

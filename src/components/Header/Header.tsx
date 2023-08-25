@@ -15,18 +15,18 @@ const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
       <Logo />
       <nav>
         <div className={styles.section}>
-          <Link to="/">WHY NK?</Link>
+          <Link to="/why-nk">WHY NK?</Link>
         </div>
         <div className={styles.section}>
-          <Link to="/">SERVICES</Link>
+          <Link to="/web-applications">SERVICES</Link>
           <div className={styles.hoverPopup}>
-            <Link to="/">WEB APPLICATIONS</Link>
-            <Link to="/">CHROME EXTENTIONS</Link>
-            <Link to="/">DESKTOP APPLICATIONS</Link>
+            <Link to="/web-applications">WEB APPLICATIONS</Link>
+            <Link to="/chrome-extensions">CHROME EXTENSIONS</Link>
+            <Link to="/desktop-applications">DESKTOP APPLICATIONS</Link>
           </div>
         </div>
         <div className={styles.section}>
-          <Link to="/">CONTACT US</Link>
+          <Link to="/contact-us">CONTACT US</Link>
         </div>
       </nav>
       <button onClick={handleSidebar} className={styles.burgerMenu}>

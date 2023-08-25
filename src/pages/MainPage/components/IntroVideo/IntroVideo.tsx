@@ -6,9 +6,15 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { videoUrl } from '../../../../constants';
 
 import styles from './IntroVideo.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const IntroVideo = () => {
   const [activeVideo, setActiveVideo] = useState(false);
+  const navigate = useNavigate();
+
+  const linkToContact = () => {
+    navigate('/contact-us');
+  };
 
   const handleClickVideo = () => {
     setActiveVideo(true);
@@ -36,7 +42,7 @@ const IntroVideo = () => {
           ></iframe>
         </>
       )}
-      <button>Contact us now</button>
+      <button onClick={linkToContact}>Contact us now</button>
       <div id={styles.border}>
         <hr />
       </div>

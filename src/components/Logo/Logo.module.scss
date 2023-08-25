@@ -2,6 +2,8 @@
   padding: 5px;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  animation: show 0.5s ease-in-out;
 
   div {
     display: flex;
@@ -15,5 +17,14 @@
     color: white;
     border-radius: 3px;
     margin: 0 2px;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

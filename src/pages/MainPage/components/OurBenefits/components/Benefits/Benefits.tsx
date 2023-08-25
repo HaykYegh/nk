@@ -3,8 +3,14 @@ import transparency from 'images/Transparency.svg';
 import expertise from 'images/Expertise.svg';
 
 import styles from './Benefits.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Benefits = () => {
+  const navigate = useNavigate();
+
+  const linkToNk = () => {
+    navigate('/contact-us');
+  };
   return (
     <div className={styles.benefits_wrapper}>
       <div className={styles.content_wrapper}>
@@ -36,7 +42,7 @@ const Benefits = () => {
           </p>
         </div>
       </div>
-      <button>Learn More About Benefits</button>
+      <button onClick={linkToNk}>Learn More About Benefits</button>
     </div>
   );
 };

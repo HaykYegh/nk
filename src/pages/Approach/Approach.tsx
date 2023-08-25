@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import styles from './Approach.module.scss';
 
-const Approach = () => {
+const Approach: FC = () => {
   return (
     <div className={styles.Approach}>
       <h3>YOUR PROJECT IS JUST 4 EASY AND SIMPLE STEPS AWAY.</h3>
