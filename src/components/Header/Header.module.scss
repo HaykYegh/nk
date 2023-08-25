@@ -10,7 +10,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   background: $header-color;
 
   @media (max-width: 550px) {
@@ -38,7 +38,7 @@
       align-items: center;
       justify-content: flex-end;
       width: 30px;
-      height: 18px;
+      height: 19px;
 
       span {
         height: 2px;

@@ -236,6 +236,11 @@ export const GoogleMapStyle = [
   },
 ];
 
+export const ServicesPathNames = {
+  web: '/web-applications',
+  desktop: '/desktop-applications',
+  chrome: '/chrome-extensions',
+};
 export const SliderData = [
   {
     imgUrl: recomazingImage,

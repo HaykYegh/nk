@@ -9,7 +9,6 @@ const Portfolio = () => {
         <h2>Portfolio</h2>
       </div>
       <PortfolioSlider />
-      <button>Project Details</button>
     </div>
   );
 };

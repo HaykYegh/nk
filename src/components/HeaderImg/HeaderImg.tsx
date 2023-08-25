@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
 
 import styles from './HeaderImg.module.scss';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const HeaderImg = () => {
   const location = useLocation();
   const [currentBg, setCurrentBg] = useState('');
   const [textOnImg, setTextOnImg] = useState('');
+
+  const navigate = useNavigate();
+
+  const linkToContact = () => {
+    navigate('/contact-us');
+  };
 
   const pathWithImg = (path: string) => {
     if (
@@ -73,7 +79,9 @@ const HeaderImg = () => {
           <div className={styles.textOnImg}>
             <h1>{textOnImg}</h1>
             {location.pathname === '/' && (
-              <button className={styles.contactUsBtn}>CONTACT US</button>
+              <button onClick={linkToContact} className={styles.contactUsBtn}>
+                CONTACT US
+              </button>
             )}
           </div>
         </div>
