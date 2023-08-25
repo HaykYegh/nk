@@ -6,6 +6,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 18px;
+    width: 100%;
     .req {
         color: red;
     }
@@ -26,24 +27,22 @@ form {
     color: #222;
     
 }
-
-
-.fieldsBlock {
+.formNames_section{
     display: flex;
-    gap: 10px;
-
-    @media (max-width: 450px) {
-        flex-direction: column;
-    }
-
-    input {
-        @include stylesInput;
-    }
-
-    label {
-        font-size: $label-fontSize;
+    gap: 15px;
+   .cusstomFieldBlock{
+    width: 50%;
+   }
+   @media (max-width: 450px) {
+    flex-direction: column;
+    .cusstomFieldBlock{
+        width: 100%;
     }
 }
+}
+
+
+
 
 .cusstomFieldBlock {
     font-size: $cusstomField-fs;
@@ -99,7 +98,7 @@ form {
     padding: 15px 0;
 }
 
-#submitBtn {
+.submitBtn {
     @include submitFormstyles;
 }
 
@@ -133,5 +132,11 @@ form {
     }
   }
   
-  
-  
+  .btnContact{
+    justify-content: start;
+    
+   
+}
+.btnSub{
+    border-radius: 0;
+}

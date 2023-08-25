@@ -8,13 +8,15 @@ import styles from './AboutFormModal.module.scss';
 const AboutFormModal: FC<IAboutFormModalProps> = ({
   showFormModal,
   setShowFormModalBlock,
+  checkBoxShow,
+  formTitle,
 }) => {
   return showFormModal ? (
     <div className={styles.lightbox_inner}>
       <div className={styles.lightbox_content}>
         <div className={styles.block_form}>
           <div className={styles.titleBlock}>
-            <div className={styles.title}>Tell Us About Your Project</div>
+            <div className={styles.title}>{formTitle}</div>
             <button
               onClick={setShowFormModalBlock}
               className={styles.closeBlock}
@@ -22,7 +24,7 @@ const AboutFormModal: FC<IAboutFormModalProps> = ({
               <FontAwesomeIcon icon={faX} />
             </button>
           </div>
-          <GetProjectForm />
+          <GetProjectForm checkBoxShow={checkBoxShow} />
         </div>
       </div>
     </div>
