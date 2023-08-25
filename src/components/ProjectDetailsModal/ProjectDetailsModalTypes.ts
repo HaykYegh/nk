@@ -1,5 +1,4 @@
-export interface IAboutFormModalProps {
-  showFormModal: boolean;
+export interface IProjectDitealsProps {
   setShowFormModalBlock: () => void;
   formTitle: string;
   checkBoxShow: boolean;

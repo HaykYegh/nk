@@ -1,5 +1,5 @@
-import AboutForm from 'components/AboutForm/AboutForm';
 import styles from './TellUsAboutProject.module.scss';
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 
 const TellUsAboutProject = () => {
   return (
@@ -16,7 +16,7 @@ const TellUsAboutProject = () => {
           keen to learn more.
         </p>
       </div>
-      <AboutForm
+      <ProjectDiteals
         btnTitle="REQUEST A QUOTE"
         formTitle="Tell us about your project"
         checkBoxShow={true}

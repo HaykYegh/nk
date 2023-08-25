@@ -1,4 +1,4 @@
-import AboutForm from 'components/AboutForm/AboutForm';
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import {
   manDeveloperImg,
   matureImg,
@@ -81,7 +81,7 @@ const WhyNK = () => {
           <img src={matureImg} alt="" />
         </div>
       </div>
-      <AboutForm
+      <ProjectDiteals
         btnTitle="REQUEST A QUOTE"
         formTitle="Tell us about your project"
         checkBoxShow={true}
