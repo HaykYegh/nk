@@ -1,3 +1,9 @@
+import tuningImage from 'images/3dtuning.jpg';
+import digiconnectImage from 'images/digiconnect.jpg';
+import justhiveImage from 'images/justhive.jpg';
+import lpmaImage from 'images/LPMA.jpg';
+import recomazingImage from 'images/recomazing.jpg';
+
 export const MAP_API_KEY: string = process.env[
   'REACT_APP_MAP_API_KEY'
 ] as string;
@@ -227,6 +233,40 @@ export const GoogleMapStyle = [
         color: '#92998d',
       },
     ],
+  },
+];
+
+export const videoUrl = 'https://www.youtube.com/embed/Yk1uCWWUl-4';
+
+export const SliderData = [
+  {
+    imgUrl: recomazingImage,
+    id: 1,
+    activeImage: true,
+  },
+
+  {
+    imgUrl: digiconnectImage,
+    id: 2,
+    activeImage: false,
+  },
+
+  {
+    imgUrl: justhiveImage,
+    id: 3,
+    activeImage: false,
+  },
+
+  {
+    imgUrl: lpmaImage,
+    id: 4,
+    activeImage: false,
+  },
+
+  {
+    imgUrl: tuningImage,
+    id: 5,
+    activeImage: false,
   },
 ];
 //urls
