@@ -1,8 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-// import { Services } from 'pages/Services';
+import { MainPage } from '../../pages/MainPage';
 import { Layout } from '../Layout';
 import styles from './App.module.scss';
-import { MainPage } from '../../pages/MainPage';
 
 function App() {
   return (
