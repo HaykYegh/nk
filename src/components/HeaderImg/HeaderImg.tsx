@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-
-import styles from './HeaderImg.module.scss';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { getImageFromPath } from 'helpers/getImageFromPath';
+
+import styles from './HeaderImg.module.scss';
 
 const HeaderImg = () => {
   const location = useLocation();

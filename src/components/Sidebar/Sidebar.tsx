@@ -1,7 +1,8 @@
-import React, { FC, useEffect, useState } from 'react';
-import { NavLink as Link, useLocation } from 'react-router-dom';
-import styles from './Sidebar.module.scss';
+import { FC, useEffect, useState } from 'react';
 import classNames from 'classnames';
+import { NavLink as Link, useLocation } from 'react-router-dom';
+
+import styles from './Sidebar.module.scss';
 
 interface IProps {
   isSidebarActive: boolean;

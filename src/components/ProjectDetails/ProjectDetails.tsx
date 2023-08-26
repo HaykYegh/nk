@@ -3,6 +3,7 @@ import AboutFormModal from '../ProjectDetailsModal';
 import RequestBtn from '../RequestBtn/RequestBtn';
 import { createPortal } from 'react-dom';
 import { IProjectDitealsProps } from './ProjectDetailsTypes';
+
 import styles from './ProjectDetails.module.scss';
 
 const ProjectDiteals: FC<IProjectDitealsProps> = ({

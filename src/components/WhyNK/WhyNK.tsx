@@ -5,6 +5,7 @@ import {
   oficeImg,
   superPowerImg,
 } from '../../constants';
+
 import styles from './WhyNK.module.scss';
 
 const WhyNK = () => {

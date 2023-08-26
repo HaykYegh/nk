@@ -1,1 +1,1 @@
-export { default as HeaderImg } from './HeaderImg';
+export { default } from './HeaderImg';

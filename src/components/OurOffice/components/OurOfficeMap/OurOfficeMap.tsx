@@ -7,7 +7,7 @@ import {
   GoogleMapStyle,
 } from '../../../../constants';
 
-import { MapLoading } from './components/MapLoading';
+import MapLoading from './components/MapLoading';
 
 import styles from './OurOffice.module.scss';
 

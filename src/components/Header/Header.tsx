@@ -1,12 +1,13 @@
-import React, { FC } from 'react';
-import styles from './Header.module.scss';
+import { FC, MouseEvent } from 'react';
 import { NavLink as Link } from 'react-router-dom';
-import { Logo } from '../Logo';
+import Logo from '../Logo';
 import classNames from 'classnames';
+
+import styles from './Header.module.scss';
 
 interface IProps {
   isSidebarActive: boolean;
-  handleSidebar: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  handleSidebar: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
