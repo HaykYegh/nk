@@ -1,12 +1,13 @@
-import React, { FC, ReactNode, useEffect, useState } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
+import Container from '../Container';
+import Header from '../Header';
+import HeaderImg from '../HeaderImg';
+import Sidebar from 'components/Sidebar';
+import Footer from 'components/Footer';
 
 import styles from './Layout.module.scss';
-import { Container } from '../Container';
-import { Header } from '../Header';
-import { HeaderImg } from '../HeaderImg';
-import { Sidebar } from 'components/Sidebar';
-import { Footer } from 'components/Footer';
-import { useLocation } from 'react-router-dom';
 
 interface IProps {
   children: ReactNode;
