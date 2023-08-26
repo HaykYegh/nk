@@ -1,4 +1,4 @@
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import {
   DefaultCenter,
   MAP_API_KEY,
@@ -12,12 +12,13 @@ import { MapLoading } from './components/MapLoading';
 import styles from './OurOffice.module.scss';
 
 const OurOfficeMap = () => {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: MAP_API_KEY,
+  });
+
   return (
     <div className={styles.map_wrapper}>
-      <LoadScript
-        googleMapsApiKey={MAP_API_KEY}
-        loadingElement={<MapLoading />}
-      >
+      {isLoaded ? (
         <GoogleMap
           mapContainerStyle={MapStyle}
           center={DefaultCenter}
@@ -28,7 +29,9 @@ const OurOfficeMap = () => {
         >
           <Marker position={DefaultCenter} />
         </GoogleMap>
-      </LoadScript>
+      ) : (
+        <MapLoading />
+      )}
     </div>
   );
 };
