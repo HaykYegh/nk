@@ -1,5 +1,7 @@
-import React, { FC } from 'react';
-
+import { FC } from 'react';
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
+import { formTypes } from '../../constants';
 import styles from './Approach.module.scss';
 
 const Approach: FC = () => {
@@ -44,7 +46,11 @@ const Approach: FC = () => {
           </p>
         </div>
       </div>
-      <button className={styles.tellBtn}>TELL US ABOUT YOUR PROJETC</button>
+      <ProjectDiteals
+        btnTitle={formTypes[FormTypesEnum.approach].btnTitle}
+        checkBoxShow={true}
+        formTitle={formTypes[FormTypesEnum.approach].formTitle}
+      />
     </div>
   );
 };

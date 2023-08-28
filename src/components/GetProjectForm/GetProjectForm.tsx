@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { scemaGetProjectForm } from '../../schemas/getProjectScema';
 import { IGetProjectData, IGetProjectDataProps } from './GetProjectFormTypes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
-
+import { getErrorFilds } from 'helpers/FormHelpers';
+import { FC } from 'react';
 import classNames from 'classnames';
 import styles from './GetProjectForm.module.scss';
 
@@ -21,9 +21,14 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
     resolver: yupResolver(scemaGetProjectForm),
     mode: 'onSubmit',
   });
+  const errorMessageAlert = `Form submission failed. Review the following information:   ${getErrorFilds(
+    errors,
+  )}`;
+
   const onSubmit: SubmitHandler<IGetProjectData> = (data) => {
     console.log(data);
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       {!!Object.keys(errors).length && (
@@ -32,13 +37,7 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
             icon={faCircleExclamation}
             className={styles.iconFont}
           />
-          <p>
-            Form submission failed. Review the following information:
-            {errors.firstName && `firstName, `}
-            {errors.lastName && `LastName, `}
-            {errors.email && `Email, `}
-            {errors.projectBrief && `Project Brief`}
-          </p>
+          <p>{errorMessageAlert}</p>
         </div>
       )}
       <div className={styles.formNames_section}>

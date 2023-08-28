@@ -272,6 +272,29 @@ export const SliderData = [
     activeImage: false,
   },
 ];
+
+export const formTypes = {
+  global: {
+    btnTitle: 'Request a Quote',
+    formTitle: 'Tell Us About Your Project',
+  },
+  webApp: {
+    btnTitle: 'Need a Web Application?',
+    formTitle: 'TELL US ABOUT YOUR WEB APPLICATION',
+  },
+  chrome: {
+    btnTitle: 'Get Your Extension Project Quote',
+    formTitle: 'Get Your Extension Project Quote',
+  },
+  desktop: {
+    btnTitle: 'Need a Desktop Application?',
+    formTitle: 'TELL US ABOUT YOUR Desktop APPLICATION',
+  },
+  approach: {
+    btnTitle: 'TELL US ABOUT YOUR PROJECT',
+    formTitle: 'New Form',
+  },
+};
 //urls
 export const manDeveloperImg =
   'https://www.outbrain.com/case-studies/wp-content/uploads/2022/01/GettyImages-516895432-Smiling-Businessman-on-Tablet-min.jpg';
@@ -293,7 +316,8 @@ export const careerFirstUrl =
   'https://www.youtube.com/embed/UjaZVGBYW60?si=Yt2QiaDmzVFn4dF3';
 export const careerSecondUrl =
   'https://www.youtube.com/embed/V84IycATdvA?si=564EZlDUjJMWyrg5';
-export const videoUrl = 'https://www.youtube.com/embed/Yk1uCWWUl-4';
+export const videoUrl =
+  'https://www.youtube.com/embed/9ltpBAUJAi4?si=hk5nLR_cCNW3wufY';
 export const careerDetailsImg1 =
   'https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/5b5bec5f-186d-492c-9447-3043d0c19db7/DSC07803.jpg?format=1500w';
 

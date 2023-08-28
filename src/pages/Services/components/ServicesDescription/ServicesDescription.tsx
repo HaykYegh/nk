@@ -1,5 +1,8 @@
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import { Technologies } from './components/Technologies';
 
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
+import { formTypes } from '../../../../constants';
 import styles from './ServicesDescription.module.scss';
 
 const ServicesDescription = () => {
@@ -56,7 +59,11 @@ const ServicesDescription = () => {
             </p>
           </div>
         </div>
-        <button>Need a web application?</button>
+        <ProjectDiteals
+          btnTitle={formTypes[FormTypesEnum.webApp].btnTitle}
+          formTitle={formTypes[FormTypesEnum.webApp].formTitle}
+          checkBoxShow={false}
+        />
       </div>
     </div>
   );

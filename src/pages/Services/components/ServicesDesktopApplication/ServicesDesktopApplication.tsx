@@ -5,6 +5,9 @@ import appStore from 'images/app-store.png';
 import crashReporting from 'images/crash-reporting.png';
 
 import styles from './ServicesDesktopApplication.module.scss';
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
+import { formTypes } from '../../../../constants';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
 
 const ServicesDesktopApplication = () => {
   return (
@@ -84,6 +87,11 @@ const ServicesDesktopApplication = () => {
           </div>
         </div>
       </div>
+      <ProjectDiteals
+        btnTitle={formTypes[FormTypesEnum.desktop].btnTitle}
+        formTitle={formTypes[FormTypesEnum.desktop].formTitle}
+        checkBoxShow={false}
+      />
     </div>
   );
 };

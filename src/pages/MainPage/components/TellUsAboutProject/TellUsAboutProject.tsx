@@ -1,5 +1,7 @@
-import styles from './TellUsAboutProject.module.scss';
 import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
+import styles from './TellUsAboutProject.module.scss';
+import { formTypes } from '../../../../constants';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
 
 const TellUsAboutProject = () => {
   return (
@@ -16,9 +18,10 @@ const TellUsAboutProject = () => {
           keen to learn more.
         </p>
       </div>
+
       <ProjectDiteals
-        btnTitle="REQUEST A QUOTE"
-        formTitle="Tell us about your project"
+        btnTitle={formTypes[FormTypesEnum.global].btnTitle}
+        formTitle={formTypes[FormTypesEnum.global].formTitle}
         checkBoxShow={true}
       />
     </div>
