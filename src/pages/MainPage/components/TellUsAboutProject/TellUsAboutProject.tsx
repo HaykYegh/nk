@@ -1,5 +1,7 @@
 import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import styles from './TellUsAboutProject.module.scss';
+import { caseForm } from '../../../../constants';
+import { ProjectType } from 'globalTypes/projectDitealsTypes';
 
 const TellUsAboutProject = () => {
   return (
@@ -17,13 +19,11 @@ const TellUsAboutProject = () => {
         </p>
       </div>
 
-      <div className={styles.button_wrapper}>
-        <ProjectDiteals
-          btnTitle="Request a quote"
-          formTitle="Tell Us About Your Project"
-          checkBoxShow={true}
-        />
-      </div>
+      <ProjectDiteals
+        btnTitle={caseForm[ProjectType.global].btnTitle}
+        formTitle={caseForm[ProjectType.global].formTitle}
+        checkBoxShow={true}
+      />
     </div>
   );
 };

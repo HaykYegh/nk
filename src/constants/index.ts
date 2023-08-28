@@ -272,6 +272,29 @@ export const SliderData = [
     activeImage: false,
   },
 ];
+
+export const caseForm = {
+  global: {
+    btnTitle: 'Request a Quote',
+    formTitle: 'Tell Us About Your Project',
+  },
+  webApp: {
+    btnTitle: 'Need a Web Application?',
+    formTitle: 'TELL US ABOUT YOUR WEB APPLICATION',
+  },
+  chrome: {
+    btnTitle: 'Get Your Extension Project Quote',
+    formTitle: 'Get Your Extension Project Quote',
+  },
+  desktop: {
+    btnTitle: 'Need a Desktop Application?',
+    formTitle: 'TELL US ABOUT YOUR Desktop APPLICATION',
+  },
+  approach: {
+    btnTitle: 'TELL US ABOUT YOUR PROJECT',
+    formTitle: 'New Form',
+  },
+};
 //urls
 export const manDeveloperImg =
   'https://www.outbrain.com/case-studies/wp-content/uploads/2022/01/GettyImages-516895432-Smiling-Businessman-on-Tablet-min.jpg';

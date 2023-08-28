@@ -1,5 +1,8 @@
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import { Technologies } from './components/Technologies';
 
+import { ProjectType } from 'globalTypes/projectDitealsTypes';
+import { caseForm } from '../../../../constants';
 import styles from './ServicesDescription.module.scss';
 
 const ServicesDescription = () => {
@@ -56,7 +59,11 @@ const ServicesDescription = () => {
             </p>
           </div>
         </div>
-        <button>Need a web application?</button>
+        <ProjectDiteals
+          btnTitle={caseForm[ProjectType.webApp].btnTitle}
+          formTitle={caseForm[ProjectType.webApp].formTitle}
+          checkBoxShow={false}
+        />
       </div>
     </div>
   );

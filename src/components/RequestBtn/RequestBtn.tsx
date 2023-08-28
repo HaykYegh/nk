@@ -7,9 +7,9 @@ const RequestBtn: FC<IRequestBtnProps> = ({
   btnTitle,
 }) => {
   return (
-    <button onClick={setShowFormModalBlock} className={styles.btnRequest}>
-      {btnTitle}
-    </button>
+    <div className={styles.btnRequest}>
+      <button onClick={setShowFormModalBlock}>{btnTitle}</button>
+    </div>
   );
 };
 

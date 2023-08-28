@@ -5,6 +5,9 @@ import appStore from 'images/app-store.png';
 import crashReporting from 'images/crash-reporting.png';
 
 import styles from './ServicesDesktopApplication.module.scss';
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
+import { caseForm } from '../../../../constants';
+import { ProjectType } from 'globalTypes/projectDitealsTypes';
 
 const ServicesDesktopApplication = () => {
   return (
@@ -84,6 +87,11 @@ const ServicesDesktopApplication = () => {
           </div>
         </div>
       </div>
+      <ProjectDiteals
+        btnTitle={caseForm[ProjectType.desktop].btnTitle}
+        formTitle={caseForm[ProjectType.desktop].formTitle}
+        checkBoxShow={false}
+      />
     </div>
   );
 };
