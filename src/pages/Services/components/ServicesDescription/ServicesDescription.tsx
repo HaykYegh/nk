@@ -1,8 +1,8 @@
 import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import { Technologies } from './components/Technologies';
 
-import { ProjectType } from 'globalTypes/projectDitealsTypes';
-import { caseForm } from '../../../../constants';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
+import { formTypes } from '../../../../constants';
 import styles from './ServicesDescription.module.scss';
 
 const ServicesDescription = () => {
@@ -60,8 +60,8 @@ const ServicesDescription = () => {
           </div>
         </div>
         <ProjectDiteals
-          btnTitle={caseForm[ProjectType.webApp].btnTitle}
-          formTitle={caseForm[ProjectType.webApp].formTitle}
+          btnTitle={formTypes[FormTypesEnum.webApp].btnTitle}
+          formTitle={formTypes[FormTypesEnum.webApp].formTitle}
           checkBoxShow={false}
         />
       </div>

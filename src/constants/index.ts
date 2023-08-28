@@ -273,7 +273,7 @@ export const SliderData = [
   },
 ];
 
-export const caseForm = {
+export const formTypes = {
   global: {
     btnTitle: 'Request a Quote',
     formTitle: 'Tell Us About Your Project',

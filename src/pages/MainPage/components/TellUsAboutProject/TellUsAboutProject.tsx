@@ -1,7 +1,7 @@
 import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import styles from './TellUsAboutProject.module.scss';
-import { caseForm } from '../../../../constants';
-import { ProjectType } from 'globalTypes/projectDitealsTypes';
+import { formTypes } from '../../../../constants';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
 
 const TellUsAboutProject = () => {
   return (
@@ -20,8 +20,8 @@ const TellUsAboutProject = () => {
       </div>
 
       <ProjectDiteals
-        btnTitle={caseForm[ProjectType.global].btnTitle}
-        formTitle={caseForm[ProjectType.global].formTitle}
+        btnTitle={formTypes[FormTypesEnum.global].btnTitle}
+        formTitle={formTypes[FormTypesEnum.global].formTitle}
         checkBoxShow={true}
       />
     </div>

@@ -1,4 +1,4 @@
-export enum ProjectType {
+export enum FormTypesEnum {
   global = 'global',
   webApp = 'webApp',
   chrome = 'chrome',

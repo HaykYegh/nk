@@ -1,7 +1,7 @@
 import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import styles from './ServicesChromeExtensions.module.scss';
-import { caseForm } from '../../../../constants';
-import { ProjectType } from 'globalTypes/projectDitealsTypes';
+import { formTypes } from '../../../../constants';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
 
 const ServicesChromeExtensions = () => {
   return (
@@ -51,8 +51,8 @@ const ServicesChromeExtensions = () => {
         </p>
       </div>
       <ProjectDiteals
-        btnTitle={caseForm[ProjectType.chrome].btnTitle}
-        formTitle={caseForm[ProjectType.chrome].formTitle}
+        btnTitle={formTypes[FormTypesEnum.chrome].btnTitle}
+        formTitle={formTypes[FormTypesEnum.chrome].formTitle}
         checkBoxShow={false}
       />
     </div>

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
-import { ProjectType } from 'globalTypes/projectDitealsTypes';
-import { caseForm } from '../../constants';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
+import { formTypes } from '../../constants';
 import styles from './Approach.module.scss';
 
 const Approach: FC = () => {
@@ -47,9 +47,9 @@ const Approach: FC = () => {
         </div>
       </div>
       <ProjectDiteals
-        btnTitle={caseForm[ProjectType.approach].btnTitle}
+        btnTitle={formTypes[FormTypesEnum.approach].btnTitle}
         checkBoxShow={true}
-        formTitle={caseForm[ProjectType.approach].formTitle}
+        formTitle={formTypes[FormTypesEnum.approach].formTitle}
       />
     </div>
   );
