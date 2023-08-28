@@ -32,11 +32,11 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
             className={styles.iconFont}
           />
           <p>
-            Form submission failed. Review the following information:
-            {errors.firstName && `firstName, `}
-            {errors.lastName && `LastName, `}
-            {errors.email && `Email, `}
-            {errors.projectBrief && `Project Brief`}
+            Form submission failed. Review the following information:&nbsp;
+            {errors.firstName && `firstName,`}&nbsp;
+            {errors.lastName && `LastName, `}&nbsp;
+            {errors.email && `Email, `}&nbsp;
+            {errors.projectBrief && `Project Brief`}&nbsp;
           </p>
         </div>
       )}
