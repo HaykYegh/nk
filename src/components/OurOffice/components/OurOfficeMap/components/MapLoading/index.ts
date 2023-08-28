@@ -1,1 +1,1 @@
-export { default as MapLoading } from './MapLoading';
+export { default } from './MapLoading';

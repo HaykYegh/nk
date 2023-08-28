@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
-import styles from './RequestBtn.module.scss';
+import { FC } from 'react';
 import { IRequestBtnProps } from './RequestBtnTypes';
+
+import styles from './RequestBtn.module.scss';
 
 const RequestBtn: FC<IRequestBtnProps> = ({
   setShowFormModalBlock,

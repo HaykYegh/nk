@@ -1,5 +1,5 @@
-import { LeftContent } from './components/LeftContent';
-import { OurOfficeMap } from './components/OurOfficeMap';
+import LeftContent from './components/LeftContent';
+import OurOfficeMap from './components/OurOfficeMap';
 
 import styles from './OurOffice.module.scss';
 

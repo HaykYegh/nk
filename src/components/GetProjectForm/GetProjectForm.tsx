@@ -1,13 +1,13 @@
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { scemaGetProjectForm } from '../../schemas/getProjectScema';
 import { IGetProjectData, IGetProjectDataProps } from './GetProjectFormTypes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { getErrorFilds } from 'helpers/FormHelpers';
+import { FC } from 'react';
 import classNames from 'classnames';
 import styles from './GetProjectForm.module.scss';
-import { FC } from 'react';
-import { getErrorFilds } from 'helpers/FormHelpers';
 
 const GetProjectForm: FC<IGetProjectDataProps> = ({
   contactPage,
