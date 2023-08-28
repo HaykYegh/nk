@@ -7,6 +7,7 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
 import styles from './GetProjectForm.module.scss';
 import { FC } from 'react';
+import { findError } from 'helpers/FormHelpers';
 
 const GetProjectForm: FC<IGetProjectDataProps> = ({
   contactPage,
@@ -20,9 +21,11 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
     resolver: yupResolver(scemaGetProjectForm),
     mode: 'onSubmit',
   });
+
   const onSubmit: SubmitHandler<IGetProjectData> = (data) => {
     console.log(data);
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       {!!Object.keys(errors).length && (
@@ -32,11 +35,9 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
             className={styles.iconFont}
           />
           <p>
-            Form submission failed. Review the following information:&nbsp;
-            {errors.firstName && `firstName,`}&nbsp;
-            {errors.lastName && `LastName, `}&nbsp;
-            {errors.email && `Email, `}&nbsp;
-            {errors.projectBrief && `Project Brief`}&nbsp;
+            {`Form submission failed. Review the following information:   ${findError(
+              errors,
+            )}`}
           </p>
         </div>
       )}

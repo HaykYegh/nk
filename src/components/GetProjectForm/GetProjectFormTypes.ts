@@ -4,7 +4,7 @@ export interface IGetProjectData {
   lastName: string;
   other: boolean | undefined;
   phone?: number;
-  projectBrief: string;
+  projectBrief?: string;
   support: boolean | undefined;
   web_application: boolean | undefined;
 }
