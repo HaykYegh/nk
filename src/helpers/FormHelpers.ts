@@ -25,7 +25,6 @@ export const findCheckedBox = (checkBox: ICheckedValues) => {
 };
 
 export const findFormType = (formType: string) => {
-  console.log(formType);
   switch (formType) {
     case FormTypesEnum.webApp:
       return TypesOfForms.webApplication;

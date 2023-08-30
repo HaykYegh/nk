@@ -6,8 +6,10 @@ import Header from '../Header';
 import HeaderImg from '../HeaderImg';
 import Sidebar from 'components/Sidebar';
 import Footer from 'components/Footer';
-
+import 'react-toastify/dist/ReactToastify.css';
 import styles from './Layout.module.scss';
+import { ToastContainer } from 'react-toastify';
+import { createPortal } from 'react-dom';
 
 interface IProps {
   children: ReactNode;
@@ -41,6 +43,7 @@ const Layout: FC<IProps> = ({ children }) => {
         <Footer />
       </div>
       <Sidebar isSidebarActive={isSidebarActive} />
+      {createPortal(<ToastContainer />, document.body)}
     </div>
   );
 };

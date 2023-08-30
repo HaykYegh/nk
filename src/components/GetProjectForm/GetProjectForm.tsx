@@ -20,6 +20,7 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType }) => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(scemaGetProjectForm),
     mode: 'onSubmit',
@@ -50,7 +51,7 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType }) => {
         formType: findFormType(formType),
       });
     }
-    console.log(findFormType(formType));
+    reset();
   };
 
   return (

@@ -1,12 +1,15 @@
 import axios from 'axios';
-import { postUrlForm } from '../constants';
+import { postUrlForm, toastDefaultValue } from '../constants';
 import { IPostData } from 'components/GetProjectForm/GetProjectFormTypes';
+import { toast } from 'react-toastify';
 
 export const postFormData = async (body: IPostData) => {
-  const data = await axios.post(postUrlForm, body, {
+  const { data } = await axios.post(postUrlForm, body, {
     headers: {
       'Content-Type': 'application/json',
     },
   });
-  console.log(data);
+  toast.success(data, {
+    ...toastDefaultValue(),
+  });
 };

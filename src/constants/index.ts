@@ -3,6 +3,7 @@ import digiconnectImage from 'images/digiconnect.jpg';
 import justhiveImage from 'images/justhive.jpg';
 import lpmaImage from 'images/LPMA.jpg';
 import recomazingImage from 'images/recomazing.jpg';
+import { ToastOptions } from 'react-toastify';
 
 export const MAP_API_KEY: string = process.env[
   'REACT_APP_MAP_API_KEY'
@@ -343,3 +344,16 @@ export const aboutUrl =
 // servicesUrl
 export const postUrlForm =
   'https://young-citadel-44598.herokuapp.com/sendMailer/sendmail';
+//tost
+export const toastDefaultValue = (): ToastOptions => {
+  return {
+    position: 'top-left',
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'light',
+  };
+};
