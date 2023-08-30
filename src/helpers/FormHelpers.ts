@@ -1,4 +1,4 @@
-import { TypesOfForms } from 'globalTypes/projectDitealsTypes';
+import { FormTypesEnum, TypesOfForms } from 'globalTypes/projectDitealsTypes';
 import { FieldErrors } from 'react-hook-form';
 
 export const getErrorFilds = (errors: FieldErrors) => {
@@ -22,4 +22,18 @@ export const findCheckedBox = (checkBox: ICheckedValues) => {
     }
   }
   return trueKeys.length > 1 ? TypesOfForms.other : trueKeys[0];
+};
+
+export const findFormType = (formType: string) => {
+  console.log(formType);
+  switch (formType) {
+    case FormTypesEnum.webApp:
+      return TypesOfForms.webApplication;
+    case FormTypesEnum.chrome:
+      return TypesOfForms.chromeExtention;
+    case FormTypesEnum.desktop:
+      return TypesOfForms.desktopApplication;
+    default:
+      return FormTypesEnum.conuct;
+  }
 };

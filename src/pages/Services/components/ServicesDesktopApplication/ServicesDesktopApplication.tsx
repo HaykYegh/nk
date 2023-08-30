@@ -90,7 +90,7 @@ const ServicesDesktopApplication = () => {
       <ProjectDiteals
         btnTitle={formTypes[FormTypesEnum.desktop].btnTitle}
         formTitle={formTypes[FormTypesEnum.desktop].formTitle}
-        formType={FormTypesEnum.webApp}
+        formType={FormTypesEnum.desktop}
       />
     </div>
   );

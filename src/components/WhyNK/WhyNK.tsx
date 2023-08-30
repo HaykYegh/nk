@@ -86,7 +86,7 @@ const WhyNK = () => {
       <ProjectDiteals
         btnTitle="REQUEST A QUOTE"
         formTitle="Tell us about your project"
-        formType={FormTypesEnum.global}
+        formType={FormTypesEnum.whyNk}
       />
     </div>
   );

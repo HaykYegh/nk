@@ -3,7 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { yupResolver } from '@hookform/resolvers/yup';
 import classNames from 'classnames';
 import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
-import { findCheckedBox, getErrorFilds } from 'helpers/FormHelpers';
+import {
+  findCheckedBox,
+  findFormType,
+  getErrorFilds,
+} from 'helpers/FormHelpers';
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { postFormData } from 'services';
@@ -24,18 +28,29 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType }) => {
     errors,
   )}`;
   const onSubmit: SubmitHandler<IGetProjectData> = (data) => {
-    postFormData({
-      email: data.email,
-      lastName: data.lastName,
-      firstName: data.firstName,
-      message: data.projectBrief,
-      formType: findCheckedBox({
-        webApplication: data.web_application,
-        chromeExtention: data.chromeExtention,
-        desktopApplication: data.desktopApplication,
-        other: data.other,
-      }),
-    });
+    if (formType === FormTypesEnum.global || formType === FormTypesEnum.whyNk) {
+      postFormData({
+        email: data.email,
+        lastName: data.lastName,
+        firstName: data.firstName,
+        message: data.projectBrief,
+        formType: findCheckedBox({
+          webApplication: data.web_application,
+          chromeExtention: data.chromeExtention,
+          desktopApplication: data.desktopApplication,
+          other: data.other,
+        }),
+      });
+    } else {
+      postFormData({
+        email: data.email,
+        lastName: data.lastName,
+        firstName: data.firstName,
+        message: data.projectBrief,
+        formType: findFormType(formType),
+      });
+    }
+    console.log(findFormType(formType));
   };
 
   return (
@@ -100,7 +115,9 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType }) => {
 
       <div className={styles.cusstomFieldBlock}>
         <label htmlFor="projectBrief">
-          {formType == FormTypesEnum.whyNk ? 'Project Brief' : 'message'}
+          {formType == FormTypesEnum.whyNk || formType == FormTypesEnum.global
+            ? 'Project Brief'
+            : 'message'}
           <span className={styles.req}>*</span>
         </label>
 
