@@ -12,9 +12,10 @@ export const scemaGetProjectForm = yup.object().shape({
   firstName: yup.string().required(`First${required}`),
   email: yup.string().required(requiredEmail).email(invalidEmail),
   projectBrief: yup.string().required(projectBriefError),
-  support: yup.boolean(),
+  chromeExtention: yup.boolean(),
   web_application: yup.boolean(),
   other: yup.boolean(),
   phone: yup.number().typeError(phoneValidation),
   projectBudget: yup.string(),
+  desktopApplication: yup.boolean(),
 });

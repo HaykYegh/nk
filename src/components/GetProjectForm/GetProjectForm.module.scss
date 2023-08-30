@@ -109,17 +109,12 @@ form {
 
     .error {
         @include errorStyles;
-
-
-      
-
-        .btnContact {
-            justify-content: start;
-        }
-
-        .btnSub {
-            border-radius: 0;
-        }
+    }
+    .btnContact {
+        justify-content: start;
+    }
+    .btnSub {
+        border-radius: 0;
     }
 }
 .alertBlock {

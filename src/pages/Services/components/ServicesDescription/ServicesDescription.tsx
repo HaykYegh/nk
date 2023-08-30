@@ -62,7 +62,7 @@ const ServicesDescription = () => {
         <ProjectDiteals
           btnTitle={formTypes[FormTypesEnum.webApp].btnTitle}
           formTitle={formTypes[FormTypesEnum.webApp].formTitle}
-          checkBoxShow={false}
+          formType={FormTypesEnum.webApp}
         />
       </div>
     </div>

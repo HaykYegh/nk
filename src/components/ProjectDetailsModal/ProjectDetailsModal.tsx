@@ -7,8 +7,8 @@ import styles from './ProjectDetailsModal.module.scss';
 
 const ProjectDetailsModal: FC<IProjectDitealsProps> = ({
   setShowFormModalBlock,
-  checkBoxShow,
   formTitle,
+  formType,
 }) => {
   useEffect(() => {
     const body = document.body;
@@ -30,7 +30,7 @@ const ProjectDetailsModal: FC<IProjectDitealsProps> = ({
               <FontAwesomeIcon icon={faX} />
             </button>
           </div>
-          <GetProjectForm checkBoxShow={checkBoxShow} />
+          <GetProjectForm formType={formType} />
         </div>
       </div>
     </div>

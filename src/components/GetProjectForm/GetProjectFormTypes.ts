@@ -4,12 +4,24 @@ export interface IGetProjectData {
   lastName: string;
   other: boolean | undefined;
   phone?: number;
-  projectBrief?: string;
-  support: boolean | undefined;
+  projectBrief: string;
+  chromeExtention: boolean | undefined;
   web_application: boolean | undefined;
+  desktopApplication: boolean | undefined;
 }
 
 export interface IGetProjectDataProps {
-  contactPage?: boolean;
-  checkBoxShow: boolean;
+  formType: string;
+}
+
+export interface IPostData {
+  email: string;
+  firstName: string;
+  lastName: string;
+  message: string;
+  chromeExtention?: boolean | undefined;
+  web_application?: boolean | undefined;
+  desktopApplication?: boolean | undefined;
+  other?: boolean | undefined;
+  formType: string;
 }

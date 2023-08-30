@@ -7,6 +7,7 @@ import {
 } from '../../constants';
 
 import styles from './WhyNK.module.scss';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
 
 const WhyNK = () => {
   return (
@@ -85,7 +86,7 @@ const WhyNK = () => {
       <ProjectDiteals
         btnTitle="REQUEST A QUOTE"
         formTitle="Tell us about your project"
-        checkBoxShow={true}
+        formType={FormTypesEnum.global}
       />
     </div>
   );

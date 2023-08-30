@@ -295,6 +295,7 @@ export const formTypes = {
     formTitle: 'New Form',
   },
 };
+
 //urls
 export const manDeveloperImg =
   'https://www.outbrain.com/case-studies/wp-content/uploads/2022/01/GettyImages-516895432-Smiling-Businessman-on-Tablet-min.jpg';
@@ -338,3 +339,7 @@ export const approachUrl =
 
 export const aboutUrl =
   'https://d7fi61gsgzcz4.cloudfront.net/assets/page-hero-images/istock-493171547_2500.jpg/dynamic:1-aspect:2.5-fit:cover-strategy:entropy/istock-493171547_2500--1400.webp';
+
+// servicesUrl
+export const postUrlForm =
+  'https://young-citadel-44598.herokuapp.com/sendMailer/sendmail';
