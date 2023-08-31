@@ -1,4 +1,5 @@
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
+import ErrorPage from 'pages/ErrorPage/ErrorPage';
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 const Approach = lazy(() => import('pages/Approach'));
@@ -20,6 +21,7 @@ const RoutesComponent = () => {
         <Route path="/approach" element={<Approach />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <ScrollToTop />
     </Suspense>
