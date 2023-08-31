@@ -3,11 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { yupResolver } from '@hookform/resolvers/yup';
 import classNames from 'classnames';
 import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
-import {
-  findCheckedBox,
-  findFormType,
-  getErrorFilds,
-} from 'helpers/FormHelpers';
+import { findCheckedBox, getErrorFilds } from 'helpers/FormHelpers';
 import { FC, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { postFormData } from 'services';
@@ -26,7 +22,6 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
   const {
     register,
     handleSubmit,
-    getValues,
     formState: { errors },
     reset,
   } = useForm({
@@ -45,20 +40,16 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
       firstName: data.firstName,
       message: data.projectBrief,
       phone: data.phone ? data.phone : null,
-      formType: FormTypesEnum.global,
+      formType: findCheckedBox(
+        {
+          webApplication: data.web_application,
+          chromeExtention: data.chromeExtention,
+          desktopApplication: data.desktopApplication,
+          other: data.other,
+        },
+        formType,
+      ),
     };
-
-    if (formType === FormTypesEnum.global || formType === FormTypesEnum.whyNk) {
-      formData.formType = findCheckedBox({
-        webApplication: data.web_application,
-        chromeExtention: data.chromeExtention,
-        desktopApplication: data.desktopApplication,
-        other: data.other,
-      });
-    } else {
-      formData.formType = findFormType(formType);
-    }
-
     const resp = await postFormData(formData);
     setloading(false);
     toast(resp?.data, {
@@ -75,7 +66,6 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
     <form
       onSubmit={handleSubmit(onSubmit, (data) => {
         console.log(data);
-        console.log('getValues -> ', getValues());
       })}
     >
       {!!Object.keys(errors).length && (
@@ -211,12 +201,8 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
           })}
           type="submit"
         >
-          {loading
-            ? null
-            : formType == FormTypesEnum.conuct
-            ? 'TALK TO US'
-            : 'SUBMIT'}
-          {loading && <div className={styles.spinner}></div>}
+          {formType == FormTypesEnum.conuct ? 'TALK TO US' : 'SUBMIT'}
+          {loading && <span className={styles.loader}></span>}
         </button>
       </div>
     </form>

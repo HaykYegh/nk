@@ -14,28 +14,28 @@ export interface ICheckedValues {
   desktopApplication: boolean | undefined;
   other: boolean | undefined;
 }
-export const findCheckedBox = (checkBox: ICheckedValues) => {
-  const trueKeys = [];
-  for (const key in checkBox) {
-    if (checkBox[key as keyof ICheckedValues]) {
-      trueKeys.push(key);
+export const findCheckedBox = (checkBox: ICheckedValues, formType: string) => {
+  if (formType === FormTypesEnum.global || formType === FormTypesEnum.whyNk) {
+    const trueKeys = [];
+    for (const key in checkBox) {
+      if (checkBox[key as keyof ICheckedValues]) {
+        trueKeys.push(key);
+      }
     }
-  }
-  return trueKeys.length > 1 ? TypesOfForms.other : trueKeys[0] || 'other';
-};
-
-export const findFormType = (formType: string) => {
-  switch (formType) {
-    case FormTypesEnum.webApp:
-      return TypesOfForms.webApplication;
-    case FormTypesEnum.chrome:
-      return TypesOfForms.chromeExtention;
-    case FormTypesEnum.desktop:
-      return TypesOfForms.desktopApplication;
-    case FormTypesEnum.conuct:
-      return TypesOfForms.contuctUs;
-    default:
-      return 'other';
+    return trueKeys.length > 1 ? TypesOfForms.other : trueKeys[0] || 'other';
+  } else {
+    switch (formType) {
+      case FormTypesEnum.webApp:
+        return TypesOfForms.webApplication;
+      case FormTypesEnum.chrome:
+        return TypesOfForms.chromeExtention;
+      case FormTypesEnum.desktop:
+        return TypesOfForms.desktopApplication;
+      case FormTypesEnum.conuct:
+        return TypesOfForms.contuctUs;
+      default:
+        return 'other';
+    }
   }
 };
 
