@@ -39,5 +39,5 @@ export const findFormType = (formType: string) => {
   }
 };
 
-export const transformScemas = (value: number) =>
-  isNaN(value) ? undefined : value;
+export const transformScemas = (value: string) =>
+  value === '' ? undefined : value;

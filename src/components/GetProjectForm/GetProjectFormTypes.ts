@@ -3,7 +3,7 @@ export interface IGetProjectData {
   firstName: string;
   lastName: string;
   other: boolean | undefined;
-  phone?: number | null;
+  phone?: string | null;
   projectBrief: string;
   chromeExtention?: boolean;
   web_application?: boolean;
@@ -25,5 +25,5 @@ export interface IPostData {
   desktopApplication?: boolean | undefined;
   other?: boolean | undefined;
   formType: string;
-  phone?: number | null;
+  phone?: string | null;
 }

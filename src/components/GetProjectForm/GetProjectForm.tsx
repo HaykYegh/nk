@@ -26,6 +26,7 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
     reset,
   } = useForm({
@@ -71,7 +72,12 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit, (data) => console.log(data))}>
+    <form
+      onSubmit={handleSubmit(onSubmit, (data) => {
+        console.log(data);
+        console.log('getValues -> ', getValues());
+      })}
+    >
       {!!Object.keys(errors).length && (
         <div className={styles.alertBlock}>
           <FontAwesomeIcon
@@ -127,7 +133,14 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
 
       <div className={styles.cusstomFieldBlock}>
         <label htmlFor="phone">Phone</label>
-        <input type="text" {...register('phone')} />
+        <input
+          className={classNames({
+            [styles.activeError]: errors.phone,
+          })}
+          type="text"
+          {...register('phone')}
+        />
+        <span className={styles.error}>{errors.phone?.message}</span>
       </div>
 
       <div className={styles.cusstomFieldBlock}>

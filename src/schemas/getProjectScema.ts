@@ -1,6 +1,8 @@
 import * as yup from 'yup';
 import {
   invalidEmail,
+  phoneRegExp,
+  phoneValidation,
   projectBriefError,
   required,
   requiredEmail,
@@ -15,7 +17,11 @@ export const scemaGetProjectForm = yup.object().shape({
   chromeExtention: yup.boolean(),
   web_application: yup.boolean(),
   other: yup.boolean(),
-  phone: yup.number().transform(transformScemas).nullable(),
+  phone: yup
+    .string()
+    .transform(transformScemas)
+    .matches(phoneRegExp, phoneValidation)
+    .nullable(),
   projectBudget: yup.string(),
   desktopApplication: yup.boolean(),
 });
