@@ -105,18 +105,23 @@ form {
     .submitBtn {
         @include submitFormstyles;
         background-color: $secondary2-color;
+        display: flex;
+
     }
 
     .error {
         @include errorStyles;
     }
+
     .btnContact {
         justify-content: start;
     }
+
     .btnSub {
         border-radius: 0;
     }
 }
+
 .alertBlock {
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
@@ -145,4 +150,25 @@ form {
         color: #ce2c30;
         font-weight: bold;
     }
+}
+
+.spinner {
+    display: block;
+    border: 7px solid transparent;
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+    border-top-color: salmon;
+    border-right-color: salmon;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingBtn {
+    opacity: 0.3;
+    cursor: not-allowed;
 }

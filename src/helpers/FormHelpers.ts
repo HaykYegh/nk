@@ -21,7 +21,7 @@ export const findCheckedBox = (checkBox: ICheckedValues) => {
       trueKeys.push(key);
     }
   }
-  return trueKeys.length > 1 ? TypesOfForms.other : trueKeys[0];
+  return trueKeys.length > 1 ? TypesOfForms.other : trueKeys[0] || 'other';
 };
 
 export const findFormType = (formType: string) => {
@@ -38,3 +38,6 @@ export const findFormType = (formType: string) => {
       return 'other';
   }
 };
+
+export const transformScemas = (value: number) =>
+  isNaN(value) ? undefined : value;

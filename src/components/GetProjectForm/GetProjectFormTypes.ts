@@ -3,11 +3,11 @@ export interface IGetProjectData {
   firstName: string;
   lastName: string;
   other: boolean | undefined;
-  phone?: number;
+  phone?: number | null;
   projectBrief: string;
-  chromeExtention: boolean | undefined;
-  web_application: boolean | undefined;
-  desktopApplication: boolean | undefined;
+  chromeExtention?: boolean;
+  web_application?: boolean;
+  desktopApplication?: boolean;
 }
 
 export interface IGetProjectDataProps {
@@ -25,4 +25,5 @@ export interface IPostData {
   desktopApplication?: boolean | undefined;
   other?: boolean | undefined;
   formType: string;
+  phone?: number | null;
 }

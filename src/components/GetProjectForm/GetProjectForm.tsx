@@ -8,14 +8,21 @@ import {
   findFormType,
   getErrorFilds,
 } from 'helpers/FormHelpers';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { postFormData } from 'services';
 import { scemaGetProjectForm } from '../../schemas/getProjectScema';
-import { IGetProjectData, IGetProjectDataProps } from './GetProjectFormTypes';
+import {
+  IGetProjectData,
+  IGetProjectDataProps,
+  IPostData,
+} from './GetProjectFormTypes';
 import styles from './GetProjectForm.module.scss';
+import { toast } from 'react-toastify';
+import { toastDefaultValue } from '../../constants';
 
 const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
+  const [loading, setloading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -30,38 +37,41 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
   )}`;
 
   const onSubmit: SubmitHandler<IGetProjectData> = async (data) => {
+    setloading(true);
+    const formData: IPostData = {
+      email: data.email,
+      lastName: data.lastName,
+      firstName: data.firstName,
+      message: data.projectBrief,
+      phone: data.phone ? data.phone : null,
+      formType: FormTypesEnum.global,
+    };
+
     if (formType === FormTypesEnum.global || formType === FormTypesEnum.whyNk) {
-      await postFormData({
-        email: data.email,
-        lastName: data.lastName,
-        firstName: data.firstName,
-        message: data.projectBrief,
-        formType: findCheckedBox({
-          webApplication: data.web_application,
-          chromeExtention: data.chromeExtention,
-          desktopApplication: data.desktopApplication,
-          other: data.other,
-        }),
+      formData.formType = findCheckedBox({
+        webApplication: data.web_application,
+        chromeExtention: data.chromeExtention,
+        desktopApplication: data.desktopApplication,
+        other: data.other,
       });
     } else {
-      await postFormData({
-        email: data.email,
-        lastName: data.lastName,
-        firstName: data.firstName,
-        message: data.projectBrief,
-        formType: findFormType(formType),
-      });
+      formData.formType = findFormType(formType);
     }
+
+    const resp = await postFormData(formData);
+    setloading(false);
+    toast(resp?.data, {
+      ...toastDefaultValue(),
+    });
+
     reset();
     if (formType !== FormTypesEnum.conuct) {
-      if (closeModal) {
-        closeModal();
-      }
+      closeModal!();
     }
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit, (data) => console.log(data))}>
       {!!Object.keys(errors).length && (
         <div className={styles.alertBlock}>
           <FontAwesomeIcon
@@ -136,12 +146,6 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
         ></textarea>
         <span className={styles.error}>{errors.projectBrief?.message}</span>
       </div>
-      {!(formType == FormTypesEnum.conuct) && (
-        <div className={styles.cusstomFieldBlock}>
-          <label htmlFor="projectBudget">Project Budget</label>
-          <input type="text" {...register('projectBudget')} />
-        </div>
-      )}
       {(formType == FormTypesEnum.global ||
         formType == FormTypesEnum.whyNk) && (
         <div className={styles.checkbox_section}>
@@ -187,12 +191,15 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
         })}
       >
         <button
+          disabled={loading}
           className={classNames(styles.submitBtn, {
             [styles.btnSub]: FormTypesEnum.conuct == formType,
+            [styles.loadingBtn]: loading,
           })}
           type="submit"
         >
           {formType == FormTypesEnum.conuct ? 'TALK TO US' : 'SUBMIT'}
+          {loading && <div className={styles.spinner}></div>}
         </button>
       </div>
     </form>
