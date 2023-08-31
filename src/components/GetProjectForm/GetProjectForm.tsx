@@ -198,7 +198,11 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
           })}
           type="submit"
         >
-          {formType == FormTypesEnum.conuct ? 'TALK TO US' : 'SUBMIT'}
+          {loading
+            ? null
+            : formType == FormTypesEnum.conuct
+            ? 'TALK TO US'
+            : 'SUBMIT'}
           {loading && <div className={styles.spinner}></div>}
         </button>
       </div>

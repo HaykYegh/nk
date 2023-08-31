@@ -105,8 +105,11 @@ form {
     .submitBtn {
         @include submitFormstyles;
         background-color: $secondary2-color;
-        display: flex;
+    }
 
+    .loadingBtn {
+        cursor: not-allowed;
+        opacity: 0.3;
     }
 
     .error {
@@ -166,9 +169,4 @@ form {
     to {
         transform: rotate(360deg);
     }
-}
-
-.loadingBtn {
-    opacity: 0.3;
-    cursor: not-allowed;
 }
