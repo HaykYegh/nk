@@ -12,6 +12,7 @@ export interface IGetProjectData {
 
 export interface IGetProjectDataProps {
   formType: string;
+  closeModal?: () => void;
 }
 
 export interface IPostData {

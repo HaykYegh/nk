@@ -15,7 +15,7 @@ import { scemaGetProjectForm } from '../../schemas/getProjectScema';
 import { IGetProjectData, IGetProjectDataProps } from './GetProjectFormTypes';
 import styles from './GetProjectForm.module.scss';
 
-const GetProjectForm: FC<IGetProjectDataProps> = ({ formType }) => {
+const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
   const {
     register,
     handleSubmit,
@@ -28,9 +28,10 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType }) => {
   const errorMessageAlert = `Form submission failed. Review the following information:   ${getErrorFilds(
     errors,
   )}`;
-  const onSubmit: SubmitHandler<IGetProjectData> = (data) => {
+
+  const onSubmit: SubmitHandler<IGetProjectData> = async (data) => {
     if (formType === FormTypesEnum.global || formType === FormTypesEnum.whyNk) {
-      postFormData({
+      await postFormData({
         email: data.email,
         lastName: data.lastName,
         firstName: data.firstName,
@@ -43,7 +44,7 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType }) => {
         }),
       });
     } else {
-      postFormData({
+      await postFormData({
         email: data.email,
         lastName: data.lastName,
         firstName: data.firstName,
@@ -52,6 +53,11 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType }) => {
       });
     }
     reset();
+    if (formType !== FormTypesEnum.conuct) {
+      if (closeModal) {
+        closeModal();
+      }
+    }
   };
 
   return (

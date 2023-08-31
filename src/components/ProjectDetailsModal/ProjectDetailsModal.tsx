@@ -30,7 +30,10 @@ const ProjectDetailsModal: FC<IProjectDitealsProps> = ({
               <FontAwesomeIcon icon={faX} />
             </button>
           </div>
-          <GetProjectForm formType={formType} />
+          <GetProjectForm
+            closeModal={setShowFormModalBlock}
+            formType={formType}
+          />
         </div>
       </div>
     </div>

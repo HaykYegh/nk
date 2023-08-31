@@ -32,7 +32,9 @@ export const findFormType = (formType: string) => {
       return TypesOfForms.chromeExtention;
     case FormTypesEnum.desktop:
       return TypesOfForms.desktopApplication;
+    case FormTypesEnum.conuct:
+      return TypesOfForms.contuctUs;
     default:
-      return FormTypesEnum.conuct;
+      return 'other';
   }
 };
