@@ -22,7 +22,7 @@ const TellUsAboutProject = () => {
       <ProjectDiteals
         btnTitle={formTypes[FormTypesEnum.global].btnTitle}
         formTitle={formTypes[FormTypesEnum.global].formTitle}
-        checkBoxShow={true}
+        formType={FormTypesEnum.global}
       />
     </div>
   );

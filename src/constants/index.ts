@@ -3,6 +3,7 @@ import digiconnectImage from 'images/digiconnect.jpg';
 import justhiveImage from 'images/justhive.jpg';
 import lpmaImage from 'images/LPMA.jpg';
 import recomazingImage from 'images/recomazing.jpg';
+import { ToastOptions } from 'react-toastify';
 
 export const MAP_API_KEY: string = process.env[
   'REACT_APP_MAP_API_KEY'
@@ -295,6 +296,7 @@ export const formTypes = {
     formTitle: 'New Form',
   },
 };
+
 //urls
 export const manDeveloperImg =
   'https://www.outbrain.com/case-studies/wp-content/uploads/2022/01/GettyImages-516895432-Smiling-Businessman-on-Tablet-min.jpg';
@@ -338,3 +340,20 @@ export const approachUrl =
 
 export const aboutUrl =
   'https://d7fi61gsgzcz4.cloudfront.net/assets/page-hero-images/istock-493171547_2500.jpg/dynamic:1-aspect:2.5-fit:cover-strategy:entropy/istock-493171547_2500--1400.webp';
+
+// servicesUrl
+export const postUrlForm =
+  'https://young-citadel-44598.herokuapp.com/sendMailer/sendmail';
+//tost
+export const toastDefaultValue = (): ToastOptions => {
+  return {
+    position: 'top-left',
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'light',
+  };
+};

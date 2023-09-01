@@ -53,7 +53,7 @@ const ServicesChromeExtensions = () => {
       <ProjectDiteals
         btnTitle={formTypes[FormTypesEnum.chrome].btnTitle}
         formTitle={formTypes[FormTypesEnum.chrome].formTitle}
-        checkBoxShow={false}
+        formType={FormTypesEnum.chrome}
       />
     </div>
   );

@@ -1,15 +1,14 @@
 import { FC, useState } from 'react';
-import AboutFormModal from '../ProjectDetailsModal';
 import RequestBtn from '../RequestBtn/RequestBtn';
 import { createPortal } from 'react-dom';
 import { IProjectDitealsProps } from './ProjectDetailsTypes';
-
 import styles from './ProjectDetails.module.scss';
+import ProjectDetailsModal from 'components/ProjectDetailsModal/ProjectDetailsModal';
 
 const ProjectDiteals: FC<IProjectDitealsProps> = ({
   btnTitle,
-  checkBoxShow,
   formTitle,
+  formType,
 }) => {
   const [showFormModal, setShowFormModal] = useState(false);
 
@@ -25,10 +24,10 @@ const ProjectDiteals: FC<IProjectDitealsProps> = ({
       />
       {showFormModal &&
         createPortal(
-          <AboutFormModal
+          <ProjectDetailsModal
             setShowFormModalBlock={setShowFormModalBlock}
             formTitle={formTitle}
-            checkBoxShow={checkBoxShow}
+            formType={formType}
           />,
           document.body,
         )}

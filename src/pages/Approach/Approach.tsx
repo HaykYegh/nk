@@ -48,8 +48,8 @@ const Approach: FC = () => {
       </div>
       <ProjectDiteals
         btnTitle={formTypes[FormTypesEnum.approach].btnTitle}
-        checkBoxShow={true}
         formTitle={formTypes[FormTypesEnum.approach].formTitle}
+        formType={FormTypesEnum.approach}
       />
     </div>
   );
