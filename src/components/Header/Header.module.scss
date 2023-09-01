@@ -155,6 +155,16 @@
   }
 }
 
+.show {
+  transform: translateY(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.hide {
+  transform: translateY(-100%);
+  transition: transform 0.25s ease-in-out;
+}
+
 @keyframes show {
   0% {
     opacity: 0;
