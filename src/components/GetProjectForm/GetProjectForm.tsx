@@ -170,7 +170,7 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
                 type="checkbox"
                 {...register('chromeExtention')}
               />
-              <label htmlFor="chromeExtention">chromeExtention</label>
+              <label htmlFor="chromeExtention">Chrome Extention</label>
             </div>
 
             <div className={styles.checks}>
@@ -179,7 +179,7 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
                 type="checkbox"
                 {...register('desktopApplication')}
               />
-              <label htmlFor="desktopApplication">desktopApplication</label>
+              <label htmlFor="desktopApplication">Desktop Application</label>
             </div>
             <div className={styles.checks}>
               <input id="other" type="checkbox" {...register('other')} />
