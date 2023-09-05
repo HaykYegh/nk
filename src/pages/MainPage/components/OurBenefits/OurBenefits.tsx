@@ -9,7 +9,7 @@ const OurBenefits = () => {
         <hr />
       </div>
       <div className={styles.title}>
-        <h2>Work with us is beneficial course</h2>
+        <h2>Join Our Rewarding Journey</h2>
       </div>
       <Benefits />
     </div>

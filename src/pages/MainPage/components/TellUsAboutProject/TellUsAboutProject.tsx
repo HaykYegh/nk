@@ -10,12 +10,13 @@ const TellUsAboutProject = () => {
         <hr />
       </div>
       <div className={styles.title_and_content}>
-        <h2>Tell us about your project</h2>
+        <h2>Share Your Project Details</h2>
         <p>
-          Whether you are developing a web or mobile application, chatbot, api,
-          looking for a strong technical support or consulting, having troubles
-          with scaling your existing application or just have an idea, we are
-          keen to learn more.
+          Whether you`re in the midst of crafting a web or mobile application,
+          chat-bot, API, in search of robust technical support or consulting
+          services, facing challenges with scaling your current application, or
+          just brimming with an innovative concept, we`re eager to delve deeper
+          into your requirements and objectives.
         </p>
       </div>
 
