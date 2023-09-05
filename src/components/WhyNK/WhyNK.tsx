@@ -15,18 +15,20 @@ const WhyNK = () => {
           <img src={manDeveloperImg} />
         </div>
         <div className={styles.succsess_textBlock}>
-          <h2>YOUR SUCCESS IS OUR VICTORY</h2>
+          <h2>Your triumph is our achievement.</h2>
           <p>
-            We do our best to make every project a triumph. We see every
-            collaboration as a mutual reinforcement and thus we route all of our
-            efforts to the successful completion of our projects.{' '}
+            We dedicate ourselves to transforming each project into a resounding
+            success. Every partnership we engage in is a reciprocal
+            strengthening, and therefore, we channel all our energies toward the
+            triumphant fruition of our endeavours.{' '}
           </p>
           <p>
-            Simply team aims to amaze you with our work and leave you with
-            positive memories of us. Your post-development recommendation is the
-            evaluation of our daily work and our motivation to evolve. We value
-            your experience with us as, as well as your feedback. The feedback
-            will help us to grow and evolve further.
+            Our team strives to impress you with our work, leaving you with
+            memorable and positive experiences. Your post-project endorsement is
+            a testament to our daily efforts and serves as a catalyst for our
+            continuous improvement. We deeply appreciate your journey with us
+            and the valuable insights you provide. Your feedback fuels our
+            growth and propels us towards even greater heights.
           </p>
         </div>
       </div>
@@ -66,14 +68,17 @@ const WhyNK = () => {
       </div>
       <div className={styles.becauseBlocks}>
         <div className={styles.succsess_textBlock}>
-          <h2>WE ARE PROFESSIONALLY MATURE</h2>
+          <h2>JavaScript Empowers Us</h2>
           <p>
-            Simply has more than 11 years experience of providing outsourcing to
-            Australia and the USA. Our company showed 28% growth in the last 3
-            years. By creating successful projects, we have gained trust among
-            startups and founders in these countries ensuring long-term
-            partnerships and relations with our customers. The fact that 87% of
-            our clients came back for another project, makes us feel proud.
+            At N/K, we firmly hold the belief that our dedication to a singular
+            focus is the cornerstone of our expertise. We&#39;ve chosen a
+            rapidly evolving technology and honed our skills to mastery,
+            establishing our company as the haven for the finest JavaScript
+            experts who are unwavering in their pursuit of excellence and
+            ground-breaking innovations. Our commitment to perpetual refinement
+            in JavaScript knowledge is our driving force, enabling us to craft
+            code that is not just of the highest quality but also the most
+            dependable and trustworthy.
           </p>
         </div>
         <div className={styles.imgBlock}>
