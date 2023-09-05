@@ -10,12 +10,12 @@ export const getImageFromPath = (path: string) => {
     case '/':
       return {
         url: homeUrl,
-        text: 'SOFTWARE DEVELOPMENT AND INNOVATION',
+        text: 'EMPOWERING DIGITAL EVOLUTION',
       };
     case '/web-applications':
       return {
         url: webUrl,
-        text: 'WEB APPLICATIONS DEVELOPMENT',
+        text: 'ADVANCING WEB APPLICATIONS DEVELOPMENT',
       };
 
     case '/chrome-extensions':
