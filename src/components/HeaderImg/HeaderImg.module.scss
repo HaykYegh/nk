@@ -5,7 +5,7 @@
   height: 500px;
   overflow: hidden;
   max-height: 500px;
-  background-image: url('https://images.pexels.com/photos/245032/pexels-photo-245032.jpeg');
+
   background-position: center;
   background-size: cover;
   display: flex;
@@ -23,7 +23,10 @@
 
     h1 {
       color: $white-color;
-      font-size: 2em;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      animation: moveUp 0.5s ease-in-out;
+      text-shadow: 5px 5px 10px black;
 
       @media (max-width: 750px) {
         font-size: 20px;
@@ -53,5 +56,16 @@
     .contactUsBtn:hover {
       opacity: 0.8;
     }
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

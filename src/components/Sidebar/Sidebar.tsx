@@ -1,7 +1,8 @@
-import React, { FC, useState } from 'react';
-import { NavLink as Link } from 'react-router-dom';
-import styles from './Sidebar.module.scss';
+import { FC, useEffect, useState } from 'react';
 import classNames from 'classnames';
+import { NavLink as Link, useLocation } from 'react-router-dom';
+
+import styles from './Sidebar.module.scss';
 
 interface IProps {
   isSidebarActive: boolean;
@@ -9,9 +10,15 @@ interface IProps {
 
 const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
   const [isServicesActive, setServicesActive] = useState(false);
+  const location = useLocation();
   const showServicesHandler = () => {
     setServicesActive((prev) => !prev);
   };
+
+  useEffect(() => {
+    setServicesActive(false);
+  }, [location.pathname]);
+
   return (
     <div
       className={`${styles.Sidebar} ${isSidebarActive && styles.sideActive}`}
@@ -22,7 +29,7 @@ const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
             <Link to="/">MAIN PAGE</Link>
           </div>
           <div className={styles.section}>
-            <Link to="/">WHY NK?</Link>
+            <Link to="/why-nk">WHY NK?</Link>
           </div>
           <div onClick={showServicesHandler} className={styles.section}>
             <i
@@ -34,14 +41,14 @@ const Sidebar: FC<IProps> = ({ isSidebarActive }) => {
           </div>
           {isServicesActive && (
             <div className={styles.servicesSubMenu}>
-              <Link to="/">WEB APPS</Link>
-              <Link to="/">CHROME EXTENTIONS</Link>
-              <Link to="/">DESKTOP APPS</Link>
+              <Link to="/web-applications">WEB APPS</Link>
+              <Link to="/chrome-extensions">CHROME EXTENSIONS</Link>
+              <Link to="/desktop-applications">DESKTOP APPS</Link>
             </div>
           )}
 
           <div className={styles.section}>
-            <Link to="/">CONTACT US</Link>
+            <Link to="/contact-us">CONTACT US</Link>
           </div>
         </div>
       </div>

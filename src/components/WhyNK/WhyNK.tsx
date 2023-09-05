@@ -1,10 +1,13 @@
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import {
   manDeveloperImg,
   matureImg,
   oficeImg,
   superPowerImg,
 } from '../../constants';
+
 import styles from './WhyNK.module.scss';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
 
 const WhyNK = () => {
   return (
@@ -52,39 +55,50 @@ const WhyNK = () => {
           <img src={oficeImg} alt="" />
         </div>
         <div className={styles.succsess_textBlock}>
-          <h2>COMMUNICATION IS VITAL FOR USY</h2>
+          <h2>Effective Communication is Paramount to Us.</h2>
           <p>
-            Our team values communication during the creating process and loves
-            to stay connected with our customers even after the project has been
-            successfully completed. Keeping you updated about what we do is a
-            priority for us. Sharing our work process with you step by step
-            makes us more confident and motivates us to amaze you throughout the
-            completion of our projects. Our team of JS experts keeps you
-            informed and connected to your project development by sending you
-            weekly/biweekly demos. You always have access to daily statuses and
-            code updates while keeping an internal Slack communication.
+            Within our team, communication is highly regarded throughout the
+            creative journey, and our commitment to staying connected with our
+            clients extends well beyond the project&#39;s successful completion.
+            Keeping you informed about our progress remains a top priority.
+            Sharing the intricacies of our work process with you, step by step,
+            instills in us the confidence and inspiration to continually impress
+            you throughout the project&#39;s execution. Our ensemble of
+            JavaScript experts ensures that you are constantly engaged and
+            informed about the development of your project. We provide weekly or
+            biweekly demos to keep you in the loop, ensuring transparency and
+            alignment with your vision. Furthermore, you maintain access to
+            daily project statuses and code updates through our dedicated
+            internal Slack communication channels. Your involvement and insight
+            are fundamental to our collaborative success.
           </p>
         </div>
       </div>
       <div className={styles.becauseBlocks}>
         <div className={styles.succsess_textBlock}>
-          <h2>JavaScript Empowers Us</h2>
+          <h2>We Embrace Professional Expertise.</h2>
           <p>
-            At N/K, we firmly hold the belief that our dedication to a singular
-            focus is the cornerstone of our expertise. We&#39;ve chosen a
-            rapidly evolving technology and honed our skills to mastery,
-            establishing our company as the haven for the finest JavaScript
-            experts who are unwavering in their pursuit of excellence and
-            ground-breaking innovations. Our commitment to perpetual refinement
-            in JavaScript knowledge is our driving force, enabling us to craft
-            code that is not just of the highest quality but also the most
-            dependable and trustworthy.
+            With over 5 years of dedicated experience in delivering outsourcing
+            solutions to clients in Australia, Canada, Ukraine and the USA, N/K
+            has consistently showcased exceptional growth, boasting an
+            impressive 31% increase in the past three years alone. Our
+            commitment to crafting successful projects has not only garnered the
+            trust of startups and founders in these regions but has also forged
+            enduring partnerships and relationships with our valued clientele.
+            It is a source of immense pride for us that a remarkable 84% of our
+            clients have chosen to return for subsequent projects, reaffirming
+            our unwavering dedication to excellence.
           </p>
         </div>
         <div className={styles.imgBlock}>
           <img src={matureImg} alt="" />
         </div>
       </div>
+      <ProjectDiteals
+        btnTitle="REQUEST A QUOTE"
+        formTitle="Tell us about your project"
+        formType={FormTypesEnum.whyNk}
+      />
     </div>
   );
 };

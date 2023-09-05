@@ -3,113 +3,107 @@
 @import url('https://fonts.cdnfonts.com/css/sofia-pro');
 
 .lightbox_inner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $inner-bg;
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
-    font-family: 'Sofia Pro';
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $inner-bg;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  font-family: 'Sofia Pro';
+  z-index: 1;
 
-    @media (max-width: 600px) {
-        overflow-y: hidden;
-    }
+  @media (max-width: 600px) {
+    overflow-y: hidden;
+  }
 
-    &::-webkit-scrollbar {
-        background: transparent;
-        width: 9px;
-      }
-    
-      &::-webkit-scrollbar-track {
-        background-color: none;
-        
-      }
-    
-      &::-webkit-scrollbar-thumb {
-        background-color: #535151;
-        border-radius: 10px;
-      }
-    
-      &::-webkit-scrollbar-thumb:hover {
-        background-color: #555;
-      }
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 9px;
+  }
 
+  &::-webkit-scrollbar-track {
+    background-color: none;
+  }
 
+  &::-webkit-scrollbar-thumb {
+    background-color: #535151;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
 }
 
 .lightbox_content {
-    max-width: 680px;
-    width: 680px;
-    margin: 0 auto;
-    padding: 40px;
-    background: #fff;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: max-content;
+  max-width: 680px;
+  width: 680px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: max-content;
 
-    @media (max-width: 600px) {
-        margin: 0;
-        overflow-x: hidden;
-        height: 100%;
-        &::-webkit-scrollbar {
-            background: transparent;
-            width: 9px;
-          }
-        
-          &::-webkit-scrollbar-track {
-           
-            background-color: none;
-          }
-        
-          &::-webkit-scrollbar-thumb {
-            background-color: #535151;
-            border-radius: 10px;
-          }
-        
-          &::-webkit-scrollbar-thumb:hover {
-            background-color: #555;
-          }
+  @media (max-width: 600px) {
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: 9px;
     }
+
+    &::-webkit-scrollbar-track {
+      background-color: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #535151;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+  }
 }
 
 .titleBlock {
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .block_form {
-    text-transform: none;
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    gap: 55px;
+  text-transform: none;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
 }
 
 .closeBlock {
-    outline: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: $closeBlock-bg;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $closeBlock-bg;
 }
 
 .title {
-    font-size: $title-fontSize;
-    color: $title-color;
-    cursor: text;
+  font-size: $title-fontSize;
+  color: $title-color;
+  cursor: text;
+  text-transform: uppercase;
 
-    @media (max-width: 380px) {
-        font-size: 16px;
-    }
-
+  @media (max-width: 380px) {
+    font-size: 16px;
+  }
 }
 
-
 .lightbox_inner_none {
-    display: none;
+  display: none;
 }

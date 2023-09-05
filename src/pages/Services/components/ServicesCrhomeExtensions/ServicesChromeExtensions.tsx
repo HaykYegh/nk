@@ -1,4 +1,7 @@
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import styles from './ServicesChromeExtensions.module.scss';
+import { formTypes } from '../../../../constants';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
 
 const ServicesChromeExtensions = () => {
   return (
@@ -47,9 +50,11 @@ const ServicesChromeExtensions = () => {
           the browser.
         </p>
       </div>
-      <div>
-        <button>Get your extension project quote</button>
-      </div>
+      <ProjectDiteals
+        btnTitle={formTypes[FormTypesEnum.chrome].btnTitle}
+        formTitle={formTypes[FormTypesEnum.chrome].formTitle}
+        formType={FormTypesEnum.chrome}
+      />
     </div>
   );
 };

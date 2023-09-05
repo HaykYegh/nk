@@ -1,11 +1,15 @@
-import React, { FC, ReactNode, useState } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
+import Container from '../Container';
+import Header from '../Header';
+import HeaderImg from '../HeaderImg';
+import Sidebar from 'components/Sidebar';
+import Footer from 'components/Footer';
+import 'react-toastify/dist/ReactToastify.css';
 import styles from './Layout.module.scss';
-import { Container } from '../Container';
-import { Header } from '../Header';
-import { HeaderImg } from '../HeaderImg';
-import { Sidebar } from 'components/Sidebar';
-import { Footer } from 'components/Footer';
+import { ToastContainer } from 'react-toastify';
+import { createPortal } from 'react-dom';
 
 interface IProps {
   children: ReactNode;
@@ -13,12 +17,16 @@ interface IProps {
 
 const Layout: FC<IProps> = ({ children }) => {
   const [isSidebarActive, setSidebarActive] = useState(false);
+  const location = useLocation();
 
   const handleSidebar = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     setSidebarActive((prev) => !prev);
   };
 
+  useEffect(() => {
+    setSidebarActive(false);
+  }, [location.pathname]);
   const closeSidebar = () => setSidebarActive(false);
   return (
     <div className={styles.Layout}>
@@ -35,6 +43,7 @@ const Layout: FC<IProps> = ({ children }) => {
         <Footer />
       </div>
       <Sidebar isSidebarActive={isSidebarActive} />
+      {createPortal(<ToastContainer />, document.body)}
     </div>
   );
 };

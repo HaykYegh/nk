@@ -3,6 +3,7 @@ import digiconnectImage from 'images/digiconnect.jpg';
 import justhiveImage from 'images/justhive.jpg';
 import lpmaImage from 'images/LPMA.jpg';
 import recomazingImage from 'images/recomazing.jpg';
+import { ToastOptions } from 'react-toastify';
 
 export const MAP_API_KEY: string = process.env[
   'REACT_APP_MAP_API_KEY'
@@ -272,11 +273,35 @@ export const SliderData = [
     activeImage: false,
   },
 ];
+
+export const formTypes = {
+  global: {
+    btnTitle: 'Request a Quote',
+    formTitle: 'Tell Us About Your Project',
+  },
+  webApp: {
+    btnTitle: 'Need a Web Application?',
+    formTitle: 'TELL US ABOUT YOUR WEB APPLICATION',
+  },
+  chrome: {
+    btnTitle: 'Get Your Extension Project Quote',
+    formTitle: 'Get Your Extension Project Quote',
+  },
+  desktop: {
+    btnTitle: 'Need a Desktop Application?',
+    formTitle: 'TELL US ABOUT YOUR Desktop APPLICATION',
+  },
+  approach: {
+    btnTitle: 'TELL US ABOUT YOUR PROJECT',
+    formTitle: 'New Form',
+  },
+};
+
 //urls
 export const manDeveloperImg =
   'https://www.outbrain.com/case-studies/wp-content/uploads/2022/01/GettyImages-516895432-Smiling-Businessman-on-Tablet-min.jpg';
 export const superPowerImg =
-  'https://www.realmenrealstyle.com/wp-content/uploads/2023/06/Women-Like-A-Man-To-Show-Vulnerability.jpg';
+  'https://res.cloudinary.com/highereducation/images/w_1024,h_683,c_scale/f_auto,q_auto/v1659634209/BestColleges.com/BC_Bootcamps_Resources_How-to-Decide-If-Coding-is-Right-for-Me_3.7.22_FTR_24718e35be/BC_Bootcamps_Resources_How-to-Decide-If-Coding-is-Right-for-Me_3.7.22_FTR-1024x683.jpg';
 export const oficeImg =
   'https://pix4free.org/assets/library/2021-01-12/originals/office_meeting_men_women_laptop_table.jpg';
 export const matureImg =
@@ -293,6 +318,42 @@ export const careerFirstUrl =
   'https://www.youtube.com/embed/UjaZVGBYW60?si=Yt2QiaDmzVFn4dF3';
 export const careerSecondUrl =
   'https://www.youtube.com/embed/V84IycATdvA?si=564EZlDUjJMWyrg5';
-export const videoUrl = 'https://www.youtube.com/embed/Yk1uCWWUl-4';
+export const videoUrl =
+  'https://www.youtube.com/embed/9ltpBAUJAi4?si=hk5nLR_cCNW3wufY';
 export const careerDetailsImg1 =
   'https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/5b5bec5f-186d-492c-9447-3043d0c19db7/DSC07803.jpg?format=1500w';
+
+export const homeUrl =
+  'https://images.pexels.com/photos/245032/pexels-photo-245032.jpeg';
+
+export const webUrl =
+  'https://images.unsplash.com/photo-1539689007727-bf17b6198946?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80';
+
+export const chromeUrl =
+  'https://www.codefuel.com/wp-content/uploads/2022/02/How-to-make-a-chrome-extention.jpg';
+
+export const desktopUrl =
+  'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80';
+
+export const approachUrl =
+  'https://www.accountability.org/static/dd2a3fb09c6d5a28be81ed7ae8cc03e9/89218/AccountAbility_Careers.webp';
+
+export const aboutUrl =
+  'https://d7fi61gsgzcz4.cloudfront.net/assets/page-hero-images/istock-493171547_2500.jpg/dynamic:1-aspect:2.5-fit:cover-strategy:entropy/istock-493171547_2500--1400.webp';
+
+// servicesUrl
+export const postUrlForm =
+  'https://young-citadel-44598.herokuapp.com/sendMailer/sendmail';
+//tost
+export const toastDefaultValue = (): ToastOptions => {
+  return {
+    position: 'top-left',
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'light',
+  };
+};

@@ -1,8 +1,10 @@
-import React from 'react';
-
+import { FC } from 'react';
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
+import { formTypes } from '../../constants';
 import styles from './Approach.module.scss';
 
-const Approach = () => {
+const Approach: FC = () => {
   return (
     <div className={styles.Approach}>
       <h3>YOUR PROJECT IS JUST 4 EASY AND SIMPLE STEPS AWAY.</h3>
@@ -44,7 +46,11 @@ const Approach = () => {
           </p>
         </div>
       </div>
-      <button className={styles.tellBtn}>TELL US ABOUT YOUR PROJETC</button>
+      <ProjectDiteals
+        btnTitle={formTypes[FormTypesEnum.approach].btnTitle}
+        formTitle={formTypes[FormTypesEnum.approach].formTitle}
+        formType={FormTypesEnum.approach}
+      />
     </div>
   );
 };

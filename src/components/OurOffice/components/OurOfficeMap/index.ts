@@ -1,1 +1,1 @@
-export { default as OurOfficeMap } from './OurOfficeMap';
+export { default } from './OurOfficeMap';

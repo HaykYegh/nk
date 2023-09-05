@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    animation: show 0.5s ease-in-out;
 
     @media (max-width: 900px) {
       display: flex;
@@ -90,6 +91,7 @@
     display: flex;
     align-items: center;
     color: $white-color;
+    animation: show 0.5s ease-in-out;
 
     @media (max-width: 900px) {
       display: none;
@@ -150,5 +152,24 @@
         }
       }
     }
+  }
+}
+
+.show {
+  transform: translateY(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.hide {
+  transform: translateY(-100%);
+  transition: transform 0.25s ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

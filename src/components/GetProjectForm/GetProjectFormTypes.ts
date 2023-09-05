@@ -3,13 +3,27 @@ export interface IGetProjectData {
   firstName: string;
   lastName: string;
   other: boolean | undefined;
-  phone?: number;
+  phone?: string | null;
   projectBrief: string;
-  support: boolean | undefined;
-  web_application: boolean | undefined;
+  chromeExtention?: boolean;
+  web_application?: boolean;
+  desktopApplication?: boolean;
 }
 
 export interface IGetProjectDataProps {
-  contactPage?: boolean;
-  checkBoxShow: boolean;
+  formType: string;
+  closeModal?: () => void;
+}
+
+export interface IPostData {
+  email: string;
+  firstName: string;
+  lastName: string;
+  message: string;
+  chromeExtention?: boolean | undefined;
+  web_application?: boolean | undefined;
+  desktopApplication?: boolean | undefined;
+  other?: boolean | undefined;
+  formType: string;
+  phone?: string | null;
 }
