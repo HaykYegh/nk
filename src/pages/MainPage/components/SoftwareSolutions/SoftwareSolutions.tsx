@@ -6,7 +6,7 @@ const SoftwareSolutions = () => {
   return (
     <div className={styles.software_solutions_wrapper}>
       <div className={styles.title}>
-        <h1>WE DESIGN, CREATE AND DEPLOY SOFTWARE SOLUTIONS</h1>
+        <h1>Architecting, Crafting, and Launching Digital Solutions</h1>
       </div>
       <SoftwareSolutionsContent />
     </div>
