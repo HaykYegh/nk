@@ -33,7 +33,7 @@ export const getImageFromPath = (path: string) => {
     case '/approach':
       return {
         url: approachUrl,
-        text: 'STEPS TO YOUR PROJECT',
+        text: 'GUIDELINES FOR YOUR PROJECT',
       };
 
     case '/about':
