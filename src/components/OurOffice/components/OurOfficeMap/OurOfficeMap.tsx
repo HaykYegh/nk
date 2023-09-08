@@ -27,7 +27,12 @@ const OurOfficeMap = () => {
             styles: GoogleMapStyle,
           }}
         >
-          <Marker position={DefaultCenter} />
+          <Marker
+            position={DefaultCenter}
+            icon={{
+              url: 'https://maps.gstatic.com/mapfiles/transparent.png',
+            }}
+          />
         </GoogleMap>
       ) : (
         <MapLoading />
