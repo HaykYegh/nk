@@ -303,7 +303,7 @@ export const formTypes = {
 export const manDeveloperImg =
   'https://www.outbrain.com/case-studies/wp-content/uploads/2022/01/GettyImages-516895432-Smiling-Businessman-on-Tablet-min.jpg';
 export const superPowerImg =
-  'https://www.realmenrealstyle.com/wp-content/uploads/2023/06/Women-Like-A-Man-To-Show-Vulnerability.jpg';
+  'https://res.cloudinary.com/highereducation/images/w_1024,h_683,c_scale/f_auto,q_auto/v1659634209/BestColleges.com/BC_Bootcamps_Resources_How-to-Decide-If-Coding-is-Right-for-Me_3.7.22_FTR_24718e35be/BC_Bootcamps_Resources_How-to-Decide-If-Coding-is-Right-for-Me_3.7.22_FTR-1024x683.jpg';
 export const oficeImg =
   'https://pix4free.org/assets/library/2021-01-12/originals/office_meeting_men_women_laptop_table.jpg';
 export const matureImg =

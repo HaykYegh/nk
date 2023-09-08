@@ -18,18 +18,20 @@ const WhyNK = () => {
           <img src={manDeveloperImg} />
         </div>
         <div className={styles.succsess_textBlock}>
-          <h2>YOUR SUCCESS IS OUR VICTORY</h2>
+          <h2>Your triumph is our achievement.</h2>
           <p>
-            We do our best to make every project a triumph. We see every
-            collaboration as a mutual reinforcement and thus we route all of our
-            efforts to the successful completion of our projects.{' '}
+            We dedicate ourselves to transforming each project into a resounding
+            success. Every partnership we engage in is a reciprocal
+            strengthening, and therefore, we channel all our energies toward the
+            triumphant fruition of our endeavours.{' '}
           </p>
           <p>
-            Simply team aims to amaze you with our work and leave you with
-            positive memories of us. Your post-development recommendation is the
-            evaluation of our daily work and our motivation to evolve. We value
-            your experience with us as, as well as your feedback. The feedback
-            will help us to grow and evolve further.
+            Our team strives to impress you with our work, leaving you with
+            memorable and positive experiences. Your post-project endorsement is
+            a testament to our daily efforts and serves as a catalyst for our
+            continuous improvement. We deeply appreciate your journey with us
+            and the valuable insights you provide. Your feedback fuels our
+            growth and propels us towards even greater heights.
           </p>
         </div>
       </div>
@@ -53,30 +55,39 @@ const WhyNK = () => {
           <img src={oficeImg} alt="" />
         </div>
         <div className={styles.succsess_textBlock}>
-          <h2>COMMUNICATION IS VITAL FOR USY</h2>
+          <h2>Effective Communication is Paramount to Us.</h2>
           <p>
-            Our team values communication during the creating process and loves
-            to stay connected with our customers even after the project has been
-            successfully completed. Keeping you updated about what we do is a
-            priority for us. Sharing our work process with you step by step
-            makes us more confident and motivates us to amaze you throughout the
-            completion of our projects. Our team of JS experts keeps you
-            informed and connected to your project development by sending you
-            weekly/biweekly demos. You always have access to daily statuses and
-            code updates while keeping an internal Slack communication.
+            Within our team, communication is highly regarded throughout the
+            creative journey, and our commitment to staying connected with our
+            clients extends well beyond the project&#39;s successful completion.
+            Keeping you informed about our progress remains a top priority.
+            Sharing the intricacies of our work process with you, step by step,
+            instills in us the confidence and inspiration to continually impress
+            you throughout the project&#39;s execution. Our ensemble of
+            JavaScript experts ensures that you are constantly engaged and
+            informed about the development of your project. We provide weekly or
+            biweekly demos to keep you in the loop, ensuring transparency and
+            alignment with your vision. Furthermore, you maintain access to
+            daily project statuses and code updates through our dedicated
+            internal Slack communication channels. Your involvement and insight
+            are fundamental to our collaborative success.
           </p>
         </div>
       </div>
       <div className={styles.becauseBlocks}>
         <div className={styles.succsess_textBlock}>
-          <h2>WE ARE PROFESSIONALLY MATURE</h2>
+          <h2>We Embrace Professional Expertise.</h2>
           <p>
-            Simply has more than 11 years experience of providing outsourcing to
-            Australia and the USA. Our company showed 28% growth in the last 3
-            years. By creating successful projects, we have gained trust among
-            startups and founders in these countries ensuring long-term
-            partnerships and relations with our customers. The fact that 87% of
-            our clients came back for another project, makes us feel proud.
+            With over 5 years of dedicated experience in delivering outsourcing
+            solutions to clients in Australia, Canada, Ukraine and the USA, N/K
+            has consistently showcased exceptional growth, boasting an
+            impressive 31% increase in the past three years alone. Our
+            commitment to crafting successful projects has not only garnered the
+            trust of startups and founders in these regions but has also forged
+            enduring partnerships and relationships with our valued clientele.
+            It is a source of immense pride for us that a remarkable 84% of our
+            clients have chosen to return for subsequent projects, reaffirming
+            our unwavering dedication to excellence.
           </p>
         </div>
         <div className={styles.imgBlock}>
