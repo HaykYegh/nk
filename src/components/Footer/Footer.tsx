@@ -24,7 +24,7 @@ const Footer = () => {
         <Link to="/approach">APPROACH</Link>
       </div>
       <div className={styles.address}>
-        N/K IT COMPANY, TUMANYAN STREET 3, YEREVAN, ARMENIA +374 (00) 11-11-11
+        N/K IT COMPANY, TUMANYAN STREET 3, YEREVAN, ARMENIA +(374) 98 188907
         INFO@NKCOMPANY.NET
       </div>
     </div>
