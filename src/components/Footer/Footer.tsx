@@ -3,7 +3,7 @@ import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
-    <div className={styles.Footer}>
+    <footer className={styles.Footer}>
       <div className={styles.socialMedia}>
         <Link to="/" className={styles.mediaIcon}>
           <i className="fa-brands fa-facebook-f"></i>
@@ -27,7 +27,7 @@ const Footer = () => {
         N/K IT COMPANY, TUMANYAN STREET 3, YEREVAN, ARMENIA +(374) 98 188907
         INFO@NKCOMPANY.NET
       </div>
-    </div>
+    </footer>
   );
 };
 

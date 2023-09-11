@@ -34,7 +34,7 @@ const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
   };
 
   return (
-    <div
+    <header
       className={
         isVisible
           ? `${styles.Header} ${styles.show}`
@@ -69,7 +69,7 @@ const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
           ></span>
         </div>
       </button>
-    </div>
+    </header>
   );
 };
 
