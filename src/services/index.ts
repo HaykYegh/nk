@@ -4,7 +4,7 @@ import { IPostData } from 'components/GetProjectForm/GetProjectFormTypes';
 
 export const postFormData = async (body: IPostData) => {
   try {
-    const data = await axios.post(postUrlForm, body, {
+    const data = await axios.post(`${postUrlForm}/sendMailer/sendmail`, body, {
       headers: {
         'Content-Type': 'application/json',
       },
