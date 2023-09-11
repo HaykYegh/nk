@@ -16,29 +16,31 @@ const Benefits = () => {
       <div className={styles.content_wrapper}>
         <div>
           <img src={expertise} alt="expertise" />
-          <h4>expertise</h4>
+          <h4>Proficiency</h4>
           <p>
-            We have been in the software development and design industry for
-            more than 11 years. We made JavaScript into our superpower and we
-            constantly grow.
+            With over 5 years of experience in the software development and
+            design sector, we&#39;ve transformed JavaScript into our superpower,
+            and our journey of continuous growth continues unabated.
           </p>
         </div>
         <div>
           <img src={transparency} alt="transparency" />
-          <h4>transparency</h4>
+          <h4>Clarity</h4>
           <p>
-            Being transparent in the development process is crucial for any
-            product success. You can follow what we do, when we do and how we do
-            it in real-time
+            Transparency throughout the development process is paramount to the
+            success of any product. You can closely track our actions, timing,
+            and methodologies in real-time, ensuring complete visibility into
+            our work.
           </p>
         </div>
         <div>
           <img src={symplicity} alt="symplicity" />
-          <h4>symplicity</h4>
+          <h4>Simplicity</h4>
           <p>
-            Working with us is simple and easy. We deliver end-to-end
-            development services by taking care of all the technological
-            responsibilities of our partners.
+            Collaborating with us is a straightforward and hassle-free
+            experience. We provide comprehensive development services, assuming
+            full responsibility for all technological aspects on behalf of our
+            partners.
           </p>
         </div>
       </div>

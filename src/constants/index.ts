@@ -15,11 +15,13 @@ export const MapStyle = {
 };
 
 export const DefaultCenter = {
-  lat: 40.712776,
-  lng: -74.005974,
+  lat: 40.17887413405399,
+  lng: 44.52203759550231,
 };
 
-export const Zoom = 10;
+export const markerPosition = {};
+
+export const Zoom = 15;
 
 export const GoogleMapStyle = [
   {
