@@ -1,11 +1,13 @@
+import { useEffect, useState } from 'react';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import {
   DefaultCenter,
   MAP_API_KEY,
   MapStyle,
   Zoom,
-  GoogleMapStyle,
+  mapOptions,
 } from '../../../../constants';
+import { IMarkersPos } from './OurOfficeMapTypes';
 
 import MapLoading from './components/MapLoading';
 
@@ -15,6 +17,13 @@ const OurOfficeMap = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: MAP_API_KEY,
   });
+  const [markers, setMarkers] = useState<IMarkersPos[]>([]);
+
+  useEffect(() => {
+    if (isLoaded) {
+      setMarkers([DefaultCenter]);
+    }
+  }, [isLoaded]);
 
   return (
     <div className={styles.map_wrapper}>
@@ -23,11 +32,16 @@ const OurOfficeMap = () => {
           mapContainerStyle={MapStyle}
           center={DefaultCenter}
           zoom={Zoom}
-          options={{
-            styles: GoogleMapStyle,
-          }}
+          options={mapOptions}
         >
-          <Marker position={DefaultCenter} />
+          {markers.map((marker, index) => {
+            return (
+              <Marker
+                key={index}
+                position={{ lat: marker.lat, lng: marker.lng }}
+              />
+            );
+          })}
         </GoogleMap>
       ) : (
         <MapLoading />

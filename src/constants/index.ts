@@ -14,133 +14,30 @@ export const MapStyle = {
 };
 
 export const DefaultCenter = {
-  lat: 40.712776,
-  lng: -74.005974,
+  lat: 40.1788741345399,
+  lng: 44.52203759550231,
 };
 
 export const Zoom = 10;
 
 export const GoogleMapStyle = [
   {
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#ebe3cd',
-      },
-    ],
-  },
-  {
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#523735',
-      },
-    ],
-  },
-  {
-    elementType: 'labels.text.stroke',
-    stylers: [
-      {
-        color: '#f5f1e6',
-      },
-    ],
-  },
-  {
-    featureType: 'administrative',
-    elementType: 'geometry.stroke',
-    stylers: [
-      {
-        color: '#c9b2a6',
-      },
-    ],
-  },
-  {
-    featureType: 'administrative.land_parcel',
-    elementType: 'geometry.stroke',
-    stylers: [
-      {
-        color: '#dcd2be',
-      },
-    ],
-  },
-  {
-    featureType: 'administrative.land_parcel',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#ae9e90',
-      },
-    ],
-  },
-  {
-    featureType: 'landscape.natural',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#dfd2ae',
-      },
-    ],
-  },
-  {
-    featureType: 'poi',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#dfd2ae',
-      },
-    ],
-  },
-  {
-    featureType: 'poi',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#93817c',
-      },
-    ],
-  },
-  {
-    featureType: 'poi.park',
+    featureType: 'water',
     elementType: 'geometry.fill',
     stylers: [
       {
-        color: '#a5b076',
+        color: '#d3d3d3',
       },
     ],
   },
   {
-    featureType: 'poi.park',
-    elementType: 'labels.text.fill',
+    featureType: 'transit',
     stylers: [
       {
-        color: '#447530',
+        color: '#808080',
       },
-    ],
-  },
-  {
-    featureType: 'road',
-    elementType: 'geometry',
-    stylers: [
       {
-        color: '#f5f1e6',
-      },
-    ],
-  },
-  {
-    featureType: 'road.arterial',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#fdfcf8',
-      },
-    ],
-  },
-  {
-    featureType: 'road.highway',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#f8c967',
+        visibility: 'off',
       },
     ],
   },
@@ -149,88 +46,160 @@ export const GoogleMapStyle = [
     elementType: 'geometry.stroke',
     stylers: [
       {
-        color: '#e9bc62',
+        visibility: 'on',
+      },
+      {
+        color: '#b3b3b3',
       },
     ],
   },
   {
-    featureType: 'road.highway.controlled_access',
-    elementType: 'geometry',
+    featureType: 'road.highway',
+    elementType: 'geometry.fill',
     stylers: [
       {
-        color: '#e98d58',
-      },
-    ],
-  },
-  {
-    featureType: 'road.highway.controlled_access',
-    elementType: 'geometry.stroke',
-    stylers: [
-      {
-        color: '#db8555',
+        color: '#ffffff',
       },
     ],
   },
   {
     featureType: 'road.local',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#806b63',
-      },
-    ],
-  },
-  {
-    featureType: 'transit.line',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#dfd2ae',
-      },
-    ],
-  },
-  {
-    featureType: 'transit.line',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#8f7d77',
-      },
-    ],
-  },
-  {
-    featureType: 'transit.line',
-    elementType: 'labels.text.stroke',
-    stylers: [
-      {
-        color: '#ebe3cd',
-      },
-    ],
-  },
-  {
-    featureType: 'transit.station',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#dfd2ae',
-      },
-    ],
-  },
-  {
-    featureType: 'water',
     elementType: 'geometry.fill',
     stylers: [
       {
-        color: '#b9d3c2',
+        visibility: 'on',
+      },
+      {
+        color: '#ffffff',
+      },
+      {
+        weight: 1.8,
       },
     ],
   },
   {
-    featureType: 'water',
+    featureType: 'road.local',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        color: '#d7d7d7',
+      },
+    ],
+  },
+  {
+    featureType: 'poi',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        visibility: 'on',
+      },
+      {
+        color: '#ebebeb',
+      },
+    ],
+  },
+  {
+    featureType: 'administrative',
+    elementType: 'geometry',
+    stylers: [
+      {
+        color: '#a7a7a7',
+      },
+    ],
+  },
+  {
+    featureType: 'road.arterial',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#ffffff',
+      },
+    ],
+  },
+  {
+    featureType: 'road.arterial',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#ffffff',
+      },
+    ],
+  },
+  {
+    featureType: 'landscape',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        visibility: 'on',
+      },
+      {
+        color: '#efefef',
+      },
+    ],
+  },
+  {
+    featureType: 'road',
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: '#92998d',
+        color: '#696969',
+      },
+    ],
+  },
+  {
+    featureType: 'administrative',
+    elementType: 'labels.text.fill',
+    stylers: [
+      {
+        visibility: 'on',
+      },
+      {
+        color: '#737373',
+      },
+    ],
+  },
+  {
+    featureType: 'poi',
+    elementType: 'labels.icon',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'poi',
+    elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road.arterial',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        color: '#d6d6d6',
+      },
+    ],
+  },
+  {
+    featureType: 'road',
+    elementType: 'labels.icon',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'poi',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#dadada',
       },
     ],
   },
@@ -314,3 +283,8 @@ export const approachUrl =
 
 export const aboutUrl =
   'https://d7fi61gsgzcz4.cloudfront.net/assets/page-hero-images/istock-493171547_2500.jpg/dynamic:1-aspect:2.5-fit:cover-strategy:entropy/istock-493171547_2500--1400.webp';
+
+export const mapOptions = {
+  styles: GoogleMapStyle,
+  disableDefaultUI: true,
+};
