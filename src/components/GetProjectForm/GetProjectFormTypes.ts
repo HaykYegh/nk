@@ -2,7 +2,7 @@ export interface IGetProjectData {
   email: string;
   firstName: string;
   lastName: string;
-  other: boolean | undefined;
+  other?: boolean;
   phone?: string | null;
   projectBrief: string;
   chromeExtention?: boolean;
