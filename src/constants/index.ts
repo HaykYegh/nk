@@ -290,7 +290,7 @@ export const careerFirstUrl =
 export const careerSecondUrl =
   'https://www.youtube.com/embed/V84IycATdvA?si=564EZlDUjJMWyrg5';
 export const videoUrl =
-  'https://www.youtube.com/embed/9ltpBAUJAi4?si=hk5nLR_cCNW3wufY';
+  'https://www.youtube.com/embed/sMIohOq4lkU?si=fZTxk9oL_p-68zku';
 export const careerDetailsImg1 =
   'https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/5b5bec5f-186d-492c-9447-3043d0c19db7/DSC07803.jpg?format=1500w';
 
