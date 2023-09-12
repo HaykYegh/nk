@@ -11,8 +11,8 @@ const SoftwareSolutionsContent = () => {
         <img src={webApps} alt="web apps" />
         <h3>Web Applications</h3>
         <p>
-          We design and develop multi-purpose, data-driven, real-time, high
-          performing and efficient mobile-ready web applications.
+          We specialize in crafting versatile, data-powered, real-time,
+          high-performance, and mobile-responsive web applications.
         </p>
         <div className={styles.more}>
           <Link to="/web-applications">Learn more...</Link>
@@ -22,9 +22,9 @@ const SoftwareSolutionsContent = () => {
         <img src={desktopApp} alt="desktop app" />
         <h3>Desktop Application</h3>
         <p>
-          We are experts in building large scale, distributed web services,
-          APIs, micro-services using a perfect mix of reliable, robust and
-          cutting-edge technologies.
+          Our expertise lies in constructing expansive, distributed web
+          services, APIs, and microservices, blending a flawless combination of
+          dependable, resilient, and leading-edge technologies.
         </p>
         <div className={styles.more}>
           <Link to="/desktop-applications">Learn more...</Link>
@@ -34,9 +34,10 @@ const SoftwareSolutionsContent = () => {
         <img src={googleExtension} alt="google extension" />
         <h3>Google Extension</h3>
         <p>
-          We build multi-platform mobile applications, whether it will be a
-          social network, geo-tracking app, dashboard, booking app, anything -
-          you name it.
+          We specialize in developing cross-platform mobile applications,
+          whether it`s a social networking tool, a geo-tracking application, a
+          comprehensive dashboard, a booking system, or virtually any other
+          concept you can envision.
         </p>
         <div className={styles.more}>
           <Link to="/chrome-extensions">Learn more...</Link>

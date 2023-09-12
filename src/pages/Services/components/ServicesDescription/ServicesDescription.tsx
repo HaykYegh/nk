@@ -1,5 +1,8 @@
+import ProjectDiteals from 'components/ProjectDetails/ProjectDetails';
 import { Technologies } from './components/Technologies';
 
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
+import { formTypes } from '../../../../constants';
 import styles from './ServicesDescription.module.scss';
 
 const ServicesDescription = () => {
@@ -7,12 +10,15 @@ const ServicesDescription = () => {
     <div className={styles.services_description}>
       <div className={styles.title_description}>
         <p>
-          By building full featured, highly scalable and robust web apps, Simply
-          team provides a strategy for you to be effectively presented to your
-          target audience, on desktop, tablet or mobile web apps, which would be
-          designed to look great, function perfectly and be user-optimised for
-          any device and operating system. Our team creates a next generation
-          user experience with our cutting-edge technology.
+          Through the construction of fully-featured, exceptionally scalable,
+          and rock-solid web applications, the N/K team strategically positions
+          you for effective engagement with your desired audience. Whether it`s
+          on desktop, tablet, or mobile devices, our web apps are meticulously
+          designed to deliver an outstanding visual appeal, flawless
+          functionality, and a user-centric experience across all devices and
+          operating systems. With our cutting-edge technology, our team pioneers
+          the creation of next-generation user experiences, setting new
+          standards in the industry.
         </p>
       </div>
       <Technologies />
@@ -56,7 +62,11 @@ const ServicesDescription = () => {
             </p>
           </div>
         </div>
-        <button>Need a web application?</button>
+        <ProjectDiteals
+          btnTitle={formTypes[FormTypesEnum.webApp].btnTitle}
+          formTitle={formTypes[FormTypesEnum.webApp].formTitle}
+          formType={FormTypesEnum.webApp}
+        />
       </div>
     </div>
   );

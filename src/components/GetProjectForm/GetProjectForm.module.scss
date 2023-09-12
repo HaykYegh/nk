@@ -1,136 +1,181 @@
 @import '../../assets//formVars.scss';
 @import '../../assets//formMixins.scss';
+@import '../../colorsVariables.scss';
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  width: 100%;
-  .req {
-    color: red;
-  }
-}
-
-.namesTitle {
-  display: flex;
-  gap: 5px;
-  padding-bottom: 5px;
-}
-
-.namestext {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  letter-spacing: 0px;
-  color: #222;
-}
-
-.formNames_section {
-  display: flex;
-  gap: 15px;
-  .cusstomFieldBlock {
-    width: 50%;
-  }
-  @media (max-width: 450px) {
+    display: flex;
     flex-direction: column;
-    .cusstomFieldBlock {
-      width: 100%;
+    gap: 18px;
+    width: 100%;
+
+    .req {
+        color: red;
     }
-  }
+
+
+
+    .namesTitle {
+        display: flex;
+        gap: 5px;
+        padding-bottom: 5px;
+    }
+
+    .namestext {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        letter-spacing: 0px;
+        color: #222;
+    }
+
+    .formNames_section {
+        display: flex;
+        gap: 15px;
+
+        .cusstomFieldBlock {
+            width: 50%;
+        }
+
+        @media (max-width: 450px) {
+            flex-direction: column;
+
+            .cusstomFieldBlock {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .cusstomFieldBlock {
+        font-size: $cusstomField-fs;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        input {
+            @include stylesInput;
+        }
+
+        .activeError {
+            background-color: #ffeae8;
+            border: 1px solid #ce2c30;
+        }
+
+        textarea {
+            @include textAreaStyles;
+        }
+    }
+
+    .checkBoxs_title {
+        font-size: $checkBoxs_title-fs;
+        margin-bottom: 18px;
+    }
+
+    .checkbox_section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .checkBoxs_content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .checks {
+
+        align-items: center;
+        display: inline-flex;
+        column-gap: 6px;
+        text-rendering: optimizelegibility;
+        font-size: 13px;
+        @include checkBoxStyles;
+
+        label {
+            cursor: pointer;
+        }
+
+    }
+
+    .btnSubmit {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .submitBtn {
+        @include submitFormstyles;
+        background-color: $secondary2-color;
+        display: flex;
+        gap: 5px;
+        .loader{
+            align-self: center;
+        }
+    }
+
+    .loadingBtn {
+        cursor: not-allowed;
+        opacity: 0.3;
+    }
+
+    .error {
+        @include errorStyles;
+    }
+
+    .btnContact {
+        justify-content: start;
+    }
+
+    .btnSub {
+        border-radius: 0;
+    }
 }
 
-.cusstomFieldBlock {
-  font-size: $cusstomField-fs;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-
-  input {
-    @include stylesInput;
-  }
-
-  .activeError {
-    background-color: #ffeae8;
-    border: 1px solid #ce2c30;
-  }
-
-  textarea {
-    @include textAreaStyles;
-  }
-}
-
-.checkBoxs_title {
-  font-size: $checkBoxs_title-fs;
-  margin-bottom: 18px;
-}
-
-.checkbox_section {
-  display: flex;
-  flex-direction: column;
-}
-
-.checkBoxs_content {
-  display: flex;
-  flex-direction: column;
-}
-
-.checks {
-  align-items: center;
-  display: inline-flex;
-  column-gap: 6px;
-  text-rendering: optimizelegibility;
-  font-size: 13px;
-  @include checkBoxStyles;
-  label {
-    cursor: pointer;
-  }
-}
-
-.btnSubmit {
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-}
-
-.submitBtn {
-  @include submitFormstyles;
-}
-
-.error {
-  @include errorStyles;
-}
 .alertBlock {
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  color: #721c24;
-  padding: 10px 9px;
-  margin: 0 0 16px;
-  border-radius: 8px;
-  font-size: clamp(10px, 2.5vw, 14px);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-  width: 100%;
-  line-height: 17px;
-  .iconFont {
-    color: #ce2c30;
-    font-size: 20px;
-  }
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 10px 9px;
+    margin: 0 0 16px;
+    border-radius: 8px;
+    font-size: clamp(10px, 2.5vw, 14px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    width: 100%;
+    line-height: 17px;
 
-  p {
-    margin: 0;
-    color: #ce2c30;
-    font-weight: bold;
-  }
+    .iconFont {
+        color: #ce2c30;
+        font-size: 20px;
+    }
+
+    p {
+        margin: 0;
+        color: #ce2c30;
+        font-weight: bold;
+    }
 }
 
-.btnContact {
-  justify-content: start;
-}
-.btnSub {
-  border-radius: 0;
-}
+.loader {
+    width: 15px;
+    height: 15px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 

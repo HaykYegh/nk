@@ -1,44 +1,80 @@
-import { FC } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { scemaGetProjectForm } from '../../schemas/getProjectScema';
-import { IGetProjectData, IGetProjectDataProps } from './GetProjectFormTypes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { yupResolver } from '@hookform/resolvers/yup';
 import classNames from 'classnames';
+import { FormTypesEnum } from 'globalTypes/projectDitealsTypes';
+import { findCheckedBox, getErrorFilds } from 'helpers/FormHelpers';
+import { FC, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { postFormData } from 'services';
+import { scemaGetProjectForm } from '../../schemas/getProjectScema';
+import {
+  IGetProjectData,
+  IGetProjectDataProps,
+  IPostData,
+} from './GetProjectFormTypes';
 import styles from './GetProjectForm.module.scss';
+import { toast } from 'react-toastify';
+import { toastDefaultValue } from '../../constants';
 
-const GetProjectForm: FC<IGetProjectDataProps> = ({
-  contactPage,
-  checkBoxShow,
-}) => {
+const GetProjectForm: FC<IGetProjectDataProps> = ({ formType, closeModal }) => {
+  const [loading, setloading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(scemaGetProjectForm),
     mode: 'onSubmit',
   });
-  const onSubmit: SubmitHandler<IGetProjectData> = (data) => {
-    console.log(data);
+  const errorMessageAlert = `Form submission failed. Review the following information:   ${getErrorFilds(
+    errors,
+  )}`;
+
+  const onSubmit: SubmitHandler<IGetProjectData> = async (data) => {
+    setloading(true);
+    const formData: IPostData = {
+      email: data.email,
+      lastName: data.lastName,
+      firstName: data.firstName,
+      message: data.projectBrief,
+      phone: data.phone ? data.phone : null,
+      formType: findCheckedBox(
+        {
+          webApplication: data.web_application,
+          chromeExtention: data.chromeExtention,
+          desktopApplication: data.desktopApplication,
+          other: data.other,
+        },
+        formType,
+      ),
+    };
+    const resp = await postFormData(formData);
+    setloading(false);
+    toast(resp?.data, {
+      ...toastDefaultValue(),
+    });
+
+    reset();
+    if (formType !== FormTypesEnum.conuct) {
+      closeModal!();
+    }
   };
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit(onSubmit, (data) => {
+        console.log(data);
+      })}
+    >
       {!!Object.keys(errors).length && (
         <div className={styles.alertBlock}>
           <FontAwesomeIcon
             icon={faCircleExclamation}
             className={styles.iconFont}
           />
-          <p>
-            Form submission failed. Review the following information:
-            {errors.firstName && `firstName, `}
-            {errors.lastName && `LastName, `}
-            {errors.email && `Email, `}
-            {errors.projectBrief && `Project Brief`}
-          </p>
+          <p>{errorMessageAlert}</p>
         </div>
       )}
       <div className={styles.formNames_section}>
@@ -87,12 +123,21 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
 
       <div className={styles.cusstomFieldBlock}>
         <label htmlFor="phone">Phone</label>
-        <input type="text" {...register('phone')} />
+        <input
+          className={classNames({
+            [styles.activeError]: errors.phone,
+          })}
+          type="text"
+          {...register('phone')}
+        />
+        <span className={styles.error}>{errors.phone?.message}</span>
       </div>
 
       <div className={styles.cusstomFieldBlock}>
         <label htmlFor="projectBrief">
-          {!contactPage ? 'Project Brief' : 'message'}
+          {formType == FormTypesEnum.whyNk || formType == FormTypesEnum.global
+            ? 'Project Brief'
+            : 'message'}
           <span className={styles.req}>*</span>
         </label>
 
@@ -104,13 +149,8 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
         ></textarea>
         <span className={styles.error}>{errors.projectBrief?.message}</span>
       </div>
-      {!contactPage && (
-        <div className={styles.cusstomFieldBlock}>
-          <label htmlFor="projectBudget">Project Budget</label>
-          <input type="text" {...register('projectBudget')} />
-        </div>
-      )}
-      {checkBoxShow && (
+      {(formType == FormTypesEnum.global ||
+        formType == FormTypesEnum.whyNk) && (
         <div className={styles.checkbox_section}>
           <div className={styles.checkBoxs_title}>
             <span>I Need</span>
@@ -125,8 +165,21 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
               <label htmlFor="web_application">Web Application</label>
             </div>
             <div className={styles.checks}>
-              <input id="support" type="checkbox" {...register('support')} />
-              <label htmlFor="support">Technical Support</label>
+              <input
+                id="chromeExtention"
+                type="checkbox"
+                {...register('chromeExtention')}
+              />
+              <label htmlFor="chromeExtention">Chrome Extention</label>
+            </div>
+
+            <div className={styles.checks}>
+              <input
+                id="desktopApplication"
+                type="checkbox"
+                {...register('desktopApplication')}
+              />
+              <label htmlFor="desktopApplication">Desktop Application</label>
             </div>
             <div className={styles.checks}>
               <input id="other" type="checkbox" {...register('other')} />
@@ -135,19 +188,21 @@ const GetProjectForm: FC<IGetProjectDataProps> = ({
           </div>
         </div>
       )}
-
       <div
         className={classNames(styles.btnSubmit, {
-          [styles.btnContact]: contactPage,
+          [styles.btnContact]: FormTypesEnum.conuct == formType,
         })}
       >
         <button
+          disabled={loading}
           className={classNames(styles.submitBtn, {
-            [styles.btnSub]: contactPage,
+            [styles.btnSub]: FormTypesEnum.conuct == formType,
+            [styles.loadingBtn]: loading,
           })}
           type="submit"
         >
-          {contactPage ? 'TALK TO US' : 'SUBMIT'}
+          {formType == FormTypesEnum.conuct ? 'TALK TO US' : 'SUBMIT'}
+          {loading && <span className={styles.loader}></span>}
         </button>
       </div>
     </form>

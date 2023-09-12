@@ -1,4 +1,4 @@
-import { FC, MouseEvent } from 'react';
+import { FC, MouseEvent, useEffect, useState } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import Logo from '../Logo';
 import classNames from 'classnames';
@@ -11,8 +11,36 @@ interface IProps {
 }
 
 const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [window.scrollY]);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    setPrevScrollY(currentScrollY);
+    if (currentScrollY < prevScrollY) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+
+    setPrevScrollY(currentScrollY);
+  };
+
   return (
-    <div className={styles.Header}>
+    <header
+      className={
+        isVisible
+          ? `${styles.Header} ${styles.show}`
+          : `${styles.Header} ${styles.hide}`
+      }
+    >
       <Logo />
       <nav>
         <div className={styles.section}>
@@ -41,7 +69,7 @@ const Header: FC<IProps> = ({ isSidebarActive, handleSidebar }) => {
           ></span>
         </div>
       </button>
-    </div>
+    </header>
   );
 };
 

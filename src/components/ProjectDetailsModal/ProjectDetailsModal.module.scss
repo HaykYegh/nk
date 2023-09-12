@@ -97,6 +97,7 @@
   font-size: $title-fontSize;
   color: $title-color;
   cursor: text;
+  text-transform: uppercase;
 
   @media (max-width: 380px) {
     font-size: 16px;
