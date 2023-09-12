@@ -315,7 +315,7 @@ export const aboutUrl =
 export const mapOptions = {
   styles: GoogleMapStyle,
   disableDefaultUI: true,
-
+};
 // servicesUrl
 export const postUrlForm = 'https://nk-it-company-068381af881c.herokuapp.com';
 //tost
@@ -330,5 +330,4 @@ export const toastDefaultValue = (): ToastOptions => {
     progress: undefined,
     theme: 'light',
   };
-
 };
